@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>Register User</h3>
+    <br />
+    <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form">
+        <input formControlName='email_address' type="text" placeholder="Email *" />
+        <div class="alert  alert-danger"
+            *ngIf="userRegistrationForm.get('email_address').hasError('required') && userRegistrationForm.get('email_address').touched">
+            Email is required
+        </div>
+
+        <input formControlName='full_name' type="text" placeholder="Full Name *" />
+        <div class="alert  alert-danger"
+            *ngIf=" !userRegistrationForm.get('full_name').valid && userRegistrationForm.get('full_name').touched">
+            Name is required
+        </div>
+        <br />
+        <input formControlName='password' type="password" placeholder="Enter Password" />
+        <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
+        <br />
+        <div>
+            <p>If you would like to explore campus course near you, please provide zip code</p>
+            <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
+        </div>
+        <br />
+        <br />
+        <button [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+    </form>
+    <div *ngIf='registerUserFlag'>
+       <p>Student Created Sucessfully with Id {{resData.uid}} and title {{resData.title}}</p>
+    </div>
+</div>
