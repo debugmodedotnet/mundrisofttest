@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,16 @@ export class AppComponent {
   
     openDialog(): void {
       const dialogRef = this.dialog.open(RegisterDialogComponent, {
+        
+      });
+  
+      dialogRef.afterClosed().subscribe(result => {
+        console.log('The dialog was closed');        
+      });
+    }
+
+    openDialogLogin(): void {
+      const dialogRef = this.dialog.open(LoginComponent, {
         
       });
   

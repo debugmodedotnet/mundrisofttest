@@ -9,13 +9,15 @@
     />
     <span class="title">{{title}}</span>
     
-    <a aria-label="Home"  routerLink="/home">Home</a>
+    <a aria-label="Home"  routerLink="/home">Home</a>    
+    <a aria-label="Catalog"  routerLink="/catalog">Catalog</a>
+    <a aria-label="Franchise"  routerLink="/franchise">Franchise</a>
     <div class="spacer"></div>
 
     <a aria-label="Course" routerLink="/course">Course</a>
 
-    <a aria-label="Register Student" routerLink="/user">Register Student</a>
-    <button mat-button (click)="openDialog()">Register Student</button>
-    <a aria-label="Login Student"  routerLink="/user/login">Login Student</a>
+    <a aria-label="Register Student" routerLink="/user">Register Student</a>      
+    <button mat-button (click)="openDialog()">Sign Up</button>
+    <button mat-button (click)="openDialogLogin()">Login</button>
 </div>
 <router-outlet></router-outlet>

@@ -1,31 +1,50 @@
-<div class="container">
-    <h3>Register User</h3>
-    <br />
+<div class="register-form">
+    <h1>Create Your Acccount</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+    </p>
     <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form">
-        <input formControlName='email_address' type="text" placeholder="Email *" />
-        <div class="alert  alert-danger"
-            *ngIf="userRegistrationForm.get('email_address').hasError('required') && userRegistrationForm.get('email_address').touched">
-            Email is required
+        <div class="frm-field-group">
+            <div class="form-field">
+                <div class="frm-input">
+                    <input formControlName='full_name' type="text" placeholder="Full Name *" />
+                    <div class="alert  alert-danger" *ngIf=" !userRegistrationForm.get('full_name').valid && userRegistrationForm.get('full_name').touched">
+                        Name is required
+                    </div>
+                </div>
+                <div class="frm-input">
+                    <input formControlName='email_address' type="text" placeholder="Email *" />
+                    <div class="alert  alert-danger" *ngIf="userRegistrationForm.get('email_address').hasError('required') && userRegistrationForm.get('email_address').touched">
+                        Email is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-field">
+                <div class="frm-input">
+                    <input formControlName='password' type="password" placeholder="Enter Password" />
+                </div>
+                <div class="frm-input">
+                    <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
+                </div>
+            </div>
         </div>
+        <p>If you would like to explore campus courses near you, please provide your zipcode.</p>
+        <div class="zipcode">
 
-        <input formControlName='full_name' type="text" placeholder="Full Name *" />
-        <div class="alert  alert-danger"
-            *ngIf=" !userRegistrationForm.get('full_name').valid && userRegistrationForm.get('full_name').touched">
-            Name is required
+            <div class="frm-input">
+                <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
+            </div>
         </div>
-        <br />
-        <input formControlName='password' type="password" placeholder="Enter Password" />
-        <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
-        <br />
-        <div>
-            <p>If you would like to explore campus course near you, please provide zip code</p>
-            <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
+        <p>Already have an account? <strong>Login here</strong></p>
+        <div class="checkbox-container">
+            <!--<section class="example-section">
+                <mat-checkbox class="example-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit</mat-checkbox>
+            </section>-->
         </div>
-        <br />
-        <br />
-        <button [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+        <div class="frm-btn-container">
+            <button mat-raised-button color="warn" [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+        </div>
     </form>
     <div *ngIf='registerUserFlag'>
-       <p>Student Created Sucessfully with Id {{resData.uid}} and title {{resData.title}}</p>
+        <p>Student Created Sucessfully with Id {{resData.uid}} and title {{resData.title}}</p>
     </div>
 </div>

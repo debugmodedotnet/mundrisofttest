@@ -2,9 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -14,19 +11,31 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
-import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
+
+import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
+import { CatalogComponent } from './catalog/catalog.component';
+import { FranchiseComponent } from './franchise/franchise.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RegisterDialogComponent,    
+    RegisterDialogComponent,
+    CatalogComponent,
+    FranchiseComponent,
+    LoginComponent,    
     
   ],
   entryComponents: [
     RegisterDialogComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +51,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatListModule,
     MatDialogModule,
     MatCheckboxModule,
+    MatPaginatorModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
