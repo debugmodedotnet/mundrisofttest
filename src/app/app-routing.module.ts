@@ -9,7 +9,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
+  { path: 'course', loadChildren: () => import('./course/course.module').then(m => m.CourseModule) }
 ];
 
 @NgModule({

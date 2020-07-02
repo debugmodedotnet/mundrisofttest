@@ -1,0 +1,58 @@
+<br/>
+<br/>
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+
+    <div class="col-md-6">
+        <input class="form-control" type="text" placeholder="Search a topic, path,course,subject..." />
+    </div>
+    <div class="col-md-3">
+        
+    </div>
+</div>
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-md-4" *ngFor="let data of courseCatalogsData.entries">
+        <div class="card">
+            <img src="{{data.course_outline.banner_image.url}}" class="card-img-top" alt="...">
+            <P class="card-img-overlay text-danger">
+                <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice"></ng-container>
+                <ng-template #onlineprice>
+                 <h2> <span class="badge badge-danger text-right">{{data.course_info.cost.online}}</span> </h2>
+                </ng-template>
+                <ng-template #campusprice>
+                <h2> <span class="badge badge-danger text-right">{{data.course_info.cost.campus}}</span></h2>
+                </ng-template> 
+            </P>
+            <div class="card-body">
+                <h5 class="card-title">{{data.course_name}}</h5>
+                <p class="card-text">
+                    {{data.brief_description}}
+                </p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+               <p>
+                   <span><app-starrating [rating]='data.course_info.star_rating'></app-starrating> {{data.course_info.star_rating}}</span>
+                   <span>{{data.course_info.level}}</span>
+                   <ng-container *ngIf="data.course_info.course_length.online; then onlinelength else campuslength"></ng-container>
+                   <ng-template #onlinelength>
+                    <span>{{data.course_info.course_length.online}}</span>
+                   </ng-template>
+                   <ng-template #campuslength>
+                   <span>{{data.course_info.course_length.campus}}</span>
+                   </ng-template> 
+                   <span></span>
+               </p>
+            </div>
+            <div class="card-footer">
+                <span>By : {{data.instructor[0].first_name}}</span>
+                <span class="text-right" *ngFor="let ci of data.course_info.course_availability">
+                   <span class="badge badge-danger text-right"> {{ci}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
