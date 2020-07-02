@@ -19,15 +19,15 @@
     <div class="col-md-4" *ngFor="let data of courseCatalogsData.entries">
         <div class="card">
             <img src="{{data.course_outline.banner_image.url}}" class="card-img-top" alt="...">
-            <P class="card-img-overlay text-danger">
+            
                 <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice"></ng-container>
                 <ng-template #onlineprice>
-                 <h2> <span class="badge badge-danger text-right">{{data.course_info.cost.online}}</span> </h2>
+                  <span class="price-badge">{{data.course_info.cost.online}}</span> 
                 </ng-template>
                 <ng-template #campusprice>
-                <h2> <span class="badge badge-danger text-right">{{data.course_info.cost.campus}}</span></h2>
+                <span class="price-badge">{{data.course_info.cost.campus}}</span><
                 </ng-template> 
-            </P>
+            
             <div class="card-body">
                 <h5 class="card-title">{{data.course_name}}</h5>
                 <p class="card-text">

@@ -1,22 +1,14 @@
 <div class="main-container">
     <!-- Hero Banner section begin-->
-    <div class="hero-banner">
+    <div class="hero-banner" [style.background-image]='homeData.entry.banner_section.banner_image.url'>
+    <!-- <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData.entry.banner_section.banner_image.url + ') no-repeat 0 0'}"> -->
+     <!-- <img [src]='homeData.entry.banner_section.banner_image.url'> -->
         <div class="banner-overlay">
-            <!--<div class="toolbar" role="banner">
-                <img width="40" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
-                />
-                <span>{{title}}</span>
-                <div class="spacer"></div>
-
-                <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
-                
-              </a>
-            </div>-->
             <div class="banner-content">
                 <div>
-                    <h1>Lorem ipsum dolor sit amet</h1>
-
-                    <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                    <h1>{{homeData.entry.banner_section.heading}}</h1>
+                      <!-- <p>{{homeData.entry.banner_section.brief_description}}</p> -->
+                    <p [innerHTML]="homeData.entry.banner_section.brief_description"></p>
 
                     <div class="btn-container">
                         <div class="search-input">
@@ -26,7 +18,13 @@
                                 <mat-icon matSuffix>search</mat-icon>
                             </mat-form-field>
                         </div>
-                        <div><button mat-raised-button class="btn-transparent btn-white">Get To Know Us <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon></button>
+                        <div>
+                            <a href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}} 
+                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
+                            </a>
+                            <!-- <button href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}} 
+                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -46,11 +44,8 @@
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
 
-                        <h2>Learn. Imrove. Your Way</h2>
-
-
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                        <h2>{{homeData.entry.learn_improve_your_way.learn_improve_your_way_heading}}</h2>
+                        <p>{{homeData.entry.learn_improve_your_way.brief_description}}</p>
                     </div>
                 </div>
             </div>
@@ -62,16 +57,15 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image src="./assets/img/figure-3.png" alt="picture">
-                                <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_image.url' alt="picture">
+                                <mat-card-content>  
+                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_heading}}</h3>
                                     <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        {{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_description}} 
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="#">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[0].block_1.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -82,16 +76,15 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
+                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_image.url' alt="Picture">
                                 <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_heading}}</h3>
                                     <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        {{homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="#">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[1].block_2.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -102,16 +95,15 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_image.url' alt="Picture">
                                 <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_heading}}</h3>
                                     <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        {{homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="#">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[2].block_3.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -128,17 +120,13 @@
                     <div class="s-col s3-padding-tb-16">
                         <div class="img-box-container-rl">
                             <div class="img-container">
-                                <img src="./assets/img/figure-2.png" alt="image">
+                                <img src="{{homeData.entry.marketing_blocks[0].block_1.block_1_image.url}}" alt="image">
                             </div>
                             <div class="img-content-box">
-                                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.</p>
+                                <h2>{{homeData.entry.marketing_blocks[0].block_1.block_1_heading}}</h2>
+                                <p>{{homeData.entry.marketing_blocks[0].block_1.block_1_description}}</p>
                                 <div class="btn-container">
-                                    <button class="btn-orange" mat-button href="#">Learn more</button>
+                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[0].block_1.block_1_button_url}}">Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -159,17 +147,13 @@
                     <div class="s-col s3-padding-tb-16">
                         <div class="img-box-container-lr">
                             <div class="img-container">
-                                <img src="./assets/img/figure-1.png" alt="image">
+                                <img src="{{homeData.entry.marketing_blocks[1].block_2.block_2_image.url}}" alt="image">
                             </div>
                             <div class="img-content-box">
-                                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-                                <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                                    mollit anim id est laborum.</p>
+                                <h2>{{homeData.entry.marketing_blocks[1].block_2.block_2_heading}}</h2>
+                                <p>{{homeData.entry.marketing_blocks[1].block_2.block_2_decription}}</p>
                                 <div class="btn-container">
-                                    <button class="btn-orange" mat-button href="#">Learn more</button>
+                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[1].block_2.block_2_button_url}}">Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -195,18 +179,26 @@
             </div>
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
-                    <div class="s-col s3-padding-tb-16">
+                    <div *ngFor="let c of homeData.entry.new_courses.courses" class="s-col s3-padding-tb-16">
                         <mat-card class="example-card">
                             <mat-card-header>
 
                             </mat-card-header>
                             <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-                                <span class="price-badge">$200</span>
+                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
+                                <span class="price-badge">
+                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice"></ng-container>
+                                    <ng-template #onlineprice>
+                                     {{c.course_info.cost.online}}
+                                    </ng-template>
+                                    <ng-template #campusprice>
+                                    {{c.course_info.cost.campus}}
+                                    </ng-template> 
+                                </span>
                             </div>
 
                             <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                <h4>{{c.course_name}}</h4>
                                 <div class="course-detials-container">
                                     <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
                                     <div><span>Level:</span>
@@ -224,64 +216,7 @@
                             </mat-card-actions>
                         </mat-card>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
-
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
-                                <span class="price-badge">$150</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                    <div><span>Level:</span>
-                                        <mat-icon> bar_chart</mat-icon>
-                                    </div>
-                                    <div><span>Length: 8h 12m</span></div>
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-                                    <div>By: Robert Larry</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
-
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
-                                <span class="price-badge">$190</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                    <div><span>Level:</span>
-                                        <mat-icon> bar_chart</mat-icon>
-                                    </div>
-                                    <div><span>Length: 8h 12m</span></div>
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-                                    <div>By: Doug Jales</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
+                   
                 </div>
             </div>
         </section>
