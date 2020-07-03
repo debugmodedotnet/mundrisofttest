@@ -6,32 +6,33 @@ import { Observable, throwError, observable } from 'rxjs';
 import { tap, catchError, map } from 'rxjs/operators';
 
 @Injectable({
- providedIn:'root'
+  providedIn: 'root'
 })
-export class CourseCatalogService{
+export class CourseCatalogService {
 
-     apiurl ='https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc&locale=en-us&include[]=instructor';
-   // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
-    headers = new HttpHeaders()
+  apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc&locale=en-us&include[]=instructor';
+  // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
+  headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
-    .set("api_key","blt88a7ab59a822374a")
-    .set("access_token","cs79ecf5e7c24502ba9da94fe0")
+    .set("api_key", "blt88a7ab59a822374a")
+    .set("access_token", "cs79ecf5e7c24502ba9da94fe0")
     .set('Accept', 'application/json');
-  
-    httpOptions = {
-      headers: this.headers
-    };
 
-    constructor(private http: HttpClient){
+  httpOptions = {
+    headers: this.headers
+  };
 
-    }
+  constructor(private http: HttpClient) {
 
-    getCourseCatalog():Observable<any> {
-        return this.http.get<any>(this.apiurl,this.httpOptions).pipe(
-            tap(data => {console.log(data)}),
-            catchError(this.handleError)
-          );
-    }
+  }
+
+  getCourseCatalog(): Observable<any> {
+    console.log('in service');
+    return this.http.get<any>(this.apiurl, this.httpOptions).pipe(
+      tap(data => { console.log(data) }),
+      catchError(this.handleError)
+    );
+  }
 
   //   getCourseCatalogTemp():Observable<any> {
   //     let data1 : any = [];
@@ -46,9 +47,9 @@ export class CourseCatalogService{
   // }
 
 
-    private handleError(error: any) {
-        console.error(error);
-        return throwError(error);
-      }
+  private handleError(error: any) {
+    console.error(error);
+    return throwError(error);
+  }
 
 }

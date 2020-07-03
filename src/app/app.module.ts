@@ -23,6 +23,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { FranchiseComponent } from './franchise/franchise.component';
 import { LoginComponent } from './login/login.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
+import {StarRatingComponent} from './shared/star-rating.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { CoursedetailsComponent } from './coursedetails/coursedetails.component'
     CatalogComponent,
     FranchiseComponent,
     LoginComponent,
-    CoursedetailsComponent,    
+    CoursedetailsComponent, 
+    StarRatingComponent
     
   ],
   entryComponents: [

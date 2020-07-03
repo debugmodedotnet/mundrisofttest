@@ -9,7 +9,8 @@ import { tap, catchError, map } from 'rxjs/operators';
 })
 export class HomeService{
 
-     apiurl ='https://cdn.contentstack.io/v3/content_types/home_page/entries/blt93ad0d3e3f401472?environment=poc&include[]=new_courses.courses&locale=en-us&include[]=certification.certification_category&include[]=certification.certifications&include[]=instructors_section.instructor&include[]=partner_relationships_section.partner&include[]=trending_courses.course&include[]=testimonial_section.testimonial&include[]=pathway_block.pathway_block_2.pathway';
+     apiurl = "https://cdn.contentstack.io/v3/content_types/home_page/entries/blt93ad0d3e3f401472?environment=poc&include[]=new_courses.courses&locale=en-us&include[]=certification.certification_category&include[]=certification.certifications&include[]=instructors_section.instructor&include[]=partner_relationships_section.partner&include[]=trending_courses.course&include[]=testimonial_section.testimonial&include[]=pathway_block.pathway_block_2.pathway&include[]=trending_courses.course.instructor&include[]=new_courses.courses.instructor"
+    // apiurl ='https://cdn.contentstack.io/v3/content_types/home_page/entries/blt93ad0d3e3f401472?environment=poc&include[]=new_courses.courses&locale=en-us&include[]=certification.certification_category&include[]=certification.certifications&include[]=instructors_section.instructor&include[]=partner_relationships_section.partner&include[]=trending_courses.course&include[]=testimonial_section.testimonial&include[]=pathway_block.pathway_block_2.pathway';
    // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
     headers = new HttpHeaders()
     .set('Content-Type', 'application/json')

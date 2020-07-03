@@ -1,13 +1,13 @@
 <div class="main-container">
     <!-- Hero Banner section begin-->
     <div class="hero-banner" [style.background-image]='homeData.entry.banner_section.banner_image.url'>
-    <!-- <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData.entry.banner_section.banner_image.url + ') no-repeat 0 0'}"> -->
-     <!-- <img [src]='homeData.entry.banner_section.banner_image.url'> -->
+        <!-- <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData.entry.banner_section.banner_image.url + ') no-repeat 0 0'}"> -->
+        <!-- <img [src]='homeData.entry.banner_section.banner_image.url'> -->
         <div class="banner-overlay">
             <div class="banner-content">
                 <div>
                     <h1>{{homeData.entry.banner_section.heading}}</h1>
-                      <!-- <p>{{homeData.entry.banner_section.brief_description}}</p> -->
+                    <!-- <p>{{homeData.entry.banner_section.brief_description}}</p> -->
                     <p [innerHTML]="homeData.entry.banner_section.brief_description"></p>
 
                     <div class="btn-container">
@@ -19,8 +19,10 @@
                             </mat-form-field>
                         </div>
                         <div>
-                            <a href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}} 
-                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
+                            <a href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button
+                                class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}}
+                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">
+                                    play_circle_filled</mat-icon>
                             </a>
                             <!-- <button href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}} 
                                 <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
@@ -57,15 +59,20 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_image.url' alt="picture">
-                                <mat-card-content>  
+                                <img class="image-circle" mat-card-image
+                                    [src]='homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_image.url'
+                                    alt="picture">
+                                <mat-card-content>
                                     <h3>{{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_heading}}</h3>
                                     <p>
-                                        {{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_description}} 
+                                        {{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[0].block_1.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange"
+                                        href="{{homeData.entry.learn_improve_your_way_blocks[0].block_1.learn_more_link}}">Learn
+                                        more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
+                                            play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -76,7 +83,9 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_image.url' alt="Picture">
+                                <img class="image-circle" mat-card-image
+                                    [src]='homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_image.url'
+                                    alt="Picture">
                                 <mat-card-content>
                                     <h3>{{homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_heading}}</h3>
                                     <p>
@@ -84,7 +93,10 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[1].block_2.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange"
+                                        href="{{homeData.entry.learn_improve_your_way_blocks[1].block_2.learn_more_link}}">Learn
+                                        more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
+                                            play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -95,7 +107,9 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_image.url' alt="Picture">
+                                <img class="image-circle" mat-card-image
+                                    [src]='homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_image.url'
+                                    alt="Picture">
                                 <mat-card-content>
                                     <h3>{{homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_heading}}</h3>
                                     <p>
@@ -103,7 +117,10 @@
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[2].block_3.learn_more_link}}">Learn more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">play_arrow</mat-icon></a>
+                                    <a mat-button class="link-orange"
+                                        href="{{homeData.entry.learn_improve_your_way_blocks[2].block_3.learn_more_link}}">Learn
+                                        more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
+                                            play_arrow</mat-icon></a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -126,7 +143,9 @@
                                 <h2>{{homeData.entry.marketing_blocks[0].block_1.block_1_heading}}</h2>
                                 <p>{{homeData.entry.marketing_blocks[0].block_1.block_1_description}}</p>
                                 <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[0].block_1.block_1_button_url}}">Learn more</a>
+                                    <a class="btn-orange" mat-button
+                                        href="{{homeData.entry.marketing_blocks[0].block_1.block_1_button_url}}">Learn
+                                        more</a>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +172,9 @@
                                 <h2>{{homeData.entry.marketing_blocks[1].block_2.block_2_heading}}</h2>
                                 <p>{{homeData.entry.marketing_blocks[1].block_2.block_2_decription}}</p>
                                 <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[1].block_2.block_2_button_url}}">Learn more</a>
+                                    <a class="btn-orange" mat-button
+                                        href="{{homeData.entry.marketing_blocks[1].block_2.block_2_button_url}}">Learn
+                                        more</a>
                                 </div>
                             </div>
                         </div>
@@ -172,8 +193,7 @@
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
                         <h2>New Course</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                        <p>{{homeData.entry.new_courses.description_text}}</p>
                     </div>
                 </div>
             </div>
@@ -185,38 +205,63 @@
 
                             </mat-card-header>
                             <div class="img-container">
-                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
+                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url'
+                                    alt="Picture">
                                 <span class="price-badge">
-                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice"></ng-container>
+                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
+                                    </ng-container>
                                     <ng-template #onlineprice>
-                                     {{c.course_info.cost.online}}
+                                        {{c.course_info.cost.online}}
                                     </ng-template>
                                     <ng-template #campusprice>
-                                    {{c.course_info.cost.campus}}
-                                    </ng-template> 
+                                        {{c.course_info.cost.campus}}
+                                    </ng-template>
                                 </span>
                             </div>
 
                             <mat-card-content>
                                 <h4>{{c.course_name}}</h4>
                                 <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
+                                    <div>
+                                        <!-- <span>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star_border</mat-icon>
+                                            <mat-icon>star_border</mat-icon>
+                                        </span> -->
+                                        <span><app-starrating [rating]='c.course_info.star_rating'></app-starrating></span>
+                                    </div>
+                                    <!-- need to be fixed the chart  -->
                                     <div><span>Level:</span>
                                         <mat-icon> bar_chart</mat-icon>
                                     </div>
-                                    <div><span>Length: 8h 12m</span></div>
+                                    <div>
+                                        <ng-container
+                                            *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                        </ng-container>
+                                        <ng-template #onlinelength>
+                                            <span>{{c.course_info.course_length.online}}</span>
+                                        </ng-template>
+                                        <ng-template #campuslength>
+                                            <span>{{c.course_info.course_length.campus}}</span>
+                                        </ng-template>
+                                    </div>
                                 </div>
                             </mat-card-content>
                             <mat-card-actions>
                                 <div class="card-btn-wrapper">
-                                    <div>By: Dan Ramers</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
+                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
+                                    <div>
+                                        <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
+                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" href="#">{{b}}</a>
+                                        <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
+                                   </div>
+                                 </div>
                             </mat-card-actions>
                         </mat-card>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
@@ -227,100 +272,82 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <h2>Trending Courses</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                        <h2>Trneding Course</h2>
+                        <p>{{homeData.entry.trending_courses.description_text}}</p>
                     </div>
                 </div>
             </div>
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
-                    <div class="s-col s3-padding-tb-16">
+                    <!-- for new course api returns courses and for trending courses returns course. It needs to be consistent in the API -->
+                    <div *ngFor="let c of homeData.entry.trending_courses.course" class="s-col s3-padding-tb-16">
                         <mat-card class="example-card">
                             <mat-card-header>
 
                             </mat-card-header>
                             <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
-                                <span class="price-badge">$120</span>
+                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url'
+                                    alt="Picture">
+                                <span class="price-badge">
+                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
+                                    </ng-container>
+                                    <ng-template #onlineprice>
+                                        {{c.course_info.cost.online}}
+                                    </ng-template>
+                                    <ng-template #campusprice>
+                                        {{c.course_info.cost.campus}}
+                                    </ng-template>
+                                </span>
                             </div>
 
                             <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                <h4>{{c.course_name}}</h4>
                                 <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+                                    <div>
+                                        <!-- <span>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star</mat-icon>
+                                            <mat-icon>star_border</mat-icon>
+                                            <mat-icon>star_border</mat-icon>
+                                        </span> -->
+                                        <span><app-starrating [rating]='c.course_info.star_rating'></app-starrating></span>
+                                    </div>
+                                    <!-- need to be fixed the chart  -->
                                     <div><span>Level:</span>
                                         <mat-icon> bar_chart</mat-icon>
                                     </div>
-                                    <div><span>Length: 8h 12m</span></div>
+                                    <div>
+                                        <ng-container
+                                            *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                        </ng-container>
+                                        <ng-template #onlinelength>
+                                            <span>{{c.course_info.course_length.online}}</span>
+                                        </ng-template>
+                                        <ng-template #campuslength>
+                                            <span>{{c.course_info.course_length.campus}}</span>
+                                        </ng-template>
+                                    </div>
                                 </div>
                             </mat-card-content>
                             <mat-card-actions>
                                 <div class="card-btn-wrapper">
-                                    <div>By: Dan Ramers</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Online</a></div>
-                                </div>
+                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
+                                    <div>
+                                        <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
+                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" href="#">{{b}}</a>
+                                        <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
+                                   </div>
+                                 </div>
                             </mat-card-actions>
                         </mat-card>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
 
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-                                <span class="price-badge">$340</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon></span></div>
-                                    <div><span>Level:</span>
-                                        <mat-icon> bar_chart</mat-icon>
-                                    </div>
-                                    <div><span>Length: 8h 12m</span></div>
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-                                    <div>By: Robert Larry</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
-
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
-                                <span class="price-badge">$420</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                    <div><span>Level:</span>
-                                        <mat-icon> bar_chart</mat-icon>
-                                    </div>
-                                    <div><span>Length: 8h 12m</span></div>
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-                                    <div>By: Doug Jales</div>
-                                    <div><a mat-button class="btn-orange rounded" href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
                 </div>
             </div>
+            <!-- <div class="s-container">
+                
+            </div> -->
         </section>
         <!-- Trending Courses section end-->
 
@@ -329,646 +356,846 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <h2>Certificatons at New Horizons</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h2>{{homeData.entry.certification_at_new_horizons.heading}}</h2>
+                        <p>{{homeData.entry.certification_at_new_horizons.description_text}}</p>
                     </div>
                 </div>
             </div>
 
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
-                        <mat-tab-group class="mat-tab-container" animationDuration="2000ms">
-                            <mat-tab label="Category 1">
-                                <div class="s-container">
-                                    <div class="s-row ">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
+           
 
-                                                <mat-card class="example-card certification-card">
+      <!-- certification  -->
 
-                                                    <mat-card-content>
-                                                        <span class="card-badge">New</span>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 3 Days</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
+      <div class="s-container">
+        <div class="s-row s3-padding-lr-30">
+            <div class="s-col">
+                <mat-tab-group class="mat-tab-container" animationDuration="2000ms">
+                    <mat-tab label="Category 1">
+                        <div class="s-container">
+                            <div class="s-row ">
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+
+                                        <mat-card class="example-card certification-card">
+
+                                            <mat-card-content>
+                                                <span class="card-badge">New</span>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
                                                         </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
+                                                        <div><span>Length: 3 Days</span></div>
+                                                    </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
                                                         </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-
-                                                    <mat-card-content>
-                                                        <span class="card-badge">Top Rated</span>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 1wk</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
                                     </div>
-
-                                    <div class="s-row ">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-
-                                                    <mat-card-content>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 3 Days</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-
-                                                    <mat-card-content>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 1wk</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="s-row ">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-
-                                                    <mat-card-content>
-                                                        <span class="card-badge">Trending</span>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 3 Days</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-
-                                                    <mat-card-content>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 1wk</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                 </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+                                        <mat-card class="example-card certification-card">
 
+                                            <mat-card-content>
+                                                <span class="card-badge">Top Rated</span>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                            </mat-tab>
-                            <mat-tab label="Category 2">
-                                <div class="s-container">
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
                                                         </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
+                                                        <div><span>Length: 1wk</span></div>
                                                     </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
                                     </div>
-
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-
                                 </div>
+                            </div>
 
-                            </mat-tab>
-                            <mat-tab label="Category 3">
-                                <div class="s-container">
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
+                            <div class="s-row ">
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+                                        <mat-card class="example-card certification-card">
 
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <mat-card-content>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
                                                         </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
+                                                        <div><span>Length: 3 Days</span></div>
                                                     </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
                                     </div>
-
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-
-                                    <div class="s-row">
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="s-col s3-padding-tb-16">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-
                                 </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+                                        <mat-card class="example-card certification-card">
 
-                            </mat-tab>
-                        </mat-tab-group>
-                    </div>
-                </div>
+                                            <mat-card-content>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
+                                                        </div>
+                                                        <div><span>Length: 1wk</span></div>
+                                                    </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="s-row ">
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+                                        <mat-card class="example-card certification-card">
+
+                                            <mat-card-content>
+                                                <span class="card-badge">Trending</span>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
+                                                        </div>
+                                                        <div><span>Length: 3 Days</span></div>
+                                                    </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <div class="card-wrapper">
+                                        <mat-card class="example-card certification-card">
+
+                                            <mat-card-content>
+                                                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                                    do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                            </mat-card-content>
+                                            <mat-card-actions class="card-btn-group">
+                                                <div>
+                                                    <div class="course-detials-container">
+                                                        <div><span>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                                <mat-icon>star_border</mat-icon>
+                                                            </span></div>
+                                                        <div><span>Level:</span>
+                                                            <mat-icon> bar_chart</mat-icon>
+                                                        </div>
+                                                        <div><span>Length: 1wk</span></div>
+                                                    </div>
+                                                    <div class="card-btn-wrapper">
+                                                        <div>By: Alex Mills</div>
+                                                        <div><a mat-button class="btn-orange rounded"
+                                                                href="#">Campus</a>
+                                                            <a mat-button class="btn-orange rounded"
+                                                                href="#">Online</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="text-center"><button
+                                                            mat-raised-button>Explore</button></div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </mat-tab>
+                    <mat-tab label="Category 2">
+                        <div class="s-container">
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </mat-tab>
+                    <mat-tab label="Category 3">
+                        <div class="s-container">
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                            <div class="s-row">
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 3 Days</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                                <div class="s-col s3-padding-tb-16">
+                                    <mat-card class="example-card certification-card">
+
+                                        <mat-card-content>
+                                            <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod
+                                                tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                                        </mat-card-content>
+                                        <mat-card-actions class="card-btn-group">
+                                            <div>
+                                                <div class="course-detials-container">
+                                                    <div><span>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                            <mat-icon>star_border</mat-icon>
+                                                        </span></div>
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div><span>Length: 1wk</span></div>
+                                                </div>
+                                                <div class="card-btn-wrapper">
+                                                    <div>By: Alex Mills</div>
+                                                    <div><a mat-button class="btn-orange rounded"
+                                                            href="#">Campus</a>
+                                                        <a mat-button class="btn-orange rounded"
+                                                            href="#">Online</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="text-center"><button
+                                                        mat-raised-button>Explore</button></div>
+                                            </div>
+                                        </mat-card-actions>
+                                    </mat-card>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </mat-tab>
+                </mat-tab-group>
             </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!-- end certification  -->
+
+            
+
 
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <div class="text-center"><a mat-button class="link-orange" href="#"><span>See All</span><mat-icon aria-label="Example play_arrow icon">play_arrow</mat-icon></a></div>
+                        <div class="text-center"><a mat-button class="link-orange" href="#"><span>See All</span>
+                                <mat-icon aria-label="Example play_arrow icon">play_arrow</mat-icon>
+                            </a></div>
                     </div>
                 </div>
             </div>
@@ -981,21 +1208,23 @@
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
                         <div>
-                            <p>What are your goals?</p>
-                            <h2 class="heading-orange">UpSkill Your Pathway</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat
+                            <p>{{homeData.entry.pathway_block[0].pathway_block_1.heading}}</p>
+                            <h2 class="heading-orange">{{homeData.entry.pathway_block[0].pathway_block_1.sub_heading}}</h2>
+                            <p>
+                                {{homeData.entry.pathway_block[0].pathway_block_1.description}}
                             </p>
                             <div class="btn-container">
-                                <button mat-raised-button class="btn-orange">View All Patthway</button>
+                                <a mat-raised-button href="{{homeData.entry.pathway_block[0].pathway_block_1.button_url}}" class="btn-orange">{{homeData.entry.pathway_block[0].pathway_block_1.button_text}}</a>
                             </div>
                         </div>
                     </div>
                     <div class="s-col">
-                        <h3 class="text-center">I want to be a..</h3>
+                        <h3 class="text-center">{{homeData.entry.pathway_block[1].pathway_block_2.heading}}</h3>
                         <div class="pathway-container">
-                            <div class="pathway-card">
+                            <div class="pathway-card" *ngFor="let p of homeData.entry.pathway_block[1].pathway_block_2.pathway ">
+                                <p>{{p.heading}}</p>
+                            </div>
+                            <!-- <div class="pathway-card">
                                 <p>JOB TITLE/PATHWAY</p>
                             </div>
                             <div class="pathway-card">
@@ -1009,10 +1238,7 @@
                             </div>
                             <div class="pathway-card">
                                 <p>JOB TITLE/PATHWAY</p>
-                            </div>
-                            <div class="pathway-card">
-                                <p>JOB TITLE/PATHWAY</p>
-                            </div>
+                            </div> -->
                         </div>
                         <h4 class="text-center">Select a Pathway</h4>
                     </div>
@@ -1026,19 +1252,10 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <h2 class="client-heading">We value our partner relationships</h2>
+                        <h2 class="client-heading">{{homeData.entry.partner_relationships_section.heading}}</h2>
                         <div class="client-container">
-                            <div class="client-logo">
-                                <img src="./assets/client-logo/CertNexus.png" alt="CertNexus" />
-                            </div>
-                            <div class="client-logo">
-                                <img src="./assets/client-logo/Cisco.png" alt="Cisco" />
-                            </div>
-                            <div class="client-logo">
-                                <img src="./assets/client-logo/MicroPartner.png" alt="Microsoft Partner" />
-                            </div>
-                            <div class="client-logo">
-                                <img src="./assets/client-logo/VMWare.png" alt="VMWare" />
+                            <div class="client-logo" *ngFor="let partner of homeData.entry.partner_relationships_section.partner">
+                                <img [src]="partner.image_logo.url" alt="{{partner.image_logo.title}}" />
                             </div>
                         </div>
                     </div>
@@ -1061,7 +1278,8 @@
                         <mat-list role="list">
                             <mat-list-item role="listitem"><a href="#">Lorem ipsum dolor sit amet</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Consectetur adipiscing elit</a></mat-list-item>
-                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a></mat-list-item>
+                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a>
+                            </mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Dolore magna aliqua</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Ut enim ad minim veniams</a></mat-list-item>
                         </mat-list>
@@ -1071,7 +1289,8 @@
                         <mat-list role="list">
                             <mat-list-item role="listitem"><a href="#">Lorem ipsum dolor sit amet</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Consectetur adipiscing elit</a></mat-list-item>
-                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a></mat-list-item>
+                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a>
+                            </mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Dolore magna aliqua</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Ut enim ad minim veniams</a></mat-list-item>
                         </mat-list>
@@ -1080,7 +1299,8 @@
                         <mat-list role="list">
                             <mat-list-item role="listitem"><a href="#">Lorem ipsum dolor sit amet</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Consectetur adipiscing elit</a></mat-list-item>
-                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a></mat-list-item>
+                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a>
+                            </mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Dolore magna aliqua</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Ut enim ad minim veniams</a></mat-list-item>
                         </mat-list>
@@ -1089,7 +1309,8 @@
                         <mat-list role="list">
                             <mat-list-item role="listitem"><a href="#">Lorem ipsum dolor sit amet</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Consectetur adipiscing elit</a></mat-list-item>
-                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a></mat-list-item>
+                            <mat-list-item role="listitem"><a href="#">Sed do eiusmod tempor incididunt</a>
+                            </mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Dolore magna aliqua</a></mat-list-item>
                             <mat-list-item role="listitem"><a href="#">Ut enim ad minim veniams</a></mat-list-item>
                         </mat-list>
@@ -1098,6 +1319,6 @@
             </div>
         </footer>
         <!-- Site Footer -->
-       
+
     </div>
 </div>
