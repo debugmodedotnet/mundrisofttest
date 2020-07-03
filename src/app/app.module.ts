@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +22,7 @@ import { RegisterDialogComponent } from './register-dialog/register-dialog.compo
 import { CatalogComponent } from './catalog/catalog.component';
 import { FranchiseComponent } from './franchise/franchise.component';
 import { LoginComponent } from './login/login.component';
+import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { LoginComponent } from './login/login.component';
     RegisterDialogComponent,
     CatalogComponent,
     FranchiseComponent,
-    LoginComponent,    
+    LoginComponent,
+    CoursedetailsComponent,    
     
   ],
   entryComponents: [
@@ -53,6 +56,8 @@ import { LoginComponent } from './login/login.component';
     MatCheckboxModule,
     MatPaginatorModule,
     MatSelectModule,
+    MatExpansionModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
