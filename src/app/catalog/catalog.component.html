@@ -6,7 +6,8 @@
                 <div>
                     <h1>Lorem ipsum dolor sit amet</h1>
 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur.
 
                     </p>
 
@@ -30,18 +31,18 @@
         <section class="stb-padding s3-padding-tb-70">
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
-                    
+
                     <div class="s-col">
                         <div class="view-btn-container">
-                                <div>
-                                        <span>Breadcrumb item</span> / <span class="txt-orange">Breadcrumb item</span>
-                                </div>
                             <div>
-                                    <button mat-raised-button class="btn-orange btn-active">Grid View</button>
-                                    <button mat-raised-button class="">List View</button>
+                                <span>Breadcrumb item</span> / <span class="txt-orange">Breadcrumb item</span>
                             </div>
-                            
-                            
+                            <div>
+                                <button mat-raised-button class="btn-orange btn-active">Grid View</button>
+                                <button mat-raised-button class="">List View</button>
+                            </div>
+
+
                         </div>
                     </div>
                 </div>
@@ -50,30 +51,30 @@
                         <form>
                             <div class="select-container">
                                 <div>
-                                    
+
                                 </div>
                                 <div>
-                                        <div class="search-box-container">
-                                                <div class="search-input">
-                                                    <mat-form-field appearance="outline">
-                                                        <mat-label>Search a topic, path, course</mat-label>
-                                                        <input matInput placeholder="Search a topic, path, course">
-                                                        <mat-icon matSuffix>search</mat-icon>
-                                                    </mat-form-field>
-                                                </div>
-                                            </div>
+                                    <div class="search-box-container">
+                                        <div class="search-input">
+                                            <mat-form-field appearance="outline">
+                                                <mat-label>Search a topic, path, course</mat-label>
+                                                <input matInput placeholder="Search a topic, path, course">
+                                                <mat-icon matSuffix>search</mat-icon>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div>
-                                        <div class="select-container-btn">
-                                                <button mat-raised-button class="btn-orange">Courses</button>
-                                                <button mat-raised-button class="">Certifications</button>
-                                                <button mat-raised-button class="">Pathways</button>
-                                            </div>
+                                    <div class="select-container-btn">
+                                        <button mat-raised-button class="btn-orange">Courses</button>
+                                        <button mat-raised-button class="">Certifications</button>
+                                        <button mat-raised-button class="">Pathways</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -89,110 +90,58 @@
             </div>
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
-                    <div class="s-col s3-padding-tb-16">
+                    <div class="s-col s3-padding-tb-16" *ngFor="let data of courseCatalogsData.entries">
                         <mat-card class="example-card">
                             <mat-card-header>
 
                             </mat-card-header>
                             <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-                                <span class="price-badge">$200</span>
+                                <img class="image-square" mat-card-image src="{{data.course_outline.banner_image.url}}"
+                                    alt="Picture">
+                                <!-- <span class="price-badge">$200</span> -->
+                                <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice">
+                                </ng-container>
+                                <ng-template #onlineprice>
+                                    <span class="price-badge">{{data.course_info.cost.online}}</span>
+                                </ng-template>
+                                <ng-template #campusprice>
+                                    <span class="price-badge">{{data.course_info.cost.campus}}</span>
+                                    < </ng-template>
                             </div>
 
                             <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                <h2>{{data.course_name}}</h2>
+                                <h4>{{data.brief_description}}</h4>
                                 <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
+                                    <div>
+                                        <span>
+                                            <app-starrating [rating]='data.course_info.star_rating'></app-starrating>
+                                        </span></div>
                                 </div>
+                                <span>{{data.course_info.level}}</span>
+                                <ng-container
+                                    *ngIf="data.course_info.course_length.online; then onlinelength else campuslength">
+                                </ng-container>
+                                <ng-template #onlinelength>
+                                    <span>{{data.course_info.course_length.online}}</span>
+                                </ng-template>
+                                <ng-template #campuslength>
+                                    <span>{{data.course_info.course_length.campus}}</span>
+                                </ng-template>
                             </mat-card-content>
                             <mat-card-actions>
                                 <div class="card-btn-wrapper">
+                                    <span>By : {{data.instructor[0].first_name}}</span>
 
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
+                                    <div>
+                                        <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-orange rounded" href="#">{{ci}}</a>
+                                        <!-- <a mat-button class="btn-orange rounded" href="#">Online</a> -->
+                                    </div>
                                 </div>
                             </mat-card-actions>
                         </mat-card>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
 
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
-                                <span class="price-badge">$150</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
-
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
-                                <span class="price-badge">$190</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
-
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
-                                <span class="price-badge">$190</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
-                    </div>
                 </div>
             </div>
 
@@ -216,41 +165,41 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                            <ul>
-                                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#">Consectetur adipiscing elit</a></li>
-                                    <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
-                                    <li><a href="#">Dolore magna aliqua</a></li>
-                                    <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
-                                  </ul>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Consectetur adipiscing elit</a></li>
+                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                            <li><a href="#">Dolore magna aliqua</a></li>
+                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
+                        </ul>
 
                     </div>
                     <div class="s-col">
-                            <ul>
-                                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#">Consectetur adipiscing elit</a></li>
-                                    <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
-                                    <li><a href="#">Dolore magna aliqua</a></li>
-                                    <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
-                                  </ul>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Consectetur adipiscing elit</a></li>
+                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                            <li><a href="#">Dolore magna aliqua</a></li>
+                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
+                        </ul>
                     </div>
                     <div class="s-col">
-                            <ul>
-                                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#">Consectetur adipiscing elit</a></li>
-                                    <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
-                                    <li><a href="#">Dolore magna aliqua</a></li>
-                                    <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
-                                  </ul>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Consectetur adipiscing elit</a></li>
+                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                            <li><a href="#">Dolore magna aliqua</a></li>
+                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
+                        </ul>
                     </div>
                     <div class="s-col">
-                            <ul>
-                                    <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                                    <li><a href="#">Consectetur adipiscing elit</a></li>
-                                    <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
-                                    <li><a href="#">Dolore magna aliqua</a></li>
-                                    <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
-                                  </ul>
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Consectetur adipiscing elit</a></li>
+                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                            <li><a href="#">Dolore magna aliqua</a></li>
+                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseCatalogService } from '../shared/coursecatalog.service';
 
 interface Food {
   value: string;
@@ -16,11 +17,18 @@ interface Car {
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
-
-  constructor() { }
+ 
+  courseCatalogsData = [];
+  constructor(private coursecatalogService: CourseCatalogService) { }
 
   ngOnInit(): void {
-  }
+    this.coursecatalogService.getCourseCatalog().subscribe(
+      (data) => {
+        this.courseCatalogsData = data; 
+        console.log(this.courseCatalogsData);
+      }
+    );
+  };
 
   selectedValue: string;
   selectedCar: string;

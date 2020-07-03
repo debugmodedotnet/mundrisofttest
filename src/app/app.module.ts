@@ -21,7 +21,7 @@ import { RegisterDialogComponent } from './register-dialog/register-dialog.compo
 import { CatalogComponent } from './catalog/catalog.component';
 import { FranchiseComponent } from './franchise/franchise.component';
 import { LoginComponent } from './login/login.component';
-
+import {StarRatingComponent} from './shared/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { LoginComponent } from './login/login.component';
     CatalogComponent,
     FranchiseComponent,
     LoginComponent,    
+    StarRatingComponent
     
   ],
   entryComponents: [
