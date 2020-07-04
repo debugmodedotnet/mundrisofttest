@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatAccordion } from '@angular/material/expansion';
 
+
 @Component({
   selector: 'app-coursedetails',
   templateUrl: './coursedetails.component.html',
@@ -12,7 +13,9 @@ export class CoursedetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  //Accordion
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
+  //Owl Carousel
+  
 }

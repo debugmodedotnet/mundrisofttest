@@ -15,6 +15,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -24,6 +25,8 @@ import { FranchiseComponent } from './franchise/franchise.component';
 import { LoginComponent } from './login/login.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import {StarRatingComponent} from './shared/star-rating.component';
+import { FindCampusComponent } from './find-campus/find-campus.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -35,12 +38,15 @@ import {StarRatingComponent} from './shared/star-rating.component';
     FranchiseComponent,
     LoginComponent,
     CoursedetailsComponent, 
-    StarRatingComponent
+    StarRatingComponent, 
+    FindCampusComponent, 
+    TestComponent,
     
   ],
   entryComponents: [
     RegisterDialogComponent,
     LoginComponent,
+    FindCampusComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +65,7 @@ import {StarRatingComponent} from './shared/star-rating.component';
     MatPaginatorModule,
     MatSelectModule,
     MatExpansionModule,
+    CarouselModule,
    
   ],
   providers: [],

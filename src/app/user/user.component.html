@@ -1,48 +1,74 @@
 <div class="register-form">
-    <h1>Create Your Acccount</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-    </p>
-    <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form">
-        <div class="frm-field-group">
-            <div class="form-field">
-                <div class="frm-input">
+        <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                    <h1>Create Your Acccount</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="frm-input">
                     <input formControlName='full_name' type="text" placeholder="Full Name *" />
-                    <div class="alert  alert-danger" *ngIf=" !userRegistrationForm.get('full_name').valid && userRegistrationForm.get('full_name').touched">
+                    
+                    <div class="alert alert-danger" *ngIf=" !userRegistrationForm.get('full_name').valid && userRegistrationForm.get('full_name').touched">
                         Name is required
-                    </div>
-                </div>
-                <div class="frm-input">
+                    </div></div>
+            </div>
+            <div class="col-sm-6">
+                    <div class="frm-input">
                     <input formControlName='email_address' type="text" placeholder="Email *" />
+                    
                     <div class="alert  alert-danger" *ngIf="userRegistrationForm.get('email_address').hasError('required') && userRegistrationForm.get('email_address').touched">
                         Email is required
+                    </div></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                    <div class="frm-input">
+                            <input formControlName='password' type="password" placeholder="Enter Password" />
+                        </div>
+            </div>
+            <div class="col-sm-6">
+                    <div class="frm-input">
+                            <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
+                        </div>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-12">
+                        <p>If you would like to explore campus courses near you, please provide your zipcode.</p>
+                        <div class="zipcode">
+                
+                            <div class="frm-input">
+                                <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-12">
+                            <p>Already have an account? <strong>Login here</strong></p>
+                            <div class="checkbox-container">                                
+                                    <span><input type="checkbox" class="input-checkbox"></span> Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                
+                            </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-field">
-                <div class="frm-input">
-                    <input formControlName='password' type="password" placeholder="Enter Password" />
-                </div>
-                <div class="frm-input">
-                    <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
-                </div>
-            </div>
-        </div>
-        <p>If you would like to explore campus courses near you, please provide your zipcode.</p>
-        <div class="zipcode">
+                <div class="row">
+                        <div class="col-12">
+                                <div class="frm-btn-container">
+                                        <button mat-raised-button color="warn" [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+                                    </div>
+                        </div>
+                    </div>
 
-            <div class="frm-input">
-                <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
-            </div>
-        </div>
-        <p>Already have an account? <strong>Login here</strong></p>
-        <div class="checkbox-container">
-            <!--<section class="example-section">
-                <mat-checkbox class="example-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit</mat-checkbox>
-            </section>-->
-        </div>
-        <div class="frm-btn-container">
-            <button mat-raised-button color="warn" [disabled]='userRegistrationForm.invalid'>Start Learning</button>
-        </div>
+    </div>
+          
+        
     </form>
     <div *ngIf='registerUserFlag'>
         <p>Student Created Sucessfully with Id {{resData.uid}} and title {{resData.title}}</p>

@@ -88,15 +88,25 @@ margin:0 auto;
 .s-container .s-row .s-col.col-right-panel{
     flex: 1;
 }
-.left-panel{    
-    
+.select-container{
+    display: table;
+    width:100%;
+}
+.select-container select{
+    padding: 14px 14px;
+    border:1px solid #eeeeee;
+    border-radius:4px;
+}
+.select-container > div{
+    display: table-cell;
+    padding-right: 5px;   
 }
 .right-panel{    
     border:1px solid #cccccc;
 }
 .right-panel .course-info-wrapper{
     background-color: #f4f4f4;
-    padding: 25px;
+    padding: 30px;
 }
 .right-panel .course-outline-wrapper h2{
     padding: 25px 25px 0px 25px;
@@ -222,7 +232,8 @@ margin:0 auto;
     display: block;    
 }
 .select-container-btn{
-    text-align: right;    
+    text-align: right;
+    margin: 20px 0px;    
 }
 .catalog-page .select-container-btn button, .catalog-page .view-btn-container button{    
     border-radius:17px;
@@ -257,17 +268,10 @@ margin:0 auto;
     width:150px;
 }
 .view-btn-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: right; 
     margin: 0px 0px 30px 0px;
 }
-.view-btn-container div{
-    width:100%;    
-}
-.view-btn-container div:last-child{
-   text-align: right;  
-}
+
 .btn-active{
     position: relative;
     z-index: 1;
@@ -307,6 +311,30 @@ margin:0 auto;
 .hero-banner{
     background-image: url('/assets/img/hero-banner.jpg');
     background-size: cover;    
+}
+.find-campus-container{
+    text-align: center;
+}
+.find-campus-container .mat-form-field{
+    width:60%;
+}
+.find-campus-container .map-location{
+    font-size: 20px;
+    font-weight: 500;
+}
+.find-campus-container .btn-wrapper{
+    margin:10px 0px 0px 0px;
+}
+.find-campus-container .btn-wrapper button{
+    padding:5px 25px;
+    width:50%;
+}
+.map-container{
+    margin: 20px auto;
+    width:80%;
+}
+.map-container img{
+    width:100%;   
 }
 .hero-banner .banner-overlay{
     background-color: rgba(245, 75, 30, 0.7);
@@ -397,11 +425,15 @@ margin:0 auto;
 }
 
 .course-detials-container{
-    display:flex;
-    font-size:12px;
+    display:table;
+    font-size:11px;
     width:100%;
     align-items: center;
-    margin:10px 0px;
+    margin:10px -5px;
+}
+.course-detials-container > div{
+    display:table-cell;
+    padding:5px;
 }
 .course-details-info, .course-detials-container .card-btn-wrapper{
     margin-bottom:25px;
@@ -419,9 +451,7 @@ margin:0 auto;
 .course-details-info .course-info div:last-child{
     width:55%;
 }
-.course-detials-container div{    
-    width:100%;    
-}
+
 .course-detials-container .mat-icon{
     width:15px;
     height:15px;
@@ -433,16 +463,22 @@ margin:0 auto;
     font-size:15px;
 }
 .card-btn-wrapper{
-    display: flex;
+    display: table;
     align-items: center;
     font-size:12px;
-    margin: 0px 0px;        
+    margin: 0px 0px;
+    width:100%;        
 }
-.card-btn-wrapper div{
-    flex:auto; 
+.card-btn-wrapper > div{
+    display: table-cell; 
 }
-.card-btn-wrapper div .mat-button.rounded{    
-    float:right;  
+.card-btn-wrapper > div .mat-button{
+    line-height: 30px;
+    border-radius:15px!important;
+    text-align: right;
+}
+.card-btn-wrapper > div:last-child{    
+    text-align: right;  
 }
 .course-btn-wrapper{
     display: flex;
@@ -577,11 +613,34 @@ section, footer{
     border:0px;
 }
 .example-card{
-    margin:0px 15px;
-    box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 0),;
+    margin:0px 0px;
+    box-shadow:0px 0px 0px 0px rgba(0, 0, 0, 0);
 }
 .img-container{
     position: relative;
+       
+}
+.course-price{
+    position: relative;
+    margin-bottom: 20px; 
+}
+.course-price .price-badge{
+    position: absolute;
+    display: inline-block;
+    padding: 5px 15px;
+    color:#ffffff;
+    background-color: #f54b1e;
+    top: -15px;
+    right: 15px;
+    border-radius:5px;
+}
+.card-wrapper .img-container{
+    width:100%;
+    height: 150px;
+    overflow: hidden;    
+}
+.card-wrapper .img-container img{
+    width:100%;
 }
 .img-container .price-badge{
     position: absolute;
@@ -589,12 +648,16 @@ section, footer{
     padding: 5px 15px;
     color:#ffffff;
     background-color: #f54b1e;
-    bottom: 10px;
+    bottom: -15px;
     right: 15px;
     border-radius:5px;
 }
 .card-wrapper{
     position: relative;
+    margin-bottom:20px;
+}
+.card-wrapper h3{
+    line-height: 20px;
 }
 .card-wrapper .card-badge{
     position: absolute;
@@ -606,7 +669,7 @@ section, footer{
     right: -20px;
     border-radius:15px;
 }
-.card-wrapper .mat-button:hover{
+.card-wrapper .mat-button,  .card-wrapper .mat-button:hover{
     color:#ffffff;
 }
 .card-wrapper .mat-card{
@@ -628,9 +691,10 @@ section, footer{
   .mat-tab-container .s-container{
     max-width:960px;
   }
-
-  
- .mat-card.certification-card:not([class*=mat-elevation-z]) {
+  .mat-card-image:first-child{
+      margin:0px;
+  }
+.mat-card.certification-card:not([class*=mat-elevation-z]) {
     box-shadow: 0px 5px 3px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .certification-card h3{
@@ -657,6 +721,8 @@ section, footer{
     border-radius:100px;
     margin: 0px auto 20px auto;
     display:block;
+    box-shadow: 0px 8px 10px 3px #cccccc;
+    border: 2px solid #cccccc;
 }
 .icon-circle{
     width: 80px;
@@ -691,16 +757,18 @@ section, footer{
     color:#f54b1e;
 }
 .pathway-container{
-    display:block;
-    align-items: bottom;
-    padding-bottom:15px;
+    display:block;       
+    padding-bottom:15px;    
+}
+.clearfix{
+    clear: both;
 }
 .pathway-container .pathway-card{
     height:50px;
-    width:140px;
+    width:30.5%;
     font-size:12px;
     text-align: center;
-    float:left;
+    display: inline-block;
     border:1px solid #f54b1e;
     border-top:15px solid #f54b1e;
     border-radius:5px;
@@ -811,7 +879,7 @@ svg#rocket-smoke {
   right: 180px;
   z-index: -10;
 }
-
+/*
 a,
 a:visited,
 a:hover {
@@ -821,8 +889,17 @@ a:hover {
 
 a:hover {
   color: #125699;
+}*/
+footer a{
+    color: #888888;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 200;
 }
-
+footer a:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
 .terminal {
   position: relative;
   width: 80%;
@@ -925,26 +1002,35 @@ svg#clouds {
   z-index: -10;
   width: 1920px;
 }
+.accordion-container{
+    margin-top:70px;
+}
+.no-margin-lr{
+    margin-left: -15px;
+    margin-right:-15px;
+}
 .mat-dialog-container{
     min-width:550px;
-    background-color: #f4f4f4;
+   
+}
+.course-details-page .content{
+    margin-top:0px;
 }
 /*Form*/
 .register-form{
     text-align: center;
     width:80%;
     margin: 0 auto;
-    padding: 80px 50px;
-    background-color: #f4f4f4;
+    padding: 80px 50px;    
 }
 .login-form{
     text-align: center;
-    width:80%;
-    margin: 0 auto;
-    padding: 30px 30px;
-    background-color: #f4f4f4;
+    width:90%;
+    margin: 0 auto;       
 }
-
+.login-form .form-field .frm-input input{
+    width:100%;
+}
 .register-form .frm-btn-container{
     text-transform: uppercase;    
     width:50%;
@@ -992,10 +1078,37 @@ svg#clouds {
 .login-form .form-field .frm-input, .login-form .zipcode .frm-input{
     height:auto;
 }
+.campus-location{
+    display: table;
+    width:70%;
+    margin:0 auto;
+}
+.campus-location > div{
+    display: table-cell;
+    padding:10px 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+.location-pointer{
+    width:15px;
+    height:15px;
+    background-color:#F85D36;
+    border-radius:15px;
+    display: inline-block;
+    margin:0px 10px 0px 0px;
+}
+.location-name{
+    font-size: 25px;
+    color:#f54b1e;
+}
 .alert-danger{
     color:#ff0000;
-    padding-top:3px;
+    padding:3px 0px 0px 0px;
     font-size: 12px;
+    border:0;
+    background-color:transparent;
+    margin-top: -15px;
+    text-align: left;
 }
 .zipcode .frm-input{
     margin:0px 10px 20px 10px;
@@ -1003,14 +1116,15 @@ svg#clouds {
     width:30%;
     margin:0 auto;
 }
-.form-field .frm-input input{
+.frm-input input{
     padding:15px 20px;    
     border:1px solid #cccccc;    
     text-align: left;
-    width:90%;
+    width:100%;
     margin: 0 auto;
     background-color: #eeeeee;
     border-radius:4px;
+    margin-bottom: 15px;
 }
 .zipcode, .frm-field-group{
     margin:20px auto;    
@@ -1019,7 +1133,7 @@ svg#clouds {
     padding:15px 20px;    
     border:1px solid #cccccc;    
     text-align: left;
-    width:87%;
+    width:100%;
     border-radius:4px;   
 }
 

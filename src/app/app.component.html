@@ -12,11 +12,14 @@
     <a aria-label="Home"  routerLink="/home">Home</a>    
     <a aria-label="Catalog"  routerLink="/catalog">Catalog</a>
     <a aria-label="Franchise"  routerLink="/franchise">Franchise</a>
+    <a aria-label="Test"  routerLink="/test">Test</a>
     <div class="spacer"></div>
 
     <a aria-label="Course" routerLink="/course">Course</a>
     <a aria-label="Course Details"  routerLink="/course-details">Course Details</a>
-    <a aria-label="Register Student" routerLink="/user">Register Student</a>      
+    <a aria-label="Register Student" routerLink="/user">Register Student</a>
+         
+    <button mat-button (click)="openDialogFindCampus()"><mat-icon>place</mat-icon></button>
     <button mat-button (click)="openDialog()">Sign Up</button>
     <button mat-button (click)="openDialogLogin()">Login</button>
 </div>
