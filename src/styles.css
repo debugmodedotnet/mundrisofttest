@@ -505,12 +505,27 @@ margin:0 auto;
     color:#ffffff;
 }
 
+.bg-light-orange{
+    background-color:#f54b1e;
+    color:#ffffff;
+}
+
 .bg-dark-gray{
     background-color:#2b2b2b;
     color:#ffffff;
 }
 section, footer{
     width:100%;
+}
+.icon-wrapper{
+    text-align: center;    
+}
+.icon-wrapper .icon-box .mat-icon{
+    height: 50px;
+    width: 50px;
+}
+.icon-wrapper .icon-box .material-icons{
+    font-size: 50px;
 }
 .toolbar {
   position: absolute;
@@ -743,9 +758,70 @@ section, footer{
     font-size: 70px;
     color:#666666;   
 }
+
+.icon-circle-blue{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin: 0px auto 20px auto;
+    display: block;
+    border: 3px solid #1976d2;   
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle-blue .mat-icon{
+    width: 70px;
+    height: 70px;
+    font-size: 70px;
+    color:#666666;   
+}
+.instructor-carousel{    
+    width:100%;
+}
+.instructor-carousel .instruct-col{    
+    
+}
+.instructor-carousel .instructor-avatar{
+    float: right;
+    width:24%;
+}
+.instructor-carousel .instructor-avatar{
+    width:200px;
+    height:200px;
+    border-radius:100px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 5px #333333;
+}
+.instructor-carousel .instructor-avatar img{
+    width:100%;    
+}
+.instructor-carousel .instructor-details{
+    float: left;
+    width:74%;
+}
+.event-image{
+    position: relative;
+    overflow:hidden;
+    width:100%;
+    border-radius:15px;  
+}
+.event-image img{
+    width:100%    
+}
+.event-image .event-title{
+    position: absolute;
+    width:100%;
+    padding:10px 20px;
+    background-color: #f54b1e;
+    color:#ffffff;
+    bottom:0;
+}
 .btn-orange{
     background-color:#f54b1e;
-    color:#ffffff;
+    color:#423131;
 }
 .txt-orange{    
     color:#F85D36;

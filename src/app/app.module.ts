@@ -23,7 +23,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { FranchiseComponent } from './franchise/franchise.component';
+import { FranchiseModule } from './franchise/franchise.module';
 import { LoginComponent } from './login/login.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import {StarRatingComponent} from './shared/star-rating.component';
@@ -37,8 +37,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     AppComponent,
     HomeComponent,
     RegisterDialogComponent,
-    CatalogComponent,
-    FranchiseComponent,
+    CatalogComponent,    
     LoginComponent,
     CoursedetailsComponent, 
     StarRatingComponent, 
@@ -72,6 +71,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     MatSelectModule,
     MatExpansionModule,
     CarouselModule,
+    FranchiseModule,
    
   ],
   providers: [],

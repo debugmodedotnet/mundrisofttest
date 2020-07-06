@@ -1,16 +1,14 @@
 <div class="main-container internal-page-wrapper franchise-page">
-    <!-- Hero Banner section begin-->
-    <div class="hero-banner">
+    <!-- Hero Banner section begin
+    -->
+    <div class="hero-banner" [ngStyle]="{'background-image': 'url(' + _franchise.banner_section.image.url + ')'}">
         <div class="banner-overlay">
 
             <div class="banner-content">
                 <div>
-                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <h1>@{{_franchise.banner_section.heading}}@</h1>
 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute
-                    </p>
+                    <p>{{_franchise.banner_section.description}} </p>
 
 
                 </div>
@@ -24,23 +22,22 @@
 
     <div class="content" role="main">
 
+
+
         <!-- Image Left Content Right section begin-->
         <section class="stb-padding bg-light-gray s3-padding-tb-70">
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col s3-padding-tb-16">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                         <div class="img-box-container-rl">
                             <div class="img-container">
-                                <img src="./assets/img/figure-2.png" alt="image">
+                                <img [src]="_franchise.marketing_section_1.image.url" [alt]="_franchise.marketing_section_1.image.filename">
+
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit incididunt ut labore et dolore</h2>
-                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum.</p>
+                                    <h2>{{_franchise.marketing_section_1.heading}}</h2>
+                                    <p>{{_franchise.marketing_section_1.description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -52,71 +49,79 @@
             </div>
         </section>
         <!-- Image Left Content Rigth section end-->
-        <section>
+
+        <!-- Contact section begin-->
+        <section class="stb-padding bg-light-orange s3-padding-tb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="place-wrapper">
+                        <div class="icon-wrapper">
                             <div class="icon-box">
-                                <mat-icon>place</mat-icon>
+                                <mat-icon aria-hidden="false" aria-label="place">place</mat-icon>
                             </div>
-                            <div>
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore
-                                </p>
-                            </div>
+                            <h3>Ut enim ad minim veniam</h3>
+                            <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="place-wrapper">
+                        <div class="icon-wrapper">
                             <div class="icon-box">
-                                <mat-icon>phone</mat-icon>
+                                <mat-icon aria-hidden="false" aria-label="phone">phone</mat-icon>
                             </div>
-                            <div>
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore
-                                </p>
-                            </div>
+                            <h3>Ut enim ad minim veniam</h3>
+                            <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="place-wrapper">
+                        <div class="icon-wrapper">
                             <div class="icon-box">
-                                <mat-icon>place</mat-icon>
+                                <mat-icon aria-hidden="false" aria-label="email">email</mat-icon>
                             </div>
-                            <div>
-                                <h3>Lorem ipsum dolor sit amet</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore
-                                </p>
-                            </div>
+                            <h3>Ut enim ad minim veniam</h3>
+                            <p>Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Contact section end -->
+
         <!-- Learn Improve section begin-->
         <section class="stb-padding s3-padding-tb-70">
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                         <div class="text-center">
-                            <h2>Lorem ipsum dolor sit amet</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore
-                                <br> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <h2>{{_franchise.marketing_section_2.heading}}</h2>
+                            <p>{{_franchise.marketing_section_2.description}}</p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="s-container">
-                <div class="s-row">
-                    <div class="s-col s3-padding-tb-16">
+                <div class="row">
+                    <div class="col-md-4">
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
-                                <div class="icon-circle">
+                                <div class="icon-circle-blue">
+                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
+                                </div>
+                                <mat-card-header>
+                                </mat-card-header>
+
+                                <mat-card-content>
+
+                                    <h3>{{_franchise.marketing_section_2_modular_blocks[0].block_1.heading}} </h3>
+                                    <p> {{_franchise.marketing_section_2_modular_blocks[0].block_1.description}} </p>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[0].block_1.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[0].block_1.cta_button_text}}</a>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-wrapper icon-card">
+                            <mat-card class="example-card no-card-border">
+                                <div class="icon-circle-blue">
                                     <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
                                 </div>
                                 <mat-card-header>
@@ -125,202 +130,310 @@
 
 
                                 <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
+
+                                    <h3>{{_franchise.marketing_section_2_modular_blocks[1].block_2.heading}} </h3>
+                                    <p> {{_franchise.marketing_section_2_modular_blocks[1].block_2.description}} </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" href="#">Learn Our Approach</a>
+                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[1].block_2.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[1].block_2.cta_button_text}}</a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
+                    <div class="col-md-4">
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
+                                <div class="icon-circle-blue">
+                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
+                                </div>
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <div class="icon-circle">
-                                    <mat-icon aria-hidden="false" aria-label="inbox icon">inbox</mat-icon>
-                                </div>
+
+
                                 <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
+
+                                    <h3>{{_franchise.marketing_section_2_modular_blocks[2].block_3.heading}} </h3>
+                                    <p> {{_franchise.marketing_section_2_modular_blocks[2].block_3.description}} </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" href="#">Check Out Our Campus</a>
+                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[2].block_3.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[2].block_3.cta_button_text}}</a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <div class="card-wrapper icon-card">
-                            <mat-card class="example-card no-card-border">
 
-                                <mat-card-header>
-
-                                </mat-card-header>
-                                <div class="icon-circle">
-                                    <mat-icon aria-hidden="false" aria-label="file_copy icon">file_copy</mat-icon>
-                                </div>
-                                <mat-card-content>
-                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                    <p>
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </mat-card-content>
-                                <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" href="#">Download Our Catalog</a>
-                                </mat-card-actions>
-                            </mat-card>
-                        </div>
-                    </div>
                 </div>
             </div>
+
         </section>
         <!-- Learn Improve section end-->
 
 
 
         <!-- New Course section begin-->
-        <section class="stb-padding bg-light-gray">
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
-                        <h2>Courses at Tampa Bay</h2>
+        <section class="stb-padding bg-dark-gray s3-padding-tb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Popular Courses at Tampa Bay</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
+
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
+
+                                </div>
+                                <div class="course-price">
+                                    <span class="price-badge">$150</span>
+                                </div>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
+
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
+
+                                </div>
+                                <div class="course-price">
+                                    <span class="price-badge">$150</span>
+                                </div>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
+
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+
+                                </div>
+                                <div class="course-price">
+                                    <span class="price-badge">$190</span>
+                                </div>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btn-wrapper text-center">
+
+                            <div><a mat-button class="btn-orange rounded" href="#">View More Courses</a></div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
+        </section>
+        <!-- Popular Course section end-->
 
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-                                <span class="price-badge">$200</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
-                                </div>
-                            </mat-card-actions>
-                        </mat-card>
+        <!-- New Course section begin-->
+        <section class="stb-padding bg-light-gray s3-padding-tb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>New Courses at Tampa Bay</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
 
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
-                                <span class="price-badge">$150</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
 
                                 </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
+                                <div class="course-price">
+                                    <span class="price-badge">$150</span>
                                 </div>
-                            </mat-card-actions>
-                        </mat-card>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
                     </div>
-                    <div class="s-col s3-padding-tb-16">
-                        <mat-card class="example-card">
-                            <mat-card-header>
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
 
-                            </mat-card-header>
-                            <div class="img-container">
-                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
-                                <span class="price-badge">$190</span>
-                            </div>
-
-                            <mat-card-content>
-                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                <div class="course-detials-container">
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
 
                                 </div>
-                            </mat-card-content>
-                            <mat-card-actions>
-                                <div class="card-btn-wrapper">
-
-                                    <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
-                                            href="#">Online</a></div>
+                                <div class="course-price">
+                                    <span class="price-badge">$150</span>
                                 </div>
-                            </mat-card-actions>
-                        </mat-card>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-wrapper">
+                            <mat-card class="example-card">
+                                <mat-card-header>
+
+                                </mat-card-header>
+                                <div class="img-container">
+                                    <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+
+                                </div>
+                                <div class="course-price">
+                                    <span class="price-badge">$190</span>
+                                </div>
+                                <mat-card-content>
+                                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                    <div class="course-detials-container">
+                                        <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span></div>
+
+                                    </div>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <div class="card-btn-wrapper">
+
+                                        <div><a mat-button class="btn-orange rounded" href="#">Campus</a><a mat-button class="btn-orange rounded"
+                                                href="#">Online</a></div>
+                                    </div>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btn-wrapper text-center">
+                            <div><a mat-button class="btn-orange rounded" href="#">View More Courses</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- New Course section end-->
 
+
         <!-- Image Left Content Right Over section begin-->
         <section class="stb-padding st-padding-70 remove-b-padding">
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
                         <div class="text-center">
-                            <h2>Lorem ipsum dolor sit amet</h2>
-                            <h3>Ut enim ad minim veniam, consectetur adipiscing elit</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <h2>{{_franchise.marketing_section_3.heading}}</h2>
+                            <h3>{{_franchise.marketing_section_3.sub_heading}}</h3>
+                            <p>{{_franchise.marketing_section_3.description}}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30 remove-b-padding">
-                    <div class="s-col s3-padding-tb-16 remove-b-padding">
+            <div class="container">
+                <div class="row remove-b-padding">
+                    <div class="col-12 remove-b-padding">
                         <div class="img-box-container-lr content-box-over">
                             <div class="img-container">
-                                <img src="./assets/img/figure-2.png" alt="image">
+                                <img [src]="_franchise.marketing_section_3_modular_blocks[0].block_1.image.url" alt="_franchise.marketing_section_3_modular_blocks[0].block_1.image.title">
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit incididunt ut labore et dolore</h2>
-                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum.</p>
+                                    <h2>{{_franchise.marketing_section_3_modular_blocks[0].block_1.heading}}</h2>
+                                    <p>{{_franchise.marketing_section_3_modular_blocks[0].block_1.description}}</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -328,21 +441,17 @@
 
         <!-- Image Right Content Left Over section begin-->
         <section class="stb-padding sb-padding-70 remove-t-padding">
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30 remove-t-padding">
-                    <div class="s-col s3-padding-tb-16 remove-t-padding">
+            <div class="container">
+                <div class="row remove-t-padding">
+                    <div class="col-12 remove-t-padding">
                         <div class="img-box-container-rl content-box-over">
                             <div class="img-container">
-                                <img src="./assets/img/figure-2.png" alt="image">
+                                <img [src]="_franchise.marketing_section_3_modular_blocks[1].block_2.image.url" alt="image">
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit incididunt ut labore et dolore</h2>
-                                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                        officia deserunt mollit anim id est laborum.</p>
+                                    <h2>{{_franchise.marketing_section_3_modular_blocks[1].block_2.heading}}</h2>
+                                    <p>{{_franchise.marketing_section_3_modular_blocks[1].block_2.description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -356,7 +465,185 @@
         <!-- Image Right Content Left Over section end-->
 
 
+        <!--Instructor section begin-->
+        <section class="stb-padding sb-padding-70 bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 sb-padding-70">
+                        <h2>Owl Carousel</h2>
+                        <div class="instructor-carousel sb-padding-70">
+                            <div class="instructor-details instruct-col">
+                                <div>
+                                    <p class="course-title">Lorem ipsum dolor sit amet</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                    </p>
+                                </div>
 
+                            </div>
+                            <div class="instructor-avatar instruct-col">
+                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 ">
+                        <h2>Courses Taught by James Lawery</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div>
+                            <div class="course-picture">
+                                <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p class="course-title">Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                .
+                            </p>
+                            <div class="other-course-details">
+                                <div class="course-info">
+                                    <div><span>By: Alex Mills</span></div>
+                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div>
+                                        <div class="btn-wrapper">
+                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div>
+                            <div class="course-picture">
+                                <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p class="course-title">Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                .
+                            </p>
+                            <div class="other-course-details">
+                                <div class="course-info">
+                                    <div><span>By: Alex Mills</span></div>
+                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div>
+                                        <div class="btn-wrapper">
+                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div>
+                            <div class="course-picture">
+                                <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p class="course-title">Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                .
+                            </p>
+                            <div class="other-course-details">
+                                <div class="course-info">
+                                    <div><span>By: Alex Mills</span></div>
+                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div>
+                                        <div class="btn-wrapper">
+                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div>
+                            <div class="course-picture">
+                                <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>
+                            <p class="course-title">Lorem ipsum dolor sit amet</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                .
+                            </p>
+                            <div class="other-course-details">
+                                <div class="course-info">
+                                    <div><span>By: Alex Mills</span></div>
+                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div>
+                                        <div class="btn-wrapper">
+                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-5">
+                        <div class="btn-wrapper text-center">
+                            <div><a mat-button class="btn-orange rounded" href="#">More Courses by James</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Instructor section -end-->
+
+        <!--Events in City Section begin -->
+        <section class="stb-padding sb-padding-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="event-image">
+                            <img class="image-square" src="./assets/img/figure-1.png" alt="Picture">
+                            <div class="event-title"><span>Event Name</span><span>|</span><span>2-20-20</span></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="event-image">
+                            <img class="image-square" src="./assets/img/figure-2.png" alt="Picture">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="event-image">
+                            <img class="image-square" src="./assets/img/figure-3.png" alt="Picture">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Events in City Section end -->
 
         <!-- Site Footer -->
         <footer class="stb-padding bg-light-gray">

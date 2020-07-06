@@ -28,10 +28,10 @@ export class CatalogComponent implements OnInit {
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(
       (data) => {
-        this.courseCatalogsDataTotal = data; 
-        this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
+        //this.courseCatalogsDataTotal = data; 
+        //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
         console.log(this.courseCatalogsData);
-        this.pageLength =  this.courseCatalogsDataTotal.entries.length;
+        //this.pageLength =  this.courseCatalogsDataTotal.entries.length;
         console.log(this.pageSize);
       }
     );
@@ -39,7 +39,7 @@ export class CatalogComponent implements OnInit {
 
   changePage(data): void{
       console.log(data);
-      this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
+      //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
 
   }
 
