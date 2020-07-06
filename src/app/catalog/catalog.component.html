@@ -85,8 +85,8 @@
                         <div class="search-box-container">
                             <div class="search-input">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>Search a topic, path, course</mat-label>
-                                    <input matInput placeholder="Search a topic, path, course">
+                                    <mat-label >Search a topic, path, course</mat-label>
+                                    <input matInput  [(ngModel)]='searchCatalog' placeholder="Search a topic, path, course">
                                     <mat-icon matSuffix>search</mat-icon>
                                 </mat-form-field>
                             </div>
@@ -123,7 +123,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-4" *ngFor="let data of courseCatalogsData.entries">
+                    <div class="col-sm-6 col-md-4" *ngFor="let data of courseCatalogsData |catalogfilter: searchCatalog">
                         <div class="card-wrapper">
                             <mat-card class="example-card">
                                 <mat-card-header>
@@ -190,7 +190,7 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]">
+                        <mat-paginator (page)='changePage($event)' [length]='pageLength' [pageSize]="pageSize" [pageSizeOptions]="[5,10,25,100]">
                         </mat-paginator>
                     </div>
                 </div>
