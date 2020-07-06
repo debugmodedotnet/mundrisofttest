@@ -12,13 +12,16 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogComponent },
   { path: 'test', component: TestComponent },
   { path: 'course-details', component: CoursedetailsComponent },
-  { path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) },
+  { 
+    path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) 
+  },
+  { path: 'course', loadChildren: () => import('./course/course.module').then(m => m.CourseModule) },
   {
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  },
-  { path: 'course', loadChildren: () => import('./course/course.module').then(m => m.CourseModule) }
+  }
+  
 ];
 
 @NgModule({

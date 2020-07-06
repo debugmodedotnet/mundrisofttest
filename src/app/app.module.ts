@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
@@ -27,6 +29,7 @@ import { CoursedetailsComponent } from './coursedetails/coursedetails.component'
 import {StarRatingComponent} from './shared/star-rating.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
 import { TestComponent } from './test/test.component';
+import {CatalogfilterPipe} from './shared/catalog.pipe';
 
 
 @NgModule({
@@ -40,6 +43,7 @@ import { TestComponent } from './test/test.component';
     CoursedetailsComponent, 
     StarRatingComponent, 
     FindCampusComponent, 
+    CatalogfilterPipe,
     TestComponent,
     
   ],
@@ -51,8 +55,10 @@ import { TestComponent } from './test/test.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,

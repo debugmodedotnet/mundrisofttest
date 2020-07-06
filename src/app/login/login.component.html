@@ -1,27 +1,29 @@
 <div class="login-form">
     <h1>Welcome back, Susan!</h1>
     <p>Login to your New Horizons account</p>
-    <form class="form">
+    <form class="form" (ngSubmit)='loginStudent()' [formGroup]='studentLoginForm' novalidate>
         <div class="frm-field-group">
             <div class="form-field">
                 <div class="frm-input">
-                    <input type="text" placeholder="Full Name *" />
-                    <div class="alert  alert-danger">
-                        Name is required
+                    <input type="text" placeholder="Email *"  formControlName='email_address'/>
+                    <div class="alert  alert-danger" *ngIf="studentLoginForm.get('email_address').hasError('required') && studentLoginForm.get('email_address').touched">
+                        Email is required
                     </div>
                 </div>
             </div>
             <div class="form-field">
                 <div class="frm-input">
-                    <input type="password" placeholder="Enter Password" />
+                    <input type="password" placeholder="Enter Password" formControlName='password' />
                 </div>
 
             </div>
+            <div *ngIf='studentData?.entries?.length == 0' class="alert alert-danger">
+                <p> Wrong User Name and Password</p>
+            </div>
         </div>
         <p>Forgot My Password?</p>
-
         <div class="frm-btn-container">
-            <button mat-raised-button color="warn">Login</button>
+            <button [disabled]='studentLoginForm.invalid' mat-raised-button color="warn" (click)="loginStudent()">Login</button>
         </div>
         <p>or</p>
 

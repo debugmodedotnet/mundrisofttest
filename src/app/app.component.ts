@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 import { LoginComponent } from './login/login.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',

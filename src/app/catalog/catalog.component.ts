@@ -18,17 +18,30 @@ interface Car {
 })
 export class CatalogComponent implements OnInit {
  
+  courseCatalogsDataTotal = [];
   courseCatalogsData = [];
+  searchCatalog: any; 
+  pageSize = 5; 
+  pageLength = 5;
   constructor(private coursecatalogService: CourseCatalogService) { }
 
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(
       (data) => {
-        this.courseCatalogsData = data; 
+        this.courseCatalogsDataTotal = data; 
+        this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
         console.log(this.courseCatalogsData);
+        this.pageLength =  this.courseCatalogsDataTotal.entries.length;
+        console.log(this.pageSize);
       }
     );
   };
+
+  changePage(data): void{
+      console.log(data);
+      this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
+
+  }
 
   selectedValue: string;
   selectedCar: string;

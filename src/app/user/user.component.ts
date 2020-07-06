@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserRegisterationService } from '../shared/userregisteration.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
@@ -15,7 +16,7 @@ export class UserComponent implements OnInit {
     title:''
   }
   registerUserFlag = false;
-  constructor(private fb: FormBuilder, private userService: UserRegisterationService) {
+  constructor(private fb: FormBuilder, private userService: UserRegisterationService,  private router: Router) {
 
   }
 
@@ -42,6 +43,7 @@ export class UserComponent implements OnInit {
         this.resData.title = data.entry.title; 
         this.registerUserFlag = true; 
         this.userRegistrationForm.reset();
+        this.router.navigateByUrl('/user/student');
 
       },
       (error) => { console.log(error) }
