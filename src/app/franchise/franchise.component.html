@@ -1,7 +1,7 @@
 <div class="main-container internal-page-wrapper franchise-page">
     <!-- Hero Banner section begin
     -->
-    <div class="hero-banner" [ngStyle]="{'background-image': 'url(' + _franchise.banner_section.image.url + ')'}">
+    <div class="hero-banner skew" [ngStyle]="{'background-image': 'url(' + _franchise.banner_section.image.url + ')'}">
         <div class="banner-overlay">
 
             <div class="banner-content">
@@ -9,7 +9,9 @@
                     <h1>@{{_franchise.banner_section.heading}}@</h1>
 
                     <p>{{_franchise.banner_section.description}} </p>
-
+                    <div>
+                        <a href="#" mat-raised-button class="btn-transparent btn-white">Watch</a>
+                    </div>
 
                 </div>
                 <div>
@@ -22,6 +24,17 @@
 
     <div class="content" role="main">
 
+        <section class="stb-padding s3-padding-tb-30 breadcrumb remove-b-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <span>Breadcrumb item</span> / <span class="txt-orange">Breadcrumb item</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
         <!-- Image Left Content Right section begin-->
@@ -30,7 +43,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="img-box-container-rl">
-                            <div class="img-container">
+                            <div class="img-container rounded-corner-shadow">
                                 <img [src]="_franchise.marketing_section_1.image.url" [alt]="_franchise.marketing_section_1.image.filename">
 
                             </div>
@@ -627,23 +640,84 @@
                     <div class="col-md-4">
                         <div class="event-image">
                             <img class="image-square" src="./assets/img/figure-1.png" alt="Picture">
-                            <div class="event-title"><span>Event Name</span><span>|</span><span>2-20-20</span></div>
+                            <div class="event-title"><span>Event Name</span><span> | </span><span>2-20-20</span></div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="event-image">
                             <img class="image-square" src="./assets/img/figure-2.png" alt="Picture">
+                            <div class="event-title"><span>Event Name</span><span> | </span><span>2-20-20</span></div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="event-image">
                             <img class="image-square" src="./assets/img/figure-3.png" alt="Picture">
+                            <div class="event-title"><span>Event Name</span><span> | </span><span>2-20-20</span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!--Events in City Section end -->
+
+
+        <!--Current Location Section begin -->
+        <section class="stb-padding sb-padding-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="current-location-wrapper">
+                            <div class="location-overlay bg-light-orange">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="table">
+                                                <div class="location-icon">
+                                                        <mat-icon aria-hidden="false" aria-label="place">place</mat-icon>
+                                                </div>
+                                                <div>
+                                                   <span>Current Location</span>
+                                                   <h2>New Horizons Tampa Bay</h2> 
+                                                </div>
+                                            </div>
+                                            <div class="st-padding-70">
+                                                    <span>Find the one for you</span>
+                                                    <h3>Search for a different New Horizons Location</h3>
+                                            </div>
+                                            
+                                            <div class="table">
+                                                    <div>
+                                                            <div class="search-input">
+                                                                    <mat-form-field appearance="outline">
+                                                                        <mat-label>Search by Region</mat-label>
+                                                                        <input matInput placeholder="Search by Region">
+                                                                        <mat-icon matSuffix>search</mat-icon>
+                                                                    </mat-form-field>
+                                                                </div>  
+                                                    </div>
+                                                    <div>
+                                                            <div class="search-input">
+                                                                    <mat-form-field appearance="outline">
+                                                                        <mat-label>Search by Zipcode</mat-label>
+                                                                        <input matInput placeholder="Search by Zipcode">
+                                                                        <mat-icon matSuffix>search</mat-icon>
+                                                                    </mat-form-field>
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-6">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Current Location Section end -->
 
         <!-- Site Footer -->
         <footer class="stb-padding bg-light-gray">
