@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
  
 import { FormsModule }						from '@angular/forms';
-import { HttpModule }							from '@angular/http';
+// import { HttpModule }							from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +31,6 @@ import { FranchiseComponent }					  from './franchise.component';
     FranchiseRoutingModule,
     CommonModule,
     FormsModule,
-    HttpModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,

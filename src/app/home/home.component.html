@@ -1,14 +1,14 @@
 <div class="main-container">
     <!-- Hero Banner section begin-->
-    <div class="hero-banner" [style.background-image]='homeData.entry.banner_section.banner_image.url'>
-        <!-- <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData.entry.banner_section.banner_image.url + ') no-repeat 0 0'}"> -->
-        <!-- <img [src]='homeData.entry.banner_section.banner_image.url'> -->
+    <div class="hero-banner" [style.background-image]='homeData?.entry?.banner_section?.banner_image.url'>
+        <!-- <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData?.entry.banner_section.banner_image.url + ') no-repeat 0 0'}"> -->
+        <!-- <img [src]='homeData?.entry.banner_section.banner_image.url'> -->
         <div class="banner-overlay">
             <div class="banner-content">
                 <div>
-                    <h1>{{homeData.entry.banner_section.heading}}</h1>
-                    <!-- <p>{{homeData.entry.banner_section.brief_description}}</p> -->
-                    <p [innerHTML]="homeData.entry.banner_section.brief_description"></p>
+                    <h1>{{homeData?.entry?.banner_section?.heading}}</h1>
+                    <!-- <p>{{homeDataa?a??.entry.banner_section.brief_description}}</p> -->
+                    <p [innerHTML]="homeData?.entry?.banner_section?.brief_description"></p>
 
                     <div class="btn-container">
                         <div class="search-input">
@@ -19,11 +19,11 @@
                             </mat-form-field>
                         </div>
                         <div>
-                            <a href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}}
+                            <a href="{{homeData?.entry?.banner_section?.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData?.entry?.banner_section?.cta_text}}
                                 <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">
                                     play_circle_filled</mat-icon>
                             </a>
-                            <!-- <button href="{{homeData.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData.entry.banner_section.cta_text}} 
+                            <!-- <button href="{{homeData?.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData?.entry.banner_section.cta_text}} 
                                 <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
                             </button> -->
                         </div>
@@ -45,8 +45,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-5">
-                            <h2>{{homeData.entry.learn_improve_your_way.learn_improve_your_way_heading}}</h2>
-                            <p>{{homeData.entry.learn_improve_your_way.brief_description}}</p>
+                            <h2>{{homeData?.entry?.learn_improve_your_way.learn_improve_your_way_heading}}</h2>
+                            <p>{{homeData?.entry?.learn_improve_your_way.brief_description}}</p>
                         </div>
                     </div>
                 </div>
@@ -59,16 +59,16 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_image.url'
+                                <img class="image-circle" mat-card-image [src]='homeData?.entry?.learn_improve_your_way_blocks[0].block_1.block_1_image.url'
                                     alt="picture">
                                 <mat-card-content>
-                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_heading}}</h3>
+                                    <h3>{{homeData?.entry?.learn_improve_your_way_blocks[0].block_1.block_1_heading}}</h3>
                                     <p>
-                                        {{homeData.entry.learn_improve_your_way_blocks[0].block_1.block_1_description}}
+                                        {{homeData?.entry?.learn_improve_your_way_blocks[0].block_1.block_1_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[0].block_1.learn_more_link}}">Learn
+                                    <a mat-button class="link-orange" href="{{homeData?.entry?.learn_improve_your_way_blocks[0].block_1.learn_more_link}}">Learn
                                         more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
                                             play_arrow</mat-icon></a>
                                 </mat-card-actions>
@@ -81,16 +81,16 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_image.url'
+                                <img class="image-circle" mat-card-image [src]='homeData?.entry?.learn_improve_your_way_blocks[1].block_2.block_2_image.url'
                                     alt="Picture">
                                 <mat-card-content>
-                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_heading}}</h3>
+                                    <h3>{{homeData?.entry?.learn_improve_your_way_blocks[1].block_2.block_2_heading}}</h3>
                                     <p>
-                                        {{homeData.entry.learn_improve_your_way_blocks[1].block_2.block_2_description}}
+                                        {{homeData?.entry?.learn_improve_your_way_blocks[1].block_2.block_2_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[1].block_2.learn_more_link}}">Learn
+                                    <a mat-button class="link-orange" href="{{homeData?.entry?.learn_improve_your_way_blocks[1].block_2.learn_more_link}}">Learn
                                         more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
                                             play_arrow</mat-icon></a>
                                 </mat-card-actions>
@@ -103,16 +103,16 @@
                                 <mat-card-header>
 
                                 </mat-card-header>
-                                <img class="image-circle" mat-card-image [src]='homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_image.url'
+                                <img class="image-circle" mat-card-image [src]='homeData?.entry?.learn_improve_your_way_blocks[2].block_3.block_3_image.url'
                                     alt="Picture">
                                 <mat-card-content>
-                                    <h3>{{homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_heading}}</h3>
+                                    <h3>{{homeData?.entry?.learn_improve_your_way_blocks[2].block_3.block_3_heading}}</h3>
                                     <p>
-                                        {{homeData.entry.learn_improve_your_way_blocks[2].block_3.block_3_description}}
+                                        {{homeData?.entry?.learn_improve_your_way_blocks[2].block_3.block_3_description}}
                                     </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-button class="link-orange" href="{{homeData.entry.learn_improve_your_way_blocks[2].block_3.learn_more_link}}">Learn
+                                    <a mat-button class="link-orange" href="{{homeData?.entry?.learn_improve_your_way_blocks[2].block_3.learn_more_link}}">Learn
                                         more <mat-icon aria-hidden="false" aria-label="Example play_arrow icon">
                                             play_arrow</mat-icon></a>
                                 </mat-card-actions>
@@ -131,13 +131,13 @@
                     <div class="col-12">
                         <div class="img-box-container-rl">
                             <div class="img-container">
-                                <img src="{{homeData.entry.marketing_blocks[0].block_1.block_1_image.url}}" alt="image">
+                                <img src="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_image.url}}" alt="image">
                             </div>
                             <div class="img-content-box">
-                                <h2>{{homeData.entry.marketing_blocks[0].block_1.block_1_heading}}</h2>
-                                <p>{{homeData.entry.marketing_blocks[0].block_1.block_1_description}}</p>
+                                <h2>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_heading}}</h2>
+                                <p>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_description}}</p>
                                 <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[0].block_1.block_1_button_url}}">Learn
+                                    <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_button_url}}">Learn
                                         more</a>
                                 </div>
                             </div>
@@ -158,13 +158,13 @@
                     <div class="col-12">
                         <div class="img-box-container-lr">
                             <div class="img-container">
-                                <img src="{{homeData.entry.marketing_blocks[1].block_2.block_2_image.url}}" alt="image">
+                                <img src="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_image.url}}" alt="image">
                             </div>
                             <div class="img-content-box">
-                                <h2>{{homeData.entry.marketing_blocks[1].block_2.block_2_heading}}</h2>
-                                <p>{{homeData.entry.marketing_blocks[1].block_2.block_2_decription}}</p>
+                                <h2>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_heading}}</h2>
+                                <p>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_decription}}</p>
                                 <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData.entry.marketing_blocks[1].block_2.block_2_button_url}}">Learn
+                                    <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_button_url}}">Learn
                                         more</a>
                                 </div>
                             </div>
@@ -185,11 +185,11 @@
                     <div class="col-12">
                         <div class="mb-5">
                             <h2>New Course</h2>
-                            <p>{{homeData.entry.new_courses.description_text}}</p>
+                            <p>{{homeData?.entry?.new_courses.description_text}}</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div *ngFor="let c of homeData.entry.new_courses.courses" class="col-sm-4">
+                        <div *ngFor="let c of homeData?.entry?.new_courses.courses" class="col-sm-4">
                             <div class="card-wrapper">
                                 <mat-card class="example-card">
                                     <mat-card-header>
@@ -258,13 +258,13 @@
                     <div class="col-12">
                         <div class="mb-5">
                             <h2>Trneding Course</h2>
-                            <p>{{homeData.entry.trending_courses.description_text}}</p>
+                            <p>{{homeData?.entry?.trending_courses.description_text}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <!-- for new course api returns courses and for trending courses returns course. It needs to be consistent in the API -->
-                    <div *ngFor="let c of homeData.entry.trending_courses.course" class="col-sm-4">
+                    <div *ngFor="let c of homeData?.entry.trending_courses.course" class="col-sm-4">
                         <div class="card-wrapper">
                             <mat-card class="example-card">
                                 <mat-card-header>
@@ -332,8 +332,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>{{homeData.entry.certification_at_new_horizons.heading}}</h2>
-                        <p>{{homeData.entry.certification_at_new_horizons.description_text}}</p>
+                        <h2>{{homeData?.entry?.certification_at_new_horizons.heading}}</h2>
+                        <p>{{homeData?.entry?.certification_at_new_horizons.description_text}}</p>
                     </div>
                 </div>
             </div>
@@ -347,39 +347,37 @@
                 <div class="row">
                     <div class="col-12">
                         <mat-tab-group class="mat-tab-container" animationDuration="2000ms">
-                            <mat-tab label="Category 1">
+                            <mat-tab *ngFor="let c of homeData?.entry?.certification" label={{c.certification_category[0].category_name}}>
                                 <div class="container">
                                     <div class="row ">
-                                        <div class="col-sm-6">
+                                        <div *ngFor="let cdata of c.certifications" class="col-sm-6">
                                             <div class="card-wrapper">
                                                 <mat-card class="example-card certification-card">
                                                     <mat-card-content>
                                                         <span class="card-badge">New</span>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                        <h3>{{cdata.heading}}</h3>
+                                                        <p [innerHtml]='cdata.description'></p>
 
                                                     </mat-card-content>
                                                     <mat-card-actions class="card-btn-group">
                                                         <div>
                                                             <div class="course-detials-container">
-                                                                <div><span>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star_border</mat-icon>
-                                                                <mat-icon>star_border</mat-icon>
-                                                            </span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
+                                                                <div>
+                                                                    <span><app-starrating [rating]='cdata.rating'></app-starrating></span>
                                                                 </div>
-                                                                <div><span>Length: 3 Days</span></div>
+                                                                <div><span>Level:</span>
+                                                                    {{cdata.level}} <mat-icon> bar_chart</mat-icon>
+                                                                </div>
+                                                                <div><span>Length: {{cdata.length}}</span></div>
                                                             </div>
                                                             <div class="card-btn-wrapper">
                                                                 <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
+                                                                <div>
+                                                                    <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
+                                                                    <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-orange rounded" href="#">{{b}}</a>
+                                                                    <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                                 </div>
+                                                               
                                                             </div>
                                                         </div>
                                                         <div>
@@ -389,208 +387,12 @@
                                                 </mat-card>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="card-wrapper">
-                                                <mat-card class="example-card certification-card">
-                                                    <mat-card-content>
-                                                        <span class="card-badge">Top Rated</span>
-                                                        <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                    </mat-card-content>
-                                                    <mat-card-actions class="card-btn-group">
-                                                        <div>
-                                                            <div class="course-detials-container">
-                                                                <div><span>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star</mat-icon>
-                                                                <mat-icon>star_border</mat-icon>
-                                                                <mat-icon>star_border</mat-icon>
-                                                            </span></div>
-                                                                <div><span>Level:</span>
-                                                                    <mat-icon> bar_chart</mat-icon>
-                                                                </div>
-                                                                <div><span>Length: 1wk</span></div>
-                                                            </div>
-                                                            <div class="card-btn-wrapper">
-                                                                <div>By: Alex Mills</div>
-                                                                <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                    <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                        </div>
-                                                    </mat-card-actions>
-                                                </mat-card>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </mat-tab>
 
-                            <mat-tab label="Category 2">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                        </span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <mat-card class="example-card certification-card">
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                        </span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-                                </div>
-                            </mat-tab>
-
-                            <mat-tab label="Category 3">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <mat-card class="example-card certification-card">
-
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                        </span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 3 Days</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <mat-card class="example-card certification-card">
-                                                <mat-card-content>
-                                                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                        tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                                                </mat-card-content>
-                                                <mat-card-actions class="card-btn-group">
-                                                    <div>
-                                                        <div class="course-detials-container">
-                                                            <div><span>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                            <mat-icon>star_border</mat-icon>
-                                                        </span></div>
-                                                            <div><span>Level:</span>
-                                                                <mat-icon> bar_chart</mat-icon>
-                                                            </div>
-                                                            <div><span>Length: 1wk</span></div>
-                                                        </div>
-                                                        <div class="card-btn-wrapper">
-                                                            <div>By: Alex Mills</div>
-                                                            <div><a mat-button class="btn-orange rounded" href="#">Campus</a>
-                                                                <a mat-button class="btn-orange rounded" href="#">Online</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="text-center"><button mat-raised-button>Explore</button></div>
-                                                    </div>
-                                                </mat-card-actions>
-                                            </mat-card>
-                                        </div>
-                                    </div>
-                                </div>
-                            </mat-tab>
+                           
                         </mat-tab-group>
                     </div>
                 </div>
@@ -618,21 +420,21 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div>
-                            <p>{{homeData.entry.pathway_block[0].pathway_block_1.heading}}</p>
-                            <h2 class="heading-orange">{{homeData.entry.pathway_block[0].pathway_block_1.sub_heading}}</h2>
+                            <p>{{homeData?.entry.pathway_block[0].pathway_block_1.heading}}</p>
+                            <h2 class="heading-orange">{{homeData?.entry.pathway_block[0].pathway_block_1.sub_heading}}</h2>
                             <p>
-                                {{homeData.entry.pathway_block[0].pathway_block_1.description}}
+                                {{homeData?.entry.pathway_block[0].pathway_block_1.description}}
                             </p>
                             <div class="btn-container">
-                                <a mat-raised-button href="{{homeData.entry.pathway_block[0].pathway_block_1.button_url}}" class="btn-orange">{{homeData.entry.pathway_block[0].pathway_block_1.button_text}}</a>
+                                <a mat-raised-button href="{{homeData?.entry.pathway_block[0].pathway_block_1.button_url}}" class="btn-orange">{{homeData?.entry.pathway_block[0].pathway_block_1.button_text}}</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="pathway-card-container">
-                            <h3 class="text-center">{{homeData.entry.pathway_block[1].pathway_block_2.heading}}</h3>
+                            <h3 class="text-center">{{homeData?.entry.pathway_block[1].pathway_block_2.heading}}</h3>
                             <div class="pathway-container">
-                                <div class="pathway-card" *ngFor="let p of homeData.entry.pathway_block[1].pathway_block_2.pathway ">
+                                <div class="pathway-card" *ngFor="let p of homeData?.entry.pathway_block[1].pathway_block_2.pathway ">
                                     <p>{{p.heading}}</p>
                                 </div>
                             </div>
@@ -651,10 +453,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="client-heading">{{homeData.entry.partner_relationships_section.heading}}</h2>
+                        <h2 class="client-heading">{{homeData?.entry.partner_relationships_section.heading}}</h2>
                         <div class="client-container">
-                            <div class="client-logo" *ngFor="let partner of homeData.entry.partner_relationships_section.partner">
-                                <img [src]="partner.image_logo.url" alt="{{partner.image_logo.title}}" />
+                            <div class="client-logo" *ngFor="let partner of homeData?.entry.partner_relationships_section.partner">
+                                <img src="{{partner?.image_logo?.url}}" />
+
                             </div>
                         </div>
                     </div>

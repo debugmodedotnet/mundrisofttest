@@ -125,7 +125,7 @@
                 <div class="row">
                     <div class="col-sm-6 col-md-4" *ngFor="let data of courseCatalogsData |catalogfilter: searchCatalog">
                         <div class="card-wrapper">
-                            <mat-card class="example-card">
+                            <mat-card (click)='courseDetails(data)' class="example-card">
                                 <mat-card-header>
 
                                 </mat-card-header>

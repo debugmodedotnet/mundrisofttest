@@ -10,6 +10,8 @@ import { tap, catchError, map } from 'rxjs/operators';
 })
 export class CourseCatalogService {
 
+  // coursedetailapiuirl="https://cdn.contentstack.io/v3/content_types/course/entries/blt8d11bc06769923dd/?environment=poc&locale=en-us&include[]=instructor";
+  coursedetailapiuirl = "https://cdn.contentstack.io/v3/content_types/course/entries/";
   apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc&locale=en-us&include[]=instructor';
   // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
   headers = new HttpHeaders()
@@ -32,6 +34,21 @@ export class CourseCatalogService {
       tap(data => { console.log(data) }),
       catchError(this.handleError)
     );
+  }
+
+  getCourseDetails(id: string): Observable<any> {
+
+    console.log(id);
+    this.coursedetailapiuirl = this.coursedetailapiuirl + id + "/?environment=poc&locale=en-us&include[]=instructor";
+    console.log(this.coursedetailapiuirl);
+
+    return this.http.get<any>(this.coursedetailapiuirl, this.httpOptions).pipe(
+      tap(data => {
+       // console.log(data);
+      }),
+      catchError(this.handleError)
+    );
+
   }
 
   //   getCourseCatalogTemp():Observable<any> {

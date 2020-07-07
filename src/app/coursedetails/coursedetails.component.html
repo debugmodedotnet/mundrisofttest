@@ -5,11 +5,9 @@
 
             <div class="banner-content">
                 <div>
-                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <h1>{{courseDetailsData?.title}}</h1>
 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute
+                    <p>{{courseDetailsData?.brief_description}}
                     </p>
 
 
@@ -55,12 +53,7 @@
                                     </mat-expansion-panel-header>
                                     <mat-panel-description>
                                         <div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <p [innerHtml]='courseDetailsData?.course_detail?.description'></p>
                                         </div>
                                     </mat-panel-description>
 
@@ -75,12 +68,9 @@
                                     </mat-expansion-panel-header>
                                     <mat-panel-description>
                                         <div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                                                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                            <p
+                                                [innerHtml]='courseDetailsData?.course_detail?.who_should_take_this_course'>
+                                            </p>
                                         </div>
                                     </mat-panel-description>
 
@@ -93,19 +83,11 @@
                                     </mat-expansion-panel-header>
                                     <mat-panel-description>
                                         <div>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                                nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                                            <p
+                                                [innerHtml]='courseDetailsData?.course_detail?.what_should_i_already_know'>
+                                            </p>
 
-                                            <div>
-                                                <ul>
-                                                    <li><a href="#">Ut enim ad minim veniam</a></li>
-                                                    <li><a href="#">Ut enim ad minim veniam</a></li>
-                                                    <li><a href="#">Ut enim ad minim veniam</a></li>
-                                                    <li><a href="#">Ut enim ad minim veniam</a></li>
-                                                    <li><a href="#">Ut enim ad minim veniam</a></li>
-                                                </ul>
-                                            </div>
+
                                         </div>
                                     </mat-panel-description>
 
@@ -119,36 +101,16 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <h2>Skills you will learn</h2>
-                                        <div class="skills-container">
+                                        <div class="skills-container"
+                                            *ngFor="let f of courseDetailsData?.skills_you_will_learn?.skill ">
                                             <div>
                                                 <mat-icon>highlight</mat-icon>
                                             </div>
                                             <div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+                                                <p>{{f}}</p>
                                             </div>
                                         </div>
-                                        <div class="skills-container">
-                                            <div>
-                                                <mat-icon>highlight</mat-icon>
-                                            </div>
-                                            <div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                                            </div>
-                                        </div>
-                                        <div class="skills-container">
-                                            <div>
-                                                <mat-icon>highlight</mat-icon>
-                                            </div>
-                                            <div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -160,20 +122,19 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <h2>About the instructor</h2>
-                                        <div class="instructor-container">
+                                        <div class="instructor-container"
+                                            *ngFor="let instructor of courseDetailsData?.instructor">
                                             <div>
                                                 <div class="instructor-avatar">
                                                     <mat-icon aria-label="Instructor Avatar">person</mat-icon>
+                                                    <img src='{{instructor.image.url}}' />
                                                 </div>
-                                                <div class="instructor-name"><span>Alex Mills</span></div>
+                                                <div class="instructor-name"><span>{{instructor.first_name}}</span>
+                                                </div>
                                             </div>
                                             <div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-                                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                                    aliquip. Adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                                    et dolore magna aliqua.</p>
+                                                <p [innerHtml]='instructor.bio'></p>
+
                                             </div>
                                         </div>
                                     </div>
@@ -198,13 +159,18 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
                                                     <div><span>By: Alex Mills</span></div>
-                                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                                    <div><span>Level: </span><span>
+                                                            <mat-icon aria-label="Level">insert_chart_outlined
+                                                            </mat-icon>
+                                                        </span></div>
                                                     <div><span>Length: 5 Days</span></div>
                                                 </div>
                                             </div>
@@ -221,13 +187,18 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
                                                     <div><span>By: Alex Mills</span></div>
-                                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                                    <div><span>Level: </span><span>
+                                                            <mat-icon aria-label="Level">insert_chart_outlined
+                                                            </mat-icon>
+                                                        </span></div>
                                                     <div><span>Length: 5 Days</span></div>
                                                 </div>
                                             </div>
@@ -244,13 +215,18 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
                                                     <div><span>By: Alex Mills</span></div>
-                                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                                    <div><span>Level: </span><span>
+                                                            <mat-icon aria-label="Level">insert_chart_outlined
+                                                            </mat-icon>
+                                                        </span></div>
                                                     <div><span>Length: 5 Days</span></div>
                                                 </div>
                                             </div>
@@ -267,13 +243,18 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit</p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                                tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
                                                     <div><span>By: Alex Mills</span></div>
-                                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                                    <div><span>Level: </span><span>
+                                                            <mat-icon aria-label="Level">insert_chart_outlined
+                                                            </mat-icon>
+                                                        </span></div>
                                                     <div><span>Length: 5 Days</span></div>
                                                 </div>
                                             </div>
@@ -284,7 +265,8 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="btn-container">
-                                            <button mat-raised-button class="btn-orange">View All <mat-icon aria-label="play_circle icon">chevron_right</mat-icon></button>
+                                            <button mat-raised-button class="btn-orange">View All <mat-icon
+                                                    aria-label="play_circle icon">chevron_right</mat-icon></button>
                                         </div>
                                     </div>
                                 </div>
@@ -303,48 +285,64 @@
                                 <div class="course-info">
                                     <div><span>Level:</span></div>
                                     <div>
-                                        <mat-icon> bar_chart</mat-icon>
+                                        {{courseDetailsData?.course_info?.level}} <mat-icon> bar_chart</mat-icon>
                                     </div>
                                 </div>
                                 <div class="course-info">
                                     <div><span>Rating:</span></div>
-                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span>                                        <span>(5782)</span></div>
+                                    <!-- <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span>                                        <span>(5782)</span></div> -->
+                                    <div>
+                                        <span>
+                                            <app-starrating [rating]='courseDetailsData?.course_info?.star_rating'>
+                                            </app-starrating>
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="course-info">
                                     <div><span>Offered:</span></div>
                                     <div><span>...</span></div>
                                 </div>
                                 <div class="course-btn-wrapper">
-                                    <div><a mat-raised-button class="rounded" href="#">Online</a> <a mat-raised-button class="rounded"
-                                            href="#">Campus</a></div>
+                                    <div><a *ngFor="let a of courseDetailsData?.course_info?.course_availability"
+                                            mat-raised-button class="rounded" href="#">{{a}}</a>
+
+                                    </div>
                                 </div>
                             </div>
 
                             <h3>Cost:</h3>
                             <div class="course-details-info">
-                                <div class="course-info">
-                                    <div><span><mat-icon>bar_chart</mat-icon></span><span>Online:</span></div>
+                                <div *ngIf="courseDetailsData?.course_info?.cost.online" class="course-info">
+                                    <div><span>
+                                            <mat-icon>bar_chart</mat-icon>
+                                        </span><span>Online:</span></div>
                                     <div>
-                                        <span>$199</span>
+                                        <span>{{courseDetailsData?.course_info?.cost.online}}</span>
                                     </div>
                                 </div>
-                                <div class="course-info">
-                                    <div><span><mat-icon>star</mat-icon></span><span>Campus:</span></div>
-                                    <div><span>$250</span></div>
+                                <div *ngIf="courseDetailsData?.course_info?.cost.campus" class="course-info">
+                                    <div><span>
+                                            <mat-icon>star</mat-icon>
+                                        </span><span>Campus:</span></div>
+                                    <div><span>{{courseDetailsData?.course_info?.cost.campus}}</span></div>
                                 </div>
                             </div>
 
                             <h3>Length:</h3>
                             <div class="course-details-info">
-                                <div class="course-info">
-                                    <div><span><mat-icon>bar_chart</mat-icon></span><span>Online:</span></div>
+                                <div *ngIf="courseDetailsData?.course_info?.course_length?.online" class="course-info">
+                                    <div><span>
+                                            <mat-icon>bar_chart</mat-icon>
+                                        </span><span>Online:</span></div>
                                     <div>
-                                        <span>5 hours</span>
+                                        <span>{{courseDetailsData?.course_info?.course_length.online}}</span>
                                     </div>
                                 </div>
-                                <div class="course-info">
-                                    <div><span><mat-icon>star</mat-icon></span><span>Campus:</span></div>
-                                    <div><span>1 day</span></div>
+                                <div *ngIf="courseDetailsData?.course_info?.course_length?.campus" class="course-info">
+                                    <div><span>
+                                            <mat-icon>star</mat-icon>
+                                        </span><span>Campus:</span></div>
+                                    <div><span>{{courseDetailsData?.course_info?.course_length?.campus}}</span></div>
                                 </div>
                             </div>
 
@@ -628,12 +626,15 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div><span>Length: 5 Days</span></div>
                                 </div>
                             </div>
@@ -651,12 +652,15 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div><span>Length: 5 Days</span></div>
                                 </div>
                             </div>
@@ -674,12 +678,15 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div><span>Length: 5 Days</span></div>
                                 </div>
                             </div>
@@ -697,12 +704,15 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div><span>Length: 5 Days</span></div>
                                 </div>
                             </div>
@@ -713,7 +723,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="btn-container">
-                            <button mat-raised-button class="btn-orange">View All <mat-icon aria-label="play_circle icon">chevron_right</mat-icon></button>
+                            <button mat-raised-button class="btn-orange">View All <mat-icon
+                                    aria-label="play_circle icon">chevron_right</mat-icon></button>
                         </div>
                     </div>
                 </div>
@@ -721,8 +732,8 @@
         </section>
         <!-- Pathways section end-->
 
-        
-        
+
+
         <!-- Students section begin-->
         <section class="stb-padding s3-padding-tb-30">
             <div class="container">
@@ -737,12 +748,20 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
-                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star_half">star_half</mat-icon></span></div>
+                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star_half">star_half</mat-icon>
+                                            </span></div>
                                     </div>
                                 </div>
                             </div>
@@ -755,12 +774,20 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
-                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star_half">star_half</mat-icon></span></div>
+                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star_half">star_half</mat-icon>
+                                            </span></div>
                                     </div>
                                 </div>
                             </div>
@@ -773,12 +800,20 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
-                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star_half">star_half</mat-icon></span></div>
+                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star_half">star_half</mat-icon>
+                                            </span></div>
                                     </div>
                                 </div>
                             </div>
@@ -791,12 +826,20 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
-                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star_half">star_half</mat-icon></span></div>
+                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star_half">star_half</mat-icon>
+                                            </span></div>
                                     </div>
                                 </div>
                             </div>
@@ -809,18 +852,27 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
-                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star">star</mat-icon><mat-icon aria-label="star_half">star_half</mat-icon></span></div>
+                                        <div><span>Student Name</span> <span>|</span> <span>April 20, 2020</span> <span>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star">star</mat-icon>
+                                                <mat-icon aria-label="star_half">star_half</mat-icon>
+                                            </span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="btn-container">
-                            <button mat-raised-button class="btn-orange">Learn more <mat-icon aria-label="play_circle icon">chevron_right</mat-icon></button>
+                            <button mat-raised-button class="btn-orange">Learn more <mat-icon
+                                    aria-label="play_circle icon">chevron_right</mat-icon></button>
                         </div>
                     </div>
                 </div>
