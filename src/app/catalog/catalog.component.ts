@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseCatalogService } from '../shared/coursecatalog.service';
+import { NavigationExtras, Router } from '@angular/router';
 
 interface Food {
   value: string;
@@ -23,13 +24,18 @@ export class CatalogComponent implements OnInit {
   searchCatalog: any; 
   pageSize = 5; 
   pageLength = 5;
-  constructor(private coursecatalogService: CourseCatalogService) { }
+  navigationExtras: NavigationExtras ={}; 
+  tempData : any; 
+  constructor(private coursecatalogService: CourseCatalogService, private router: Router) { }
 
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(
       (data) => {
-        //this.courseCatalogsDataTotal = data; 
+        this.courseCatalogsDataTotal = data; 
+        this.tempData = this.courseCatalogsDataTotal.entries;
+
         //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
+        this.courseCatalogsData = this.tempData.slice(0,this.pageSize);
         console.log(this.courseCatalogsData);
         //this.pageLength =  this.courseCatalogsDataTotal.entries.length;
         console.log(this.pageSize);
@@ -40,7 +46,18 @@ export class CatalogComponent implements OnInit {
   changePage(data): void{
       console.log(data);
       //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
+      this.courseCatalogsData = this.tempData.slice(0,data.pageSize);
 
+  }
+
+  courseDetails(data){
+    console.log(data);
+    this.navigationExtras.state = {
+      ...data
+   };
+
+   console.log(this.navigationExtras.state);
+   this.router.navigateByUrl('/course-details/'+data.uid,this.navigationExtras.state);
   }
 
   selectedValue: string;

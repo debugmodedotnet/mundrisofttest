@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'franchise', component: FranchiseComponent },
   { path: 'catalog', component: CatalogComponent },
   { path: 'test', component: TestComponent },
-  { path: 'course-details', component: CoursedetailsComponent },
+  { path: 'course-details/:id', component: CoursedetailsComponent },
   { 
     path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule) 
   },

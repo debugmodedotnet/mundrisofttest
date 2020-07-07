@@ -9,7 +9,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 })
 export class HomeComponent implements OnInit {
 
-  homeData: any;
+  homeData : any; 
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
