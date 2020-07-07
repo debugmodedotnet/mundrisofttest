@@ -4,6 +4,7 @@ import { RegisterDialogComponent } from './register-dialog/register-dialog.compo
 import { LoginComponent } from './login/login.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
 import { FormBuilder } from '@angular/forms';
+import { UserComponent } from './user/user.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,7 @@ export class AppComponent {
   constructor(public dialog: MatDialog) {}
   
     openDialog(): void {
-      const dialogRef = this.dialog.open(RegisterDialogComponent, {
+      const dialogRef = this.dialog.open(UserComponent, {
         
       });
   

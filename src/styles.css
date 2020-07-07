@@ -799,6 +799,9 @@ section, footer{
   .certification-card .course-detials-container{
     margin:10px;
   }
+  .mat-tab-container .card-wrapper{
+    margin-top:20px;
+  }
   .mat-tab-container{
         margin-top:20px;
   }
@@ -1205,9 +1208,9 @@ svg#clouds {
 /*Form*/
 .register-form{
     text-align: center;
-    width:80%;
+    width:100%;
     margin: 0 auto;
-    padding: 80px 50px;    
+    padding: 10px 30px;    
 }
 .login-form{
     text-align: center;
