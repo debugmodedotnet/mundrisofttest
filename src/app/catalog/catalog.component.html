@@ -85,8 +85,8 @@
                         <div class="search-box-container">
                             <div class="search-input">
                                 <mat-form-field appearance="outline">
-                                    <mat-label >Search a topic, path, course</mat-label>
-                                    <input matInput  [(ngModel)]='searchCatalog' placeholder="Search a topic, path, course">
+                                    <mat-label>Search a topic, path, course</mat-label>
+                                    <input matInput [(ngModel)]='searchCatalog' placeholder="Search a topic, path, course">
                                     <mat-icon matSuffix>search</mat-icon>
                                 </mat-form-field>
                             </div>
@@ -131,7 +131,9 @@
                                 </mat-card-header>
                                 <div class="img-container">
                                     <img class="image-square" mat-card-image src="{{data.course_outline.banner_image.url}}" alt="Picture">
-                                    <!-- <span class="price-badge">$200</span> -->
+
+                                </div>
+                                <div class="course-price">                                    
                                     <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice">
                                     </ng-container>
                                     <ng-template #onlineprice>
