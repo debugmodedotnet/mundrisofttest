@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit, NgModule } from '@angular/core'; 
 import { Router, ActivatedRoute } from '@angular/router'; 
 import { Image, Banner_section, Franchise,Entry } from './model';
 import { FranchiseService } from './franchise.service';
 
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 @Component({
@@ -26,6 +27,56 @@ public _franchise:Entry= new Entry();
 
       });
      
+  }
+//Owl Carousel Trending Courses
+customOptionsCourses: OwlOptions = {
+  loop: true,
+  mouseDrag: true,
+  touchDrag: true,
+  pullDrag: false,
+  dots: true,
+  navSpeed: 700,
+  navText: ['', ''],
+  responsive: {
+    0: {
+      items: 1
+    },
+    400: {
+      items: 1
+    },
+    740: {
+      items: 2
+    },
+    940: {
+      items: 3
+    }
+  },
+  nav: true
+}
+  //Owl Carousel Trending Courses
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 1
+      },
+      940: {
+        items: 1
+      }
+    },
+    nav: true
   }
 
 }

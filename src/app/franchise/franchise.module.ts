@@ -21,13 +21,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { FranchiseRoutingModule } from './franchise-routing.module';
 import { FranchiseService }					  from './franchise.service';
 import { FranchiseComponent }					  from './franchise.component';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
   declarations: [FranchiseComponent],
   imports: [
     CommonModule,
+    CarouselModule,
     FranchiseRoutingModule,
     CommonModule,
     FormsModule,
