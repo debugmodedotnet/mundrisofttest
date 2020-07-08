@@ -122,7 +122,7 @@ margin:0 auto;
 }
 
 .hero-banner{
-    background-image: url('/assets/img/hero-banner.jpg');
+    /* background-image: url('/assets/img/hero-banner.jpg'); */
     background-size: cover;    
 }
 .btn-container{
@@ -1378,3 +1378,13 @@ svg#clouds {
   .example-full-width {
     width: 100%;
   }
+
+
+  /* added by Dhananjay */
+  .mat-paginator-navigation-previous {
+    display: none !important;
+}
+
+.mat-paginator-navigation-next {
+        display: none !important;
+    }

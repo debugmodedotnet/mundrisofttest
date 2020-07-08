@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseCatalogService } from '../shared/coursecatalog.service';
-import { NavigationExtras, Router } from '@angular/router';
+import { NavigationExtras, Router, ActivatedRoute } from '@angular/router';
 
 interface Food {
   value: string;
@@ -18,61 +18,96 @@ interface Car {
   styleUrls: ['./catalog.component.css']
 })
 export class CatalogComponent implements OnInit {
- 
+
   courseCatalogsDataTotal = [];
   courseCatalogsData = [];
-  searchCatalog: any; 
-  pageSize = 5; 
-  pageLength = 5;
-  navigationExtras: NavigationExtras ={}; 
-  tempData : any; 
-  constructor(private coursecatalogService: CourseCatalogService, private router: Router) { }
+  searchCatalog: any;
+  courseBanner : any; 
+  pageSize = 6;
+  pageLength = 6;
+  navigationExtras: NavigationExtras = {};
+  navigation = this.router.getCurrentNavigation();
+  tempData: any;
+  dataFromHome :any; 
+  constructor(private coursecatalogService: CourseCatalogService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(
       (data) => {
-        this.courseCatalogsDataTotal = data; 
+        this.courseCatalogsDataTotal = data;
         this.tempData = this.courseCatalogsDataTotal.entries;
 
         //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
-        this.courseCatalogsData = this.tempData.slice(0,this.pageSize);
+        this.courseCatalogsData = this.tempData.slice(0, this.pageSize);
         console.log(this.courseCatalogsData);
-        //this.pageLength =  this.courseCatalogsDataTotal.entries.length;
+        this.pageLength =  this.courseCatalogsDataTotal.entries.length;
         console.log(this.pageSize);
       }
     );
+
+
+    this.coursecatalogService.getCourseCatalogBenner().subscribe(
+      data =>{
+           this.courseBanner = data ;
+          console.log(this.courseBanner);
+      }
+    )
+
+    // this.route.queryParams.subscribe(params => {
+    //   this.searchCatalog = params['search'];
+    //   console.log(this.searchCatalog);
+    // })
+
+     console.log(this.navigation.extras);
+
+     this.dataFromHome = {
+       ...this.navigation.extras
+     }
+
+     this.searchCatalog = this.dataFromHome.s; 
+     console.log(this.searchCatalog);
+
   };
 
-  changePage(data): void{
-      console.log(data);
-      //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
-      this.courseCatalogsData = this.tempData.slice(0,data.pageSize);
-
-  }
-
-  courseDetails(data){
+  changePage(data): void {
     console.log(data);
-    this.navigationExtras.state = {
-      ...data
-   };
+    //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,data.pageSize);
+    this.courseCatalogsData = this.tempData.slice(0, data.pageSize);
 
-   console.log(this.navigationExtras.state);
-   this.router.navigateByUrl('/course-details/'+data.uid,this.navigationExtras.state);
   }
+
+  // courseDetails(data){
+  //   console.log(data);
+  //   this.navigationExtras.state = {
+  //     ...data
+  //  };
+
+  //  console.log(this.navigationExtras.state);
+  //  this.router.navigateByUrl('/course-details/'+data.uid,this.navigationExtras.state);
+  // }
+
+  courseDetails(data) {
+    console.log(data);
+    this.router.navigateByUrl('/course-details/' + data.uid);
+  }
+
+
+
+
 
   selectedValue: string;
   selectedCar: string;
 
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    { value: 'steak-0', viewValue: 'Steak' },
+    { value: 'pizza-1', viewValue: 'Pizza' },
+    { value: 'tacos-2', viewValue: 'Tacos' }
   ];
 
   cars: Car[] = [
-    {value: 'volvo', viewValue: 'Volvo'},
-    {value: 'saab', viewValue: 'Saab'},
-    {value: 'mercedes', viewValue: 'Mercedes'}
+    { value: 'volvo', viewValue: 'Volvo' },
+    { value: 'saab', viewValue: 'Saab' },
+    { value: 'mercedes', viewValue: 'Mercedes' }
   ];
 
 }

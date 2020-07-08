@@ -1,14 +1,12 @@
 <div class="main-container internal-page-wrapper catalog-page">
     <!-- Hero Banner section begin-->
-    <div class="hero-banner">
+    <div class="hero-banner" [ngStyle]="{'background': 'url(' + courseBanner?.entry.banner_section.background_image.url +') no-repeat 0 0'}">
         <div class="banner-overlay">
             <div class="banner-content">
                 <div>
-                    <h1>Lorem ipsum dolor sit amet</h1>
+                    <h1>{{courseBanner?.entry?.banner_section.header_text}}</h1>
 
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-                    </p>
+                    <p> {{courseBanner?.entry?.banner_section.short_description}}</p>
 
                     <div class="btn-container">
 
@@ -33,7 +31,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div>
-                            <span>Breadcrumb item</span> / <span class="txt-orange">Breadcrumb item</span>
+                            <a class="nav-link" aria-label="Home" routerLink="/home">Home</a>/<span class="txt-orange">Courses</span>
                         </div>
                     </div>
                     <div class="col-md-5">
@@ -44,7 +42,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-5">
+                    <!-- <div class="col-md-5">
                         <div class="select-container">
                             <div>
                                 <select>
@@ -80,8 +78,8 @@
                             </div>
                         </div>
 
-                    </div>
-                    <div class="col-md-3">
+                    </div> -->
+                    <div class="col-md-6">
                         <div class="search-box-container">
                             <div class="search-input">
                                 <mat-form-field appearance="outline">
@@ -106,7 +104,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="select-container-btn">
-                            <div class="text-center"><button mat-raised-button class="">More Filters</button></div>
+                            <!-- <div class="text-center"><button mat-raised-button class="">More Filters</button></div> -->
 
                         </div>
                     </div>
@@ -192,7 +190,7 @@
             <div class="s-container">
                 <div class="s-row s3-padding-lr-30">
                     <div class="s-col">
-                        <mat-paginator (page)='changePage($event)' [length]='pageLength' [pageSize]="pageSize" [pageSizeOptions]="[5,10,25,100]">
+                        <mat-paginator (page)='changePage($event)' [length]='pageLength' [pageSize]="pageSize" [pageSizeOptions]="[6,10,25,50,100]">
                         </mat-paginator>
                     </div>
                 </div>
