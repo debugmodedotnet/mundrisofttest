@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
- 
-import { Router, ActivatedRoute } from '@angular/router';
- 
+import { Component, OnInit } from '@angular/core'; 
+import { Router, ActivatedRoute } from '@angular/router'; 
 import { Image, Banner_section, Franchise,Entry } from './model';
 import { FranchiseService } from './franchise.service';
+
+
 
 @Component({
   selector: 'app-franchise',
@@ -27,7 +27,5 @@ public _franchise:Entry= new Entry();
       });
      
   }
-
-  
 
 }

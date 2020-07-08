@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
 
   }
 
-  //Owl Carousel
-  customOptions: OwlOptions = {
+  //Owl Carousel Instructors
+  customOptionsInstructor: OwlOptions = {
     loop: true,
     mouseDrag: false,
     touchDrag: false,
@@ -38,13 +38,13 @@ export class HomeComponent implements OnInit {
         items: 1
       },
       400: {
-        items: 2
+        items: 1
       },
       740: {
-        items: 3
+        items: 1
       },
       940: {
-        items: 4
+        items: 1
       }
     },
     nav: true

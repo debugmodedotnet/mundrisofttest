@@ -61,7 +61,10 @@ margin:0 auto;
 .navigation-container .navbar-dark .navbar-nav .nav-link{
     color: rgba(255,255,255,1);
 }
-
+.hero-banner .mat-form-field-appearance-outline .mat-form-field-label,
+.bg-light-orange .mat-form-field-appearance-outline .mat-form-field-label{
+    color:#ffffff;
+}
 .table{
     display: table;    
 }
