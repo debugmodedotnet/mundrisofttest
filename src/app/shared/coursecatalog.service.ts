@@ -13,6 +13,7 @@ export class CourseCatalogService {
   // coursedetailapiuirl="https://cdn.contentstack.io/v3/content_types/course/entries/blt8d11bc06769923dd/?environment=poc&locale=en-us&include[]=instructor";
   coursedetailapiuirl = "https://cdn.contentstack.io/v3/content_types/course/entries/";
   apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc&locale=en-us&include[]=instructor';
+  apicoursebanner = "https://cdn.contentstack.io/v3/content_types/course_catalog/entries/blt3101bf8f7085f83e?environment=poc"
   // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
   headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
@@ -36,6 +37,14 @@ export class CourseCatalogService {
     );
   }
 
+  getCourseCatalogBenner(): Observable<any> {
+    console.log('in service');
+    return this.http.get<any>(this.apicoursebanner, this.httpOptions).pipe(
+      tap(data => { console.log(data) }),
+      catchError(this.handleError)
+    );
+  }
+
   getCourseDetails(id: string): Observable<any> {
 
     console.log(id);
@@ -44,7 +53,7 @@ export class CourseCatalogService {
 
     return this.http.get<any>(this.coursedetailapiuirl, this.httpOptions).pipe(
       tap(data => {
-       // console.log(data);
+        // console.log(data);
       }),
       catchError(this.handleError)
     );
