@@ -46,19 +46,18 @@ export class CourseCatalogService {
   }
 
   getCourseDetails(id: string): Observable<any> {
-
+    
     console.log(id);
+    this.coursedetailapiuirl = "https://cdn.contentstack.io/v3/content_types/course/entries/";
     this.coursedetailapiuirl = this.coursedetailapiuirl + id + "/?environment=poc&locale=en-us&include[]=instructor";
     console.log(this.coursedetailapiuirl);
-
+    
     return this.http.get<any>(this.coursedetailapiuirl, this.httpOptions).pipe(
-      tap(data => {
-        // console.log(data);
-      }),
-      catchError(this.handleError)
-    );
-
-  }
+    tap(data => {
+    console.log(data);
+    }),
+    catchError(this.handleError));
+    }
 
   //   getCourseCatalogTemp():Observable<any> {
   //     let data1 : any = [];

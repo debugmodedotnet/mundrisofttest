@@ -741,7 +741,7 @@
                                             </div>
 
                                             <div>
-                                                
+
                                             </div>
 
                                         </div>
@@ -773,7 +773,7 @@
                                     <div>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>First Name</mat-label>
-                                            <input matInput placeholder="Ex. Pizza" value="Sushi">
+                                            <input matInput placeholder="First Name">
                                         </mat-form-field>
                                     </div>
                                     <div class="table">
@@ -794,10 +794,20 @@
                                             </mat-form-field>
                                         </div>
                                     </div>
+                                    
                                     <div>
-
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Email</mat-label>
+                                            <input matInput placeholder="Email">
+                                        </mat-form-field>
                                     </div>
-
+                                    <div>
+                                            <mat-form-field class="example-full-width">
+                                                    <mat-label>Zipcode</mat-label>
+                                                    <input matInput #postalCode maxlength="6" placeholder="Zipcode">
+                                                    <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+                                                  </mat-form-field>
+                                        </div>
                                 </form>
                             </div>
                         </div>

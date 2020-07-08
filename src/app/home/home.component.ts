@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-  
+
 
   courseDetails(data) {
     console.log(data);
@@ -39,22 +39,22 @@ export class HomeComponent implements OnInit {
     // this.router.navigateByUrl('/course-details/');
     //   console.log(data);
     this.navigationExtras.state = {
-      s:this.learnSearch
-   };
+      s: this.learnSearch
+    };
 
-   console.log(this.navigationExtras.state);
-   this.router.navigateByUrl('/catalog',this.navigationExtras.state);
+    console.log(this.navigationExtras.state);
+    this.router.navigateByUrl('/catalog', this.navigationExtras.state);
     //this.router.navigate(['/catalog'], { queryParams: { search: this.learnSearch } });
 
   }
 
   //Owl Carousel Instructors
-  /*customOptionsInstructor: OwlOptions = {
+  customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
+    mouseDrag: true,
+    touchDrag: true,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -72,6 +72,58 @@ export class HomeComponent implements OnInit {
       }
     },
     nav: true
-  }*/
+  }
+
+  //Owl Carousel Clients
+  customOptionsClients: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 5
+      }
+    },
+    nav: true
+  }
+
+  //Owl Carousel Trending Courses
+  customOptionsCourse: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: false,
+    dots: true,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 1
+      },
+      740: {
+        items: 2
+      },
+      940: {
+        items: 3
+      }
+    },
+    nav: true
+  }
 
 }
