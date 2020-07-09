@@ -137,7 +137,7 @@ margin:0 auto;
     z-index: 1;
 }
 .franchise-page .hero-banner .banner-overlay{
-    background-color: rgba(9, 131, 245, 0.7);
+    /*background-color: rgba(9, 131, 245, 0.7);*/
 }
 .franchise-page .hero-banner.skew:before {
     content: '';
@@ -257,9 +257,41 @@ margin:0 auto;
     font-weight: 600;
     color: #f54b1e;    
 }
+.owl-carousel.owl-drag .owl-item .card-wrapper{
+    margin:15px;
+    cursor: pointer;
+}
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span{
     background: #f54b1e;
+}
+.owl-theme .owl-nav {
+    margin-top: 10px;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+.owl-carousel .owl-nav .owl-prev .fa,
+.owl-carousel .owl-nav .owl-next .fa{
+    font: normal normal normal 20px/1 FontAwesome;
+}
+.owl-carousel .owl-nav .owl-prev{
+    float: left;
+}
+.owl-carousel .owl-nav .owl-next{
+    float: right;
+}
+.owl-theme .owl-nav [class*=owl-] {    
+    background: #f54b1e8c;    
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background: #f54b1e;   
 }
 .testimonials-container{
     border-top:1px solid #cccccc;
@@ -318,8 +350,8 @@ margin:0 auto;
     text-align: center;
     margin: 0 15px;    
 }
-.select-container .search-box-container .search-input .mat-form-field{
-    width:100%!important;
+.search-box-container .search-input .mat-form-field{
+    width:100%;   
 }
 .instructor-name{
     text-align: center;
@@ -363,6 +395,10 @@ margin:0 auto;
 }
 .select-container .frm-select{
     width:120px;
+}
+.catalog-page .hero-banner .banner-content{
+    margin:0 auto;
+    width:75%;
 }
 .catalog-page .hero-banner .banner-content .btn-container{
     margin-top:25px;
@@ -800,8 +836,9 @@ section, footer{
 }
 .card-wrapper{
     position: relative;
-    margin-bottom:20px;
+    margin-bottom:20px;   
 }
+
 .card-wrapper h3{
     line-height: 20px;
     font-size:18px;
@@ -928,23 +965,25 @@ section, footer{
     border-radius: 150px;
     margin: 0px auto 20px auto;
     display: block;
-    border: 3px solid #1976d2;   
+    border: 1px solid #f2f2f2;   
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 10px 10px 0px #cccccc;
 }
 
 .icon-circle-blue .mat-icon{
     width: 70px;
     height: 70px;
     font-size: 70px;
-    color:#666666;   
+    color:#f54b1e;   
 }
 .instructor-carousel{    
-    width:100%;
+    width:90%;
     display: table;
-    margin-bottom: 30px;  
+    margin-bottom: 30px;
+    margin:0 auto;  
 }
 .instructor-carousel .instruct-col{    
     display: table-cell;
@@ -958,6 +997,9 @@ section, footer{
     overflow: hidden;
     box-shadow: 0px 5px 10px 5px #666666;
     margin:10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .instructor-carousel .instructor-avatar-small{
     width:100px;
@@ -966,11 +1008,16 @@ section, footer{
     overflow: hidden;
     box-shadow: 0px 5px 10px 5px #666666;
     margin:10px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .instructor-carousel .instructor-avatar img,
 .instructor-carousel .instructor-avatar-small img{
-    width:auto;    
+    width: auto;
+    height: 110%;    
 }
+
 .instructor-carousel .instructor-details{    
     width:74%;
 }
@@ -996,7 +1043,7 @@ section, footer{
     position: absolute;
     width:100%;
     padding:10px 20px;
-    background-color: #f54b1e;
+    background-color: #f54b1e8f;
     color:#ffffff;
     bottom:0;
 }
@@ -1344,6 +1391,7 @@ svg#clouds {
 }
 .login-form .form-field .frm-input, .login-form .zipcode .frm-input{
     height:auto;
+    margin:0px 0px 20px 0px;
 }
 .campus-location{
     display: table;
