@@ -242,7 +242,7 @@
                                             <div class="card-btn-wrapper">
                                                 <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
                                                 <div>
-                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" href="#">{{b}}</a>
+                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" >{{b}}</a>
                                                 </div>
                                             </div>
                                         </mat-card-actions>
@@ -324,7 +324,7 @@
                                                 <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
                                                 <div>
                                                     <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
-                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" href="#">{{b}}</a>
+                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" >{{b}}</a>
                                                     <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                 </div>
                                             </div>
@@ -438,10 +438,10 @@
                                     <div class="instructor-carousel">
                                         <div class="instructor-details instruct-col">
                                             <div class="">
-                                                <p class="course-title">{{i.first_name}}</p>
+                                                <p class="course-title">{{i.first_name}} {{i.middle_name}} {{i.last_name}}</p>
                                                 <p [innerHtml]='i.bio'> </p>
                                                 <div class="btn-wrapper">
-                                                    <a mat-raised-button class="btn-orange" href="#">More About Liz</a>
+                                                    <a mat-raised-button class="btn-orange" >More About {{i.first_name}}</a>                                                    
                                                 </div>
                                             </div>
                                         </div>

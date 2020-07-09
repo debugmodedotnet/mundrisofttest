@@ -68,8 +68,7 @@
                                     </mat-expansion-panel-header>
                                     <mat-panel-description>
                                         <div>
-                                            <p
-                                                [innerHtml]='courseDetailsData?.course_detail?.who_should_take_this_course'>
+                                            <p [innerHtml]='courseDetailsData?.course_detail?.who_should_take_this_course'>
                                             </p>
                                         </div>
                                     </mat-panel-description>
@@ -83,8 +82,7 @@
                                     </mat-expansion-panel-header>
                                     <mat-panel-description>
                                         <div>
-                                            <p
-                                                [innerHtml]='courseDetailsData?.course_detail?.what_should_i_already_know'>
+                                            <p [innerHtml]='courseDetailsData?.course_detail?.what_should_i_already_know'>
                                             </p>
 
 
@@ -101,8 +99,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <h2>Skills you will learn</h2>
-                                        <div class="skills-container"
-                                            *ngFor="let f of courseDetailsData?.skills_you_will_learn?.skill ">
+                                        <div class="skills-container" *ngFor="let f of courseDetailsData?.skills_you_will_learn?.skill ">
                                             <div>
                                                 <mat-icon>highlight</mat-icon>
                                             </div>
@@ -122,8 +119,7 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <h2>About the instructor</h2>
-                                        <div class="instructor-container"
-                                            *ngFor="let instructor of courseDetailsData?.instructor">
+                                        <div class="instructor-container" *ngFor="let instructor of courseDetailsData?.instructor">
                                             <div>
                                                 <div class="instructor-avatar">
                                                     <mat-icon aria-label="Instructor Avatar">person</mat-icon>
@@ -159,10 +155,9 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
@@ -187,10 +182,9 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
@@ -215,10 +209,9 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
@@ -243,10 +236,9 @@
                                     </div>
                                     <div class="col-sm-9">
                                         <div>
-                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor
+                                            <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                                 incididunt ut labore et dolore magna aliqua.</p>
                                             <div class="other-course-details">
                                                 <div class="course-info">
@@ -285,7 +277,8 @@
                                 <div class="course-info">
                                     <div><span>Level:</span></div>
                                     <div>
-                                        {{courseDetailsData?.course_info?.level}} <mat-icon> bar_chart</mat-icon>
+                                        {{courseDetailsData?.course_info?.level}}
+                                        <mat-icon> bar_chart</mat-icon>
                                     </div>
                                 </div>
                                 <div class="course-info">
@@ -303,8 +296,8 @@
                                     <div><span>...</span></div>
                                 </div>
                                 <div class="course-btn-wrapper">
-                                    <div><a *ngFor="let a of courseDetailsData?.course_info?.course_availability"
-                                            mat-raised-button class="rounded" href="#">{{a}}</a>
+                                    <div><a *ngFor="let a of courseDetailsData?.course_info?.course_availability" mat-raised-button
+                                            class="rounded" href="#">{{a}}</a>
 
                                     </div>
                                 </div>
@@ -383,222 +376,99 @@
                         <div class="course-outline-wrapper">
                             <h2>Course Outline</h2>
                             <div class="accordion-container">
+
                                 <mat-accordion class="example-headers-align" multi>
-                                    <mat-expansion-panel>
+
+                                    <mat-expansion-panel *ngFor="let co of courseDetailsData?.course_outline?.course_topic">
+
                                         <mat-expansion-panel-header>
+
                                             <mat-panel-title>
-                                                Course Topics
+
+                                                {{co.lesson_duration}}
+
                                             </mat-panel-title>
+
                                             <mat-panel-description>
-                                                1h 30m
+
+                                                {{co.lesson_title}}
+
                                             </mat-panel-description>
+
                                         </mat-expansion-panel-header>
+
                                         <div class="topic-details">
+
                                             <div>
+
                                                 Lorem ipsum dolor sit amet
+
                                             </div>
+
                                             <div>
+
                                                 30m
+
                                             </div>
+
                                         </div>
+
                                         <div class="topic-details">
+
                                             <div>
+
                                                 Lorem ipsum dolor sit amet
+
                                             </div>
+
                                             <div>
+
                                                 30m
+
                                             </div>
+
                                         </div>
+
                                         <div class="topic-details">
+
                                             <div>
+
                                                 Lorem ipsum dolor sit amet
+
                                             </div>
+
                                             <div>
+
                                                 20m
+
                                             </div>
+
                                         </div>
+
                                         <div class="topic-details">
+
                                             <div>
+
                                                 Lorem ipsum dolor sit amet
+
                                             </div>
+
                                             <div>
+
                                                 30m
+
                                             </div>
+
                                         </div>
+
                                     </mat-expansion-panel>
 
-                                    <mat-expansion-panel>
-                                        <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                                Course Topics
-                                            </mat-panel-title>
-                                            <mat-panel-description>
-                                                1h 30m
-                                            </mat-panel-description>
-                                        </mat-expansion-panel-header>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                20m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                    </mat-expansion-panel>
 
-                                    <mat-expansion-panel>
-                                        <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                                Course Topics
-                                            </mat-panel-title>
-                                            <mat-panel-description>
-                                                1h 30m
-                                            </mat-panel-description>
-                                        </mat-expansion-panel-header>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                20m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                    </mat-expansion-panel>
 
-                                    <mat-expansion-panel>
-                                        <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                                Course Topics
-                                            </mat-panel-title>
-                                            <mat-panel-description>
-                                                1h 30m
-                                            </mat-panel-description>
-                                        </mat-expansion-panel-header>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                20m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                    </mat-expansion-panel>
 
-                                    <mat-expansion-panel>
-                                        <mat-expansion-panel-header>
-                                            <mat-panel-title>
-                                                Course Topics
-                                            </mat-panel-title>
-                                            <mat-panel-description>
-                                                1h 30m
-                                            </mat-panel-description>
-                                        </mat-expansion-panel-header>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                20m
-                                            </div>
-                                        </div>
-                                        <div class="topic-details">
-                                            <div>
-                                                Lorem ipsum dolor sit amet
-                                            </div>
-                                            <div>
-                                                30m
-                                            </div>
-                                        </div>
-                                    </mat-expansion-panel>
+
                                 </mat-accordion>
+
                             </div>
                         </div>
                     </div>
@@ -626,8 +496,7 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
@@ -652,8 +521,7 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
@@ -678,8 +546,7 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
@@ -704,8 +571,7 @@
                     <div class="col-sm-9">
                         <div>
                             <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua.</p>
                             <div class="other-course-details">
                                 <div class="course-info">
@@ -748,10 +614,8 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
@@ -774,10 +638,8 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
@@ -800,10 +662,8 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
@@ -826,10 +686,8 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
@@ -852,10 +710,8 @@
                             </div>
                             <div>
                                 <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
-                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua.</p>
                                 <div class="other-course-details">
                                     <div class="course-info icon">
