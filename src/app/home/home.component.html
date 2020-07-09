@@ -434,20 +434,12 @@
                         <h2 class="text-center">Meet Some of Our Awesome Instructors</h2>
                         <div class="s3-padding-30">
                             <owl-carousel-o [options]="customOptions">
-                                <ng-template carouselSlide>
+                                <ng-template carouselSlide *ngFor="let i of homeData?.entry?.instructors_section.instructor">
                                     <div class="instructor-carousel">
                                         <div class="instructor-details instruct-col">
                                             <div class="">
-                                                <p class="course-title">Liz Jenkins</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                                    exercitation
-                                                </p>
+                                                <p class="course-title">{{i.first_name}}</p>
+                                                <p [innerHtml]='i.bio'> </p>
                                                 <div class="btn-wrapper">
                                                     <a mat-raised-button class="btn-orange" href="#">More About Liz</a>
                                                 </div>
@@ -455,58 +447,12 @@
                                         </div>
                                         <div class="instruct-col">
                                             <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="{{i.image.url}}" alt="Picture">
                                             </div>
                                         </div>
                                     </div>
                                 </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="instructor-carousel">
-                                        <div class="instructor-details instruct-col">
-                                            <div class="">
-                                                <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                                    exercitation
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                        <div class="instruct-col">
-                                            <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="instructor-carousel">
-                                        <div class="instructor-details instruct-col">
-                                            <div class="">
-                                                <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                    Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                                    exercitation
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="instruct-col">
-                                            <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </ng-template>
+                             
                             </owl-carousel-o>
                         </div>
                     </div>
@@ -558,59 +504,16 @@
 
                         <div class="testimonials-container">
                             <owl-carousel-o [options]="customOptions">
-                                <ng-template carouselSlide>
+                                <ng-template carouselSlide *ngFor="let c of homeData?.entry?.testimonial_section.testimonial">
                                     <div class="instructor-carousel">
                                         <div class="instructor-details instruct-col">
                                             <div class="">
-                                                <p class="course-title">Exceeding Customer Expectations</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                                                    id est laborum.
-                                                </p>
+                                                <p class="course-title">{{c.heading}}</p>
+                                                <p> {{c.feedback_text}} </p>
+                                                
                                             </div>
                                         </div>
 
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="instructor-carousel">
-                                        <div class="instructor-details instruct-col">
-                                            <div class="">
-                                                <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                                                    id est laborum.
-                                                </p>
-
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="instructor-carousel">
-                                        <div class="instructor-details instruct-col">
-                                            <div class="">
-                                                <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                                    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                                                    id est laborum.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        
                                     </div>
                                 </ng-template>
                             </owl-carousel-o>
