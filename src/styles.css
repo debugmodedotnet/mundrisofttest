@@ -160,6 +160,10 @@ margin:0 auto;
   .breadcrumb{
     background-color: #ffffff;
     z-index: 2;
+    align-items: center;
+  }
+  .breadcrumb span{    
+    padding-right: 10px;
   }
 .catalog-page .hero-banner .banner-content,
 .catalog-page .search-box-container{
@@ -312,7 +316,10 @@ margin:0 auto;
 }
 .select-container .search-box-container .search-input{
     text-align: center;
-    margin: 0 15px;
+    margin: 0 15px;    
+}
+.select-container .search-box-container .search-input .mat-form-field{
+    width:100%!important;
 }
 .instructor-name{
     text-align: center;
