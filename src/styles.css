@@ -93,11 +93,22 @@ margin:0 auto;
     align-items: center;
     width:100%;
 }
+.hero-banner .banner-content .btn-container .mat-form-field-infix{
+    width:350px;
+}
 .hero-banner .banner-content .btn-container button,
 .hero-banner .banner-content .btn-container a{
     padding: 0.45em .75em 0.45em .75em;
     margin-top: -1.4em;
     text-shadow: 1px 1px 0px #000000;
+}
+.btn-wrapper a.btn-orange:not([href]),
+.course-info-wrapper a.btn-orange:not([href]) {
+    color: #ffffff;
+    text-decoration: none;
+}
+.btn-wrapper a{
+    cursor: pointer;
 }
 .hero-banner .banner-content .btn-container > div{
     margin:0px 15px 0px 0px;
@@ -172,7 +183,19 @@ margin:0 auto;
 .contact-form select{
     padding: 0px 5px 0px 5px;
     border: 0;
-    border-bottom: 1px solid #444444;
+    border-bottom: 0px solid #444444;
+    box-shadow: 0px 2px 10px 0px #cccccc;
+    height: 35px;
+    margin-bottom: 15px;
+}
+.contact-form .mat-form-field-appearance-legacy .mat-form-field-underline{
+    border:0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.contact-form .mat-form-field-flex{
+    box-shadow: 0px 2px 10px 0px #cccccc;
+    padding: 0 10px;
+    border: 0px solid transparent;
 }
 .select-container{
     display: flex;
@@ -232,7 +255,16 @@ margin:0 auto;
     display:table-cell;
     padding:10px;
 }
-
+.skills-container > div:first-child{
+    width:50px;
+    vertical-align: center;
+}
+.course-outline-wrapper .accordion-container .mat-expansion-panel-header-description {
+    flex-grow: 100;
+}
+.course-outline-wrapper .accordion-container{
+    margin-top: 20px;
+}
 .instructor-container, .other-course-container{
     display:table;
     width:100%;   
@@ -254,7 +286,7 @@ margin:0 auto;
 }
 .course-title{
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     color: #f54b1e;    
 }
 .owl-carousel.owl-drag .owl-item .card-wrapper{
@@ -325,7 +357,7 @@ margin:0 auto;
     height: 40px;
 }
 .course-info span{
-    padding-right:10px;
+    /*padding-right:10px;*/
 }
 .course-info.icon .mat-icon{
     width: 15px;
@@ -356,6 +388,7 @@ margin:0 auto;
 .instructor-name{
     text-align: center;
     margin:13px auto;
+    font-size: 18px;
 }
 .other-course-details .course-info{
     display: flex;
@@ -600,6 +633,7 @@ margin:0 auto;
     line-height: 30px;
     border-radius:15px!important;
     text-align: right;
+    font-size: 12px;
 }
 .card-btn-wrapper > div:last-child{    
     text-align: right;  
@@ -915,7 +949,7 @@ section, footer{
 .certification-card h3{
   font-size:18px; 
 }
-.card-btn-group{
+.card-btn-group.mat-card-actions{
     display:flex;
     align-items: center;    
 }
@@ -995,7 +1029,7 @@ section, footer{
     height:200px;
     border-radius:100px;
     overflow: hidden;
-    box-shadow: 0px 5px 10px 5px #666666;
+    box-shadow: 0px 5px 10px 0px #666666;
     margin:10px 25px;
     display: flex;
     align-items: center;

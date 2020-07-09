@@ -12,7 +12,7 @@ import { UserComponent } from './user/user.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Angular POC';
+  //title = 'One NH POC';
 
   constructor(public dialog: MatDialog) {}
   
