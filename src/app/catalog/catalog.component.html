@@ -31,13 +31,14 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="breadcrumb">
-                                <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span> <span> / </span><span class="">Courses</span>
+                            <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span> <span> / </span>
+                            <span class="">Courses</span>
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="view-btn-container">
-                            <button mat-raised-button class="btn-orange btn-active">Grid View</button>
-                            <button mat-raised-button class="">List View</button>
+                            <button mat-raised-button (click)="showDiv.gridView = !showDiv.gridView;showDiv.listView = false;" class="btn-orange btn-active">Grid View</button>
+                            <button mat-raised-button (click)="showDiv.listView = !showDiv.listView;showDiv.gridView = false;" class="">List View</button>
                         </div>
                     </div>
                 </div>
@@ -111,18 +112,46 @@
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
+            <div class="container"  *ngIf="showDiv.listView">
+                <div class="row list-view-row" (click)='courseDetails(data)' *ngFor="let data of courseCatalogsData | catalogfilter: searchCatalog">
+                    <div class="col-sm-2">
+                        <div>
+                            <div class="list-view-img">
+                                <img class="image-square" src="{{data.course_outline.banner_image.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div>
+                            <p class="course-title">{{data.course_name}}</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                                labore et dolore magna aliqua.</p>
+                            <div class="other-course-details">
+                                <div class="course-info">
+                                    <div><span>By: {{data.instructor[0].first_name}}</span></div>
+                                    <div><span>Level: </span><span>{{data.course_info.level}}</span></div>
+                                    <div>
+                                        <span>
+                                            <app-starrating [rating]='data.course_info.star_rating'></app-starrating>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
 
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="btn-wrapper">
+                            <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-orange rounded" href="#">{{ci}}</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="container">
+            <div class="container"  *ngIf="showDiv.gridView">
                 <div class="row">
                     <div class="col-sm-6 col-md-4" *ngFor="let data of courseCatalogsData |catalogfilter: searchCatalog">
-                        <div class="card-wrapper">
+                        <div class="card-wrapper clickable-card">
                             <mat-card (click)='courseDetails(data)' class="example-card">
                                 <mat-card-header>
 
@@ -131,7 +160,7 @@
                                     <img class="image-square" mat-card-image src="{{data.course_outline.banner_image.url}}" alt="Picture">
 
                                 </div>
-                                <div class="course-price">                                    
+                                <div class="course-price">
                                     <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice">
                                     </ng-container>
                                     <ng-template #onlineprice>

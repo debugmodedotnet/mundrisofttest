@@ -154,17 +154,17 @@ margin:0 auto;
     content: '';
     position: absolute;
     left: 0;
-    bottom: -30px;
+    bottom: -35px;
     overflow: visible;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: #ffffff;
     z-index: 1;
-    -webkit-transform: skewY(2deg);
-    -moz-transform: skewY(2deg);
-    -ms-transform: skewY(2deg);
-    -o-transform: skewY(2deg);
-    transform: skewY(2deg);
+    -webkit-transform: skewY(2.5deg);
+    -moz-transform: skewY(2.5deg);
+    -ms-transform: skewY(2.5deg);
+    -o-transform: skewY(2.5deg);
+    transform: skewY(2.5deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: initial;
   }
@@ -232,10 +232,12 @@ margin:0 auto;
 .right-panel .course-outline-wrapper h2{
     padding: 25px 25px 0px 25px;
 }
-.right-panel .course-outline-wrapper .mat-expansion-panel-header-title{
-    font-weight:bold;
+.right-panel .course-outline-wrapper .mat-expansion-panel-header-title,
+.accordion-container .mat-expansion-panel-header-title{
+    font-weight:500;
     font-size: 14px;
 }
+
 .topic-details{
     display: flex;
 }
@@ -293,6 +295,28 @@ margin:0 auto;
     margin:15px;
     cursor: pointer;
 }
+.card-wrapper.clickable-card{   
+    cursor: pointer;
+}
+.list-view-img{
+    width: 150px;
+    height: 100px;
+    margin: 0px 15px 15px 0;    
+}
+.list-view-img img{
+    width: 100%;    
+}
+.list-view-row .btn-wrapper{
+    display: flex;
+}
+.list-view-row .btn-wrapper a{
+    margin: 0px 5px;    
+}
+.list-view-row{
+    margin-bottom:20px;
+    padding-bottom: 10px;
+    border-bottom:1px solid #cccccc;
+}
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span{
     background: #f54b1e;
@@ -302,6 +326,7 @@ margin:0 auto;
     position: absolute;
     top: 25%;
     width: 100%;
+    height:0px;
 }
 .owl-carousel .owl-nav .owl-prev .fa,
 .owl-carousel .owl-nav .owl-next .fa{
@@ -1035,6 +1060,7 @@ section, footer{
     align-items: center;
     justify-content: center;
 }
+
 .instructor-carousel .instructor-avatar-small{
     width:100px;
     height:100px;

@@ -46,6 +46,11 @@ export class CoursedetailsComponent implements OnInit {
   //Accordion
   @ViewChild(MatAccordion) accordion: MatAccordion;
 
+  step = 0;
+
+  setStep(index: number) {
+    this.step = index;
+  }
   //Owl Carousel
 
 }

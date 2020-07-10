@@ -2,33 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { CourseCatalogService } from '../shared/coursecatalog.service';
 import { NavigationExtras, Router, ActivatedRoute } from '@angular/router';
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
-
-interface Car {
-  value: string;
-  viewValue: string;
-}
 
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
+
 export class CatalogComponent implements OnInit {
 
   courseCatalogsDataTotal = [];
   courseCatalogsData = [];
   searchCatalog: any;
-  courseBanner : any; 
+  courseBanner: any;
   pageSize = 6;
   pageLength = 6;
   navigationExtras: NavigationExtras = {};
   navigation = this.router.getCurrentNavigation();
   tempData: any;
-  dataFromHome :any; 
+  dataFromHome: any;
   constructor(private coursecatalogService: CourseCatalogService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -40,16 +32,16 @@ export class CatalogComponent implements OnInit {
         //this.courseCatalogsData = this.courseCatalogsDataTotal.entries.slice(0,this.pageSize);
         this.courseCatalogsData = this.tempData.slice(0, this.pageSize);
         console.log(this.courseCatalogsData);
-        this.pageLength =  this.courseCatalogsDataTotal.entries.length;
+        this.pageLength = this.courseCatalogsDataTotal.entries.length;
         console.log(this.pageSize);
       }
     );
 
 
     this.coursecatalogService.getCourseCatalogBenner().subscribe(
-      data =>{
-           this.courseBanner = data ;
-          console.log(this.courseBanner);
+      data => {
+        this.courseBanner = data;
+        console.log(this.courseBanner);
       }
     )
 
@@ -58,14 +50,14 @@ export class CatalogComponent implements OnInit {
     //   console.log(this.searchCatalog);
     // })
 
-     console.log(this.navigation.extras);
+    console.log(this.navigation.extras);
 
-     this.dataFromHome = {
-       ...this.navigation.extras
-     }
+    this.dataFromHome = {
+      ...this.navigation.extras
+    }
 
-     this.searchCatalog = this.dataFromHome.s; 
-     console.log(this.searchCatalog);
+    this.searchCatalog = this.dataFromHome.s;
+    console.log(this.searchCatalog);
 
   };
 
@@ -91,23 +83,11 @@ export class CatalogComponent implements OnInit {
     this.router.navigateByUrl('/course-details/' + data.uid);
   }
 
+  showDiv = {
+    listView: false,
+    gridView: true,
+  }
 
 
-
-
-  selectedValue: string;
-  selectedCar: string;
-
-  foods: Food[] = [
-    { value: 'steak-0', viewValue: 'Steak' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
-  ];
-
-  cars: Car[] = [
-    { value: 'volvo', viewValue: 'Volvo' },
-    { value: 'saab', viewValue: 'Saab' },
-    { value: 'mercedes', viewValue: 'Mercedes' }
-  ];
 
 }

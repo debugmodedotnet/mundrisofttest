@@ -40,12 +40,12 @@
                 <div class="col-md-8">
                     <div class="left-panel">
                         <div class="accordion-container">
-                            <div class="example-action-buttons">
+                            <!--<div class="example-action-buttons">
                                 <button mat-button (click)="accordion.openAll()">Expand All</button>
                                 <button mat-button (click)="accordion.closeAll()">Collapse All</button>
-                            </div>
+                            </div>-->
                             <mat-accordion class="example-headers-align" multi>
-                                <mat-expansion-panel>
+                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
                                             Description
@@ -60,7 +60,7 @@
                                 </mat-expansion-panel>
 
 
-                                <mat-expansion-panel>
+                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
                                             Who should take this course?
@@ -74,7 +74,7 @@
                                     </mat-panel-description>
 
                                 </mat-expansion-panel>
-                                <mat-expansion-panel>
+                                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)">
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
                                             What should i already know?
@@ -121,9 +121,8 @@
                                         <h2>About the instructor</h2>
                                         <div class="instructor-container" *ngFor="let instructor of courseDetailsData?.instructor">
                                             <div>
-                                                <div class="instructor-avatar">
-                                                    <mat-icon aria-label="Instructor Avatar">person</mat-icon>
-                                                    <img src='{{instructor.image.url}}' />
+                                                <div class="instructor-avatar">                                                    
+                                                    <img src='{{instructor.image.url}}' alt='{{instructor.first_name}}' border='0' />
                                                 </div>
                                                 <div class="instructor-name"><span>{{instructor.first_name}}</span>
                                                 </div>
@@ -385,13 +384,13 @@
 
                                             <mat-panel-title>
 
-                                                {{co.lesson_duration}}
+                                                    {{co.lesson_title}}
 
                                             </mat-panel-title>
 
                                             <mat-panel-description>
 
-                                                {{co.lesson_title}}
+                                                    {{co.lesson_duration}}
 
                                             </mat-panel-description>
 
