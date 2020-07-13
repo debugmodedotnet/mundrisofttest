@@ -2,35 +2,31 @@
     <!-- Hero Banner section begin-->
     <!-- <div class="hero-banner"> -->
     <div class="hero-banner" [ngStyle]="{'background': 'url(' + homeData?.entry.banner_section.banner_image.url + ') no-repeat 0 0'}">
-
         <div class="banner-overlay">
-            <div class="banner-content">
-                <div>
-                    <h1>{{homeData?.entry?.banner_section?.heading}}</h1>
-                    <!-- <p>{{homeDataa?a??.entry.banner_section.brief_description}}</p> -->
-                    <p [innerHTML]="homeData?.entry?.banner_section?.brief_description"></p>
-
-                    <div class="btn-container">
-                        <div class="search-input">
-                            <mat-form-field appearance="outline">
-                                <mat-label>What do you want to learn?</mat-label>
-                                <input matInput [(ngModel)]='learnSearch' (keyup.enter)="navigateToCatalog()" placeholder="What do you want to learn?">
-                                <mat-icon matSuffix>search</mat-icon>
-                            </mat-form-field>
-                        </div>
-                        <div>
-                            <a href="{{homeData?.entry?.banner_section?.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData?.entry?.banner_section?.cta_text}}
-                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">
-                                    play_circle_filled</mat-icon>
-                            </a>
-                            <!-- <button href="{{homeData?.entry.banner_section.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData?.entry.banner_section.cta_text}} 
-                                <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">play_circle_filled</mat-icon>
-                            </button> -->
+            <div class="container">
+                <div class="row banner-content">
+                    <div class="col-lg-7">
+                        <h1>{{homeData?.entry?.banner_section?.heading}}</h1>
+                        <p [innerHTML]="homeData?.entry?.banner_section?.brief_description"></p>
+                        <div class="btn-container">
+                            <div class="search-input">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>What do you want to learn?</mat-label>
+                                    <input matInput [(ngModel)]='learnSearch' (keyup.enter)="navigateToCatalog()" placeholder="What do you want to learn?">
+                                    <mat-icon matSuffix>search</mat-icon>
+                                </mat-form-field>
+                            </div>
+                            <div>
+                                <a href="{{homeData?.entry?.banner_section?.cta_url}}" mat-raised-button class="btn-transparent btn-white">{{homeData?.entry?.banner_section?.cta_text}}
+                                    <mat-icon aria-hidden="false" aria-label="Example play_circle_filled icon">
+                                        play_circle_filled</mat-icon>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
+                    <div class="col-lg-5">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -45,15 +41,17 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-5">
-                            <h2>{{homeData?.entry?.learn_improve_your_way.learn_improve_your_way_heading}}</h2>
-                            <p>{{homeData?.entry?.learn_improve_your_way.brief_description}}</p>
+                            <div class="content-wrapper">
+                                <h2>{{homeData?.entry?.learn_improve_your_way.learn_improve_your_way_heading}}</h2>
+                                <p>{{homeData?.entry?.learn_improve_your_way.brief_description}}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper">
                             <mat-card class="example-card no-card-border">
                                 <mat-card-header>
@@ -76,7 +74,7 @@
                             </mat-card>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper">
                             <mat-card class="example-card no-card-border">
                                 <mat-card-header>
@@ -99,7 +97,7 @@
                             </mat-card>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper">
                             <mat-card class="example-card no-card-border">
                                 <mat-card-header>
@@ -132,23 +130,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="img-box-container-rl">
-                            <div class="img-container">
-                                <img src="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_image.url}}" alt="image">
-                            </div>
-                            <div class="img-content-box">
-                                <h2>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_heading}}</h2>
-                                <p>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_description}}</p>
-                                <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_button_url}}">Learn
+                        <div class="content-wrapper">
+                            <div class="img-box-container-rl">
+                                <div class="img-container">
+                                    <img src="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_image.url}}" alt="image">
+                                </div>
+                                <div class="img-content-box">
+                                    <h2>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_heading}}</h2>
+                                    <p>{{homeData?.entry?.marketing_blocks[0].block_1.block_1_description}}</p>
+                                    <div class="btn-container">
+                                        <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[0].block_1.block_1_button_url}}">Learn
                                         more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -159,23 +156,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="img-box-container-lr">
-                            <div class="img-container">
-                                <img src="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_image.url}}" alt="image">
-                            </div>
-                            <div class="img-content-box">
-                                <h2>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_heading}}</h2>
-                                <p>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_decription}}</p>
-                                <div class="btn-container">
-                                    <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_button_url}}">Learn
+                        <div class="content-wrapper">
+                            <div class="img-box-container-lr">
+                                <div class="img-container">
+                                    <img src="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_image.url}}" alt="image">
+                                </div>
+                                <div class="img-content-box">
+                                    <h2>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_heading}}</h2>
+                                    <p>{{homeData?.entry?.marketing_blocks[1].block_2.block_2_decription}}</p>
+                                    <div class="btn-container">
+                                        <a class="btn-orange" mat-button href="{{homeData?.entry?.marketing_blocks[1].block_2.block_2_button_url}}">Learn
                                         more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
             </div>
         </section>
@@ -186,70 +182,74 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>New Course</h2>
-                        <p>{{homeData?.entry?.new_courses.description_text}}</p>
+                        <div class="content-wrapper">
+                            <h2>New Course</h2>
+                            <p>{{homeData?.entry?.new_courses.description_text}}</p>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <owl-carousel-o [options]="customOptionsCourse">
-                            <ng-template *ngFor="let c of homeData?.entry?.new_courses.courses" carouselSlide>
-                                <div class="card-wrapper">
-                                    <mat-card (click)='courseDetails(c)' class="example-card">
-                                        <mat-card-header>
+                        <div class="content-wrapper">
+                            <owl-carousel-o [options]="customOptionsCourse">
+                                <ng-template *ngFor="let c of homeData?.entry?.new_courses.courses" carouselSlide>
+                                    <div class="card-wrapper">
+                                        <mat-card (click)='courseDetails(c)' class="example-card">
+                                            <mat-card-header>
 
-                                        </mat-card-header>
-                                        <div class="img-container">
-                                            <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
-                                        </div>
-                                        <div class="course-price">
-                                            <span class="price-badge">
-                                                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
-                                                                    </ng-container>
-                                                                    <ng-template #onlineprice>
-                                                                        {{c.course_info.cost.online}}
-                                                                    </ng-template>
-                                                                    <ng-template #campusprice>
-                                                                        {{c.course_info.cost.campus}}
-                                                                    </ng-template>
-                                                                </span>
-                                        </div>
-                                        <mat-card-content>
-                                            <h4>{{c.course_name}}</h4>
-                                            <div class="course-detials-container">
-                                                <div>
-                                                    <span>
-                                                                            <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
-                                                                        </span>
-                                                </div>
-                                                <!-- need to be fixed the chart  -->
-                                                <div><span>Level:</span>
-                                                    <mat-icon> bar_chart</mat-icon>
-                                                </div>
-                                                <div>
-                                                    <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                            </mat-card-header>
+                                            <div class="img-container">
+                                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price-badge">
+                                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
                                                     </ng-container>
-                                                    <ng-template #onlinelength>
-                                                        <span>{{c.course_info.course_length.online}}</span>
+                                                    <ng-template #onlineprice>
+                                                        {{c.course_info.cost.online}}
                                                     </ng-template>
-                                                    <ng-template #campuslength>
-                                                        <span>{{c.course_info.course_length.campus}}</span>
+                                                    <ng-template #campusprice>
+                                                        {{c.course_info.cost.campus}}
                                                     </ng-template>
-                                                </div>
+                                                </span>
                                             </div>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <div class="card-btn-wrapper">
-                                                <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
-                                                <div>
-                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" >{{b}}</a>
+                                            <mat-card-content>
+                                                <h4>{{c.course_name}}</h4>
+                                                <div class="course-detials-container">
+                                                    <div>
+                                                        <span>
+                                                            <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
+                                                        </span>
+                                                    </div>
+                                                    <!-- need to be fixed the chart  -->
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div>
+                                                        <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                                        </ng-container>
+                                                        <ng-template #onlinelength>
+                                                            <span>{{c.course_info.course_length.online}}</span>
+                                                        </ng-template>
+                                                        <ng-template #campuslength>
+                                                            <span>{{c.course_info.course_length.campus}}</span>
+                                                        </ng-template>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div>
-                            </ng-template>
-                        </owl-carousel-o>
+                                            </mat-card-content>
+                                            <mat-card-actions>
+                                                <div class="card-btn-wrapper">
+                                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
+                                                    <div>
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                    </div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                </ng-template>
+                            </owl-carousel-o>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,80 +262,84 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="mb-5">
-                            <h2>Trneding Course</h2>
-                            <p>{{homeData?.entry?.trending_courses.description_text}}</p>
+                            <div class="content-wrapper">
+                                <h2>Trneding Course</h2>
+                                <p>{{homeData?.entry?.trending_courses.description_text}}</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <owl-carousel-o [options]="customOptionsCourse">
-                            <!-- for new course api returns courses and for trending courses returns course. It needs to be consistent in the API -->
-                            <ng-template *ngFor="let c of homeData?.entry.trending_courses.course" carouselSlide>
-                                <div class="card-wrapper">
-                                    <mat-card (click)='courseDetails(c)' class="example-card">
-                                        <mat-card-header>
+                        <div class="content-wrapper">
+                            <owl-carousel-o [options]="customOptionsCourse">
+                                <!-- for new course api returns courses and for trending courses returns course. It needs to be consistent in the API -->
+                                <ng-template *ngFor="let c of homeData?.entry.trending_courses.course" carouselSlide>
+                                    <div class="card-wrapper">
+                                        <mat-card (click)='courseDetails(c)' class="example-card">
+                                            <mat-card-header>
 
-                                        </mat-card-header>
-                                        <div class="img-container">
-                                            <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
-
-                                        </div>
-                                        <div class="course-price">
-                                            <span class="price-badge">
-                                                        <ng-container
-                                                            *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
-                                                        </ng-container>
-                                                        <ng-template #onlineprice>
-                                                            {{c.course_info.cost.online}}
-                                                        </ng-template>
-                                                        <ng-template #campusprice>
-                                                            {{c.course_info.cost.campus}}
-                                                        </ng-template>
-                                                    </span>
-                                        </div>
-
-                                        <mat-card-content>
-                                            <h4>{{c.course_name}}</h4>
-                                            <div class="course-detials-container">
-                                                <div>
-                                                    <span>
-                                                                <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
+                                            </mat-card-header>
+                                            <div class="img-container">
+                                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
+                                            </div>
+                                            <div class="course-price">
+                                                <span class="price-badge">
+                                                                <ng-container
+                                                                    *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
+                                                                </ng-container>
+                                                                <ng-template #onlineprice>
+                                                                    {{c.course_info.cost.online}}
+                                                                </ng-template>
+                                                                <ng-template #campusprice>
+                                                                    {{c.course_info.cost.campus}}
+                                                                </ng-template>
                                                             </span>
-                                                </div>
-                                                <!-- need to be fixed the chart  -->
-                                                <div><span>Level:</span>
-                                                    <mat-icon> bar_chart</mat-icon>
-                                                </div>
-                                                <div>
-                                                    <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
-                                                    </ng-container>
-                                                    <ng-template #onlinelength>
-                                                        <span>{{c.course_info.course_length.online}}</span>
-                                                    </ng-template>
-                                                    <ng-template #campuslength>
-                                                        <span>{{c.course_info.course_length.campus}}</span>
-                                                    </ng-template>
-                                                </div>
                                             </div>
-                                        </mat-card-content>
-                                        <mat-card-actions>
-                                            <div class="card-btn-wrapper">
-                                                <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
-                                                <div>
-                                                    <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
-                                                    <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded" >{{b}}</a>
-                                                    <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
+
+                                            <mat-card-content>
+                                                <h4>{{c.course_name}}</h4>
+                                                <div class="course-detials-container">
+                                                    <div>
+                                                        <span>
+                                                                        <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
+                                                                    </span>
+                                                    </div>
+                                                    <!-- need to be fixed the chart  -->
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div>
+                                                        <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                                        </ng-container>
+                                                        <ng-template #onlinelength>
+                                                            <span>{{c.course_info.course_length.online}}</span>
+                                                        </ng-template>
+                                                        <ng-template #campuslength>
+                                                            <span>{{c.course_info.course_length.campus}}</span>
+                                                        </ng-template>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </mat-card-actions>
-                                    </mat-card>
-                                </div>
-                            </ng-template>
-                        </owl-carousel-o>
+                                            </mat-card-content>
+                                            <mat-card-actions>
+                                                <div class="card-btn-wrapper">
+                                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
+                                                    <div>
+                                                        <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                        <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
+                                                    </div>
+                                                </div>
+                                            </mat-card-actions>
+                                        </mat-card>
+                                    </div>
+                                </ng-template>
+                            </owl-carousel-o>
+                        </div>
+
                     </div>
                 </div>
-
             </div>
         </section>
         <!-- Trending Courses section end-->
@@ -345,8 +349,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>{{homeData?.entry?.certification_at_new_horizons.heading}}</h2>
-                        <p>{{homeData?.entry?.certification_at_new_horizons.description_text}}</p>
+                        <div class="content-wrapper">
+                            <h2>{{homeData?.entry?.certification_at_new_horizons.heading}}</h2>
+                            <p>{{homeData?.entry?.certification_at_new_horizons.description_text}}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -359,7 +365,7 @@
                             <mat-tab *ngFor="let c of homeData?.entry?.certification" label={{c.certification_category[0].category_name}}>
                                 <div class="container">
                                     <div class="row ">
-                                        <div *ngFor="let cdata of c.certifications" class="col-sm-6">
+                                        <div *ngFor="let cdata of c.certifications" class="col-lg-6">
                                             <div class="card-wrapper">
                                                 <mat-card class="example-card certification-card">
                                                     <mat-card-content>
@@ -386,7 +392,7 @@
                                                                 <div>By: Alex Mills</div>
                                                                 <div>
                                                                     <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
-                                                                    <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-orange rounded" >{{b}}</a>
+                                                                    <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
                                                                     <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                                 </div>
 
@@ -403,8 +409,6 @@
                                     </div>
                                 </div>
                             </mat-tab>
-
-
                         </mat-tab-group>
                     </div>
                 </div>
@@ -441,7 +445,7 @@
                                                 <p class="course-title">{{i.first_name}} {{i.middle_name}} {{i.last_name}}</p>
                                                 <p [innerHtml]='i.bio'> </p>
                                                 <div class="btn-wrapper">
-                                                    <a mat-raised-button class="btn-orange" >More About {{i.first_name}}</a>                                                    
+                                                    <a mat-raised-button class="btn-orange">More About {{i.first_name}}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -452,7 +456,7 @@
                                         </div>
                                     </div>
                                 </ng-template>
-                             
+
                             </owl-carousel-o>
                         </div>
                     </div>
@@ -489,7 +493,6 @@
                             <div class="clearfix"></div>
                             <h4 class="text-center">Select a Pathway</h4>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -510,7 +513,7 @@
                                             <div class="">
                                                 <p class="course-title">{{c.heading}}</p>
                                                 <p> {{c.feedback_text}} </p>
-                                                
+
                                             </div>
                                         </div>
 

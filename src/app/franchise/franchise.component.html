@@ -3,19 +3,16 @@
     -->
     <div class="hero-banner skew" [ngStyle]="{'background-image': 'url(' + _franchise.banner_section.image.url + ')'}">
         <div class="banner-overlay">
+            <div class="container">
+                <div class="row banner-content">
+                    <div class="col-12">
+                        <h1>@{{_franchise.banner_section.heading}}@</h1>
 
-            <div class="banner-content">
-                <div>
-                    <h1>@{{_franchise.banner_section.heading}}@</h1>
-
-                    <p>{{_franchise.banner_section.description}} </p>
-                    <div>
-                        <a  mat-raised-button class="btn-transparent btn-white">Watch</a>
+                        <p>{{_franchise.banner_section.description}} </p>
+                        <div>
+                            <a mat-raised-button class="btn-transparent btn-white">Watch</a>
+                        </div>
                     </div>
-
-                </div>
-                <div>
-
                 </div>
             </div>
         </div>
@@ -29,7 +26,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div>
-                            <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span><span>/</span><span class="">New Horizons, Portland</span>
+                            <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span><span>/</span>
+                            <span class="">New Horizons, Portland</span>
                         </div>
                     </div>
                 </div>
@@ -111,7 +109,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
@@ -131,7 +129,7 @@
                             </mat-card>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
@@ -153,7 +151,7 @@
                             </mat-card>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
@@ -221,8 +219,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -251,8 +248,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -281,8 +277,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -311,8 +306,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -341,8 +335,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -356,7 +349,7 @@
                     <div class="col-12">
                         <div class="btn-wrapper text-center">
 
-                            <div><a mat-button class="btn-orange rounded" >View More Courses</a></div>
+                            <div><a mat-button class="btn-orange rounded">View More Courses</a></div>
                         </div>
                     </div>
 
@@ -370,7 +363,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div >
+                        <div class="content-wrapper">
                             <h2>New Courses at Tampa Bay</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
@@ -379,7 +372,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <div>
+                        <div class="content-wrapper">
                             <owl-carousel-o [options]="customOptionsCourses">
                                 <ng-template carouselSlide>
                                     <div class="card-wrapper">
@@ -404,8 +397,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -434,8 +426,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -464,8 +455,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -494,8 +484,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -524,8 +513,7 @@
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
 
-                                                    <div><a mat-button class="btn-orange rounded" >Campus</a><a mat-button
-                                                            class="btn-orange rounded" >Online</a></div>
+                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -538,7 +526,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="btn-wrapper text-center">
-                            <div><a mat-button class="btn-orange rounded" >View More Courses</a></div>
+                            <div><a mat-button class="btn-orange rounded">View More Courses</a></div>
                         </div>
                     </div>
                 </div>
@@ -629,7 +617,7 @@
                                                     exercitation
                                                 </p>
                                                 <div class="btn-wrapper">
-                                                    <a mat-raised-button class="btn-orange" >More About James Lawery</a>
+                                                    <a mat-raised-button class="btn-orange">More About James Lawery</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -692,20 +680,20 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 ">
+                    <div class="col-12">
                         <h2>Courses Taught by James Lawery</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div>
                             <div class="course-picture">
                                 <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div>
+                    <div class="col-lg-4">
+                        <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 .
@@ -716,22 +704,22 @@
                                     <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
                                     <div>
                                         <div class="btn-wrapper">
-                                            <div><a mat-button class="btn-orange rounded" >Campus</a></div>
+                                            <div><a mat-button class="btn-orange rounded">Campus</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div>
                             <div class="course-picture">
                                 <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div>
+                    <div class="col-lg-4">
+                        <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 .
@@ -742,22 +730,22 @@
                                     <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
                                     <div>
                                         <div class="btn-wrapper">
-                                            <div><a mat-button class="btn-orange rounded" >Campus</a></div>
+                                            <div><a mat-button class="btn-orange rounded">Campus</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div>
                             <div class="course-picture">
                                 <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div>
+                    <div class="col-lg-4">
+                        <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 .
@@ -768,22 +756,22 @@
                                     <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
                                     <div>
                                         <div class="btn-wrapper">
-                                            <div><a mat-button class="btn-orange rounded" >Campus</a></div>
+                                            <div><a mat-button class="btn-orange rounded">Campus</a></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div>
                             <div class="course-picture">
                                 <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div>
+                    <div class="col-lg-4">
+                        <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                                 .
@@ -794,7 +782,7 @@
                                     <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
                                     <div>
                                         <div class="btn-wrapper">
-                                            <div><a mat-button class="btn-orange rounded" >Campus</a></div>
+                                            <div><a mat-button class="btn-orange rounded">Campus</a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -805,7 +793,7 @@
                 <div class="row">
                     <div class="col-12 mt-5">
                         <div class="btn-wrapper text-center">
-                            <div><a mat-button class="btn-orange rounded" >More Courses by James</a></div>
+                            <div><a mat-button class="btn-orange rounded">More Courses by James</a></div>
                         </div>
                     </div>
                 </div>
@@ -817,7 +805,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="">
+                        <div class="content-wrapper">
                             <owl-carousel-o [options]="customOptions">
                                 <ng-template carouselSlide>
                                     <div class="instructor-carousel">
@@ -966,7 +954,7 @@
                             <div class="location-overlay bg-light-orange">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-lg-6">
                                             <div class="table">
                                                 <div class="location-icon">
                                                     <mat-icon aria-hidden="false" aria-label="place">place</mat-icon>
@@ -1002,13 +990,12 @@
                                                 </div>
                                             </div>
 
-                                            <div>
-
-                                            </div>
 
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-lg-6">
+                                            <div class="map-image-wapper">
 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1024,7 +1011,7 @@
         <section class="stb-padding sb-padding-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
 
                         <div class="contact-form">
                             <h3>I need information for:</h3>
@@ -1079,7 +1066,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="contact-img">
                             <img src="./assets/img/figure-3.png" alt="image" border="0" />
                         </div>
@@ -1092,9 +1079,9 @@
         <!-- Site Footer -->
         <footer class="stb-padding bg-light-gray">
 
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
+            <div class="container">
+                <div class="row s3-padding-lr-30">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -1104,7 +1091,7 @@
                         </ul>
 
                     </div>
-                    <div class="s-col">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -1113,7 +1100,7 @@
                             <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
                         </ul>
                     </div>
-                    <div class="s-col">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -1122,7 +1109,7 @@
                             <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
                         </ul>
                     </div>
-                    <div class="s-col">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -1135,6 +1122,5 @@
             </div>
         </footer>
         <!-- Site Footer -->
-
     </div>
 </div>

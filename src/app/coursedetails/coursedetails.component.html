@@ -2,18 +2,12 @@
     <!-- Hero Banner section begin-->
     <div class="hero-banner">
         <div class="banner-overlay">
-
-            <div class="banner-content">
-                <div>
-                    <h1>{{courseDetailsData?.title}}</h1>
-
-                    <p>{{courseDetailsData?.brief_description}}
-                    </p>
-
-
-                </div>
-                <div>
-
+            <div class="container">
+                <div class="row banner-content">
+                    <div class="col-12">
+                        <h1>{{courseDetailsData?.title}}</h1>
+                        <p>{{courseDetailsData?.brief_description}}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,7 +31,7 @@
         <!--left right panel begins-->
         <div class="container">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <div class="left-panel">
                         <div class="accordion-container">
                             <!--<div class="example-action-buttons">
@@ -121,7 +115,7 @@
                                         <h2>About the instructor</h2>
                                         <div class="instructor-container" *ngFor="let instructor of courseDetailsData?.instructor">
                                             <div>
-                                                <div class="instructor-avatar">                                                    
+                                                <div class="instructor-avatar">
                                                     <img src='{{instructor.image.url}}' alt='{{instructor.first_name}}' border='0' />
                                                 </div>
                                                 <div class="instructor-name"><span>{{instructor.first_name}}</span>
@@ -266,7 +260,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <div class="right-panel">
                         <div class="course-info-wrapper">
 
@@ -296,7 +290,7 @@
                                 </div>
                                 <div class="course-btn-wrapper">
                                     <div><a *ngFor="let a of courseDetailsData?.course_info?.course_availability" mat-raised-button
-                                            class="btn-orange rounded" >{{a}}</a>
+                                            class="btn-orange rounded">{{a}}</a>
 
                                     </div>
                                 </div>
@@ -344,12 +338,12 @@
                                     <div><span>April 12, 2020</span> <span>|</span> <span>1:00pm</span> </div>
 
                                     <div>
-                                        <div><a mat-raised-button class="btn-orange" >Online LIVE</a></div>
+                                        <div><a mat-raised-button class="btn-orange">Online LIVE</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="course-btn-wrapper">
-                                <div><a mat-raised-button class="btn-orange" >View Other Dates</a></div>
+                                <div><a mat-raised-button class="btn-orange">View Other Dates</a></div>
                             </div>
 
                             <h3>Next Campus Class:</h3>
@@ -384,13 +378,13 @@
 
                                             <mat-panel-title>
 
-                                                    {{co.lesson_title}}
+                                                {{co.lesson_title}}
 
                                             </mat-panel-title>
 
                                             <mat-panel-description>
 
-                                                    {{co.lesson_duration}}
+                                                {{co.lesson_duration}}
 
                                             </mat-panel-description>
 
@@ -452,22 +446,11 @@
 
                                             </div>
 
-                                            <div>
-
-                                                30m
-
-                                            </div>
+                                            <div>30m</div>
 
                                         </div>
-
                                     </mat-expansion-panel>
-
-
-
-
-
                                 </mat-accordion>
-
                             </div>
                         </div>
                     </div>
@@ -737,20 +720,9 @@
 
         <!-- Site Footer -->
         <footer class="stb-padding bg-light-gray">
-
-            <div class="s-container">
-                <div class="s-row s3-padding-lr-30">
-                    <div class="s-col">
-                        <ul>
-                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
-                            <li><a href="#">Consectetur adipiscing elit</a></li>
-                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
-                            <li><a href="#">Dolore magna aliqua</a></li>
-                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
-                        </ul>
-
-                    </div>
-                    <div class="s-col">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -759,7 +731,7 @@
                             <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
                         </ul>
                     </div>
-                    <div class="s-col">
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
@@ -768,7 +740,16 @@
                             <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
                         </ul>
                     </div>
-                    <div class="s-col">
+                    <div class="col-md-6 col-lg-3">
+                        <ul>
+                            <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                            <li><a href="#">Consectetur adipiscing elit</a></li>
+                            <li><a href="#">Sed do eiusmod tempor incididunt</a></li>
+                            <li><a href="#">Dolore magna aliqua</a></li>
+                            <li><a href="#">Ut enim ad minim veniams exercitation</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
                         <ul>
                             <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                             <li><a href="#">Consectetur adipiscing elit</a></li>
