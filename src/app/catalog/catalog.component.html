@@ -33,15 +33,14 @@
                         </div>
                     </div>
                     <div class="col-md-5">
-                        <div class="view-btn-container">
-                            
+                        <div class="view-btn-container">                            
                             <!--<ul>
                                 <li *ngFor="let n of list" (click)="select(n)" [ngClass]="{active: isActive(n)}">
                                     <a>{{n}}</a>
                                 </li>
                             </ul>-->
-                            <button mat-raised-button (click)="showDiv.gridView = !showDiv.gridView;showDiv.listView = false;" class="btn-active">Grid View</button>
-                            <button mat-raised-button (click)="showDiv.listView = !showDiv.listView;showDiv.gridView = false;" class="">List View</button>
+                            <button mat-raised-button [class.btn-active]="gridBtn" (click)="showDiv.gridView = !showDiv.gridView;showDiv.listView = false; gridView();" class="btn-active">Grid View</button>
+                            <button mat-raised-button [class.btn-active]="listBtn" (click)="showDiv.listView = !showDiv.listView;showDiv.gridView = false; listView();" class="">List View</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +108,6 @@
                     <div class="col-12">
                         <div class="select-container-btn">
                             <!-- <div class="text-center"><button mat-raised-button class="">More Filters</button></div> -->
-
                         </div>
                     </div>
                 </div>
@@ -136,7 +134,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div>
-                            <p class="course-title">{{data.course_name}}</p>
+                            <h3>{{data.course_name}}</h3>
                             <p>{{data.brief_description}}</p>
                             <div class="other-course-details">
                                 <div class="course-info">

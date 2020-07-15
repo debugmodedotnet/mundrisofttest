@@ -22,6 +22,9 @@ export class CatalogComponent implements OnInit {
   tempData: any;
   dataFromHome: any;
 
+  gridBtn: boolean = true;
+  listBtn: boolean = false; 
+
   //list: any;
   //selected: any;
 
@@ -107,7 +110,15 @@ export class CatalogComponent implements OnInit {
     listView: false,
     gridView: true,
   }
-
+  listView(){
+    this.gridBtn = false;
+    this.listBtn = true;
+  }
+  
+  gridView(){
+    this.listBtn = false;
+    this.gridBtn = true;
+  }
 
 
 }

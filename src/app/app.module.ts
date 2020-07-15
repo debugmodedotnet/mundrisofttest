@@ -18,6 +18,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -43,8 +44,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     StarRatingComponent, 
     FindCampusComponent, 
     CatalogfilterPipe,
-    TestComponent,
-    
+    TestComponent,    
   ],
   entryComponents: [
     RegisterDialogComponent,
@@ -74,7 +74,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     FranchiseModule,
    
   ],
-  providers: [],
+  providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
