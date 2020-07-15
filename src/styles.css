@@ -41,7 +41,7 @@ p {
   flex: 1;
 }
 .main-container{
-max-width:1600px;
+/*max-width:1600px;*/
 margin:0 auto;
 }
 .main-container.internal-page-wrapper.franchise-page .content,
@@ -49,11 +49,13 @@ margin:0 auto;
     margin-top:0px;
 }
 .navigation-container{
-    background-color: rgba(245, 75, 30, 1);
+    background-color: rgba(245, 75, 30, 0.5);
     color: white;
     font-weight: 500;
-    max-width: 1600px;
-    margin:0 auto;     
+/*max-width: 1600px;*/
+    margin:0 auto;
+    position: absolute;
+    width:100%;     
 }
 .navigation-container .navbar{
     z-index: 100;
@@ -154,7 +156,7 @@ margin:0 auto;
     content: '';
     position: absolute;
     left: 0;
-    bottom: -35px;
+    bottom: -50px;
     overflow: visible;
     width: 100%;
     height: 100px;
@@ -308,6 +310,7 @@ margin:0 auto;
 }
 .list-view-row .btn-wrapper{
     display: flex;
+    justify-content: center;
 }
 .list-view-row .btn-wrapper a{
     margin: 0px 5px;    
@@ -316,7 +319,13 @@ margin:0 auto;
     margin-bottom:20px;
     padding-bottom: 10px;
     border-bottom:1px solid #cccccc;
+    cursor: pointer;
 }
+.cdk-focused {
+    background-color: #f54b1e;
+    color : #ffffff;
+    z-index: 1;
+  }
 .owl-theme .owl-dots .owl-dot.active span, 
 .owl-theme .owl-dots .owl-dot:hover span{
     background: #f54b1e;
@@ -597,6 +606,9 @@ margin:0 auto;
 .remove-t-padding{
     padding-top: 0!important;
 }
+.remove-padding{
+    padding:0!important;
+}
 .img-box-container-rl .img-content-box{
     float:left;
     width:48%;
@@ -604,6 +616,7 @@ margin:0 auto;
 .stb-padding{
     padding-top:70px;
     padding-bottom:70px;
+    z-index: 1;
 }
 
 .course-detials-container{
@@ -1107,7 +1120,7 @@ section, footer{
     display:block;
 }
 .hero-banner .banner-overlay{
-    padding: 0% 30px 5%;
+    padding: 10% 30px 5%;
 }
 .hero-banner h1 {
     font-size: 40px;
@@ -1125,7 +1138,9 @@ section, footer{
     background-color:#f54b1e;
     color:#ffffff;
 }
-
+.frm-btn-container button{
+    border-radius:4px;
+}
 .txt-orange{    
     color:#F85D36;
 }
@@ -1398,8 +1413,7 @@ svg#clouds {
     margin-right:-15px;
 }
 .mat-dialog-container{
-    min-width:550px;
-   
+    min-width:550px;   
 }
 .course-details-page .content{
     margin-top:0px;
@@ -1594,6 +1608,10 @@ svg#clouds {
 }
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+    .navigation-container{
+        background-color: rgba(245, 75, 30, 1);
+        position: relative;
+    }
     .hero-banner .banner-content .btn-container{
         display: initial;
     }
@@ -1621,7 +1639,7 @@ svg#clouds {
   .terminal {
     width: 100%;
   }
-
+  
   .card:not(.highlight-card) {
     height: 16px;
     margin: 8px 0;
@@ -1630,7 +1648,17 @@ svg#clouds {
   .card.highlight-card span {
     margin-left: 72px;
   }
-
+  .register-form .frm-btn-container button{        
+        width: 100%;        
+        font-size: 15px;
+    }
+    .navbar-nav .nav-link {
+        display: inlin-block;
+    }
+    .navbar-nav.mobile-view{
+        flex-direction: inherit;
+        float:right;
+    }
   svg#rocket-smoke {
     right: 120px;
     transform: rotate(-5deg);
@@ -1642,6 +1670,20 @@ svg#clouds {
     display: none;
     visibility: hidden;
   }
+  .mat-dialog-container{
+        min-width:350px;   
+    }
+}
+@media screen and (max-width: 480px) {    
+    .mat-dialog-container{
+          min-width:300px;   
+      }
+}
+
+@media screen and (max-width: 360px) {    
+    .mat-dialog-container{
+          min-width:100%;   
+      }
 }
 
 .example-form {

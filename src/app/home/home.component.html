@@ -261,12 +261,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div class="mb-5">
-                            <div class="content-wrapper">
-                                <h2>Trneding Course</h2>
-                                <p>{{homeData?.entry?.trending_courses.description_text}}</p>
-                            </div>
-
+                        <div class="content-wrapper">
+                            <h2>Trending Course</h2>
+                            <p>{{homeData?.entry?.trending_courses.description_text}}</p>
                         </div>
                     </div>
                 </div>
@@ -361,17 +358,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <mat-tab-group class="mat-tab-container" animationDuration="2000ms">
+                        <mat-tab-group class="mat-tab-container" animationDuration="1000ms">
                             <mat-tab *ngFor="let c of homeData?.entry?.certification" label={{c.certification_category[0].category_name}}>
                                 <div class="container">
-                                    <div class="row ">
+                                    <div class="row">
                                         <div *ngFor="let cdata of c.certifications" class="col-lg-6">
                                             <div class="card-wrapper">
                                                 <mat-card class="example-card certification-card">
                                                     <mat-card-content>
                                                         <span class="card-badge">New</span>
                                                         <h3>{{cdata.heading}}</h3>
-                                                        <p [innerHtml]='cdata.description'></p>
+                                                        <p [innerHtml]='cdata.brief_description'></p>
 
                                                     </mat-card-content>
                                                     <mat-card-actions class="card-btn-group">

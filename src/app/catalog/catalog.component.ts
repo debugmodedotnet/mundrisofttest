@@ -21,8 +21,26 @@ export class CatalogComponent implements OnInit {
   navigation = this.router.getCurrentNavigation();
   tempData: any;
   dataFromHome: any;
-  constructor(private coursecatalogService: CourseCatalogService, private router: Router, private route: ActivatedRoute) { }
 
+  //list: any;
+  //selected: any;
+
+  constructor(private coursecatalogService: CourseCatalogService, private router: Router, private route: ActivatedRoute) {
+    /*this.list = [
+      'Read about Angular',
+      'Read about knockout',
+      'Read about backbone',
+      'Read about jquery',
+      'Read about javascript'
+    ];*/
+  }
+  /*select(item) {
+    this.selected = item;
+  };
+  isActive(item) {
+    return this.selected === item;
+  };*/
+  
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(
       (data) => {
@@ -34,6 +52,8 @@ export class CatalogComponent implements OnInit {
         console.log(this.courseCatalogsData);
         this.pageLength = this.courseCatalogsDataTotal.entries.length;
         console.log(this.pageSize);
+
+        
       }
     );
 

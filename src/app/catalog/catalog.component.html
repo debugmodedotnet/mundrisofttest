@@ -34,7 +34,13 @@
                     </div>
                     <div class="col-md-5">
                         <div class="view-btn-container">
-                            <button mat-raised-button (click)="showDiv.gridView = !showDiv.gridView;showDiv.listView = false;" class="btn-orange btn-active">Grid View</button>
+                            
+                            <!--<ul>
+                                <li *ngFor="let n of list" (click)="select(n)" [ngClass]="{active: isActive(n)}">
+                                    <a>{{n}}</a>
+                                </li>
+                            </ul>-->
+                            <button mat-raised-button (click)="showDiv.gridView = !showDiv.gridView;showDiv.listView = false;" class="btn-active">Grid View</button>
                             <button mat-raised-button (click)="showDiv.listView = !showDiv.listView;showDiv.gridView = false;" class="">List View</button>
                         </div>
                     </div>
@@ -111,18 +117,27 @@
 
             <div class="container" *ngIf="showDiv.listView">
                 <div class="row list-view-row" (click)='courseDetails(data)' *ngFor="let data of courseCatalogsData | catalogfilter: searchCatalog">
-                    <div class="col-sm-2">
+                    <div class="col-lg-2">
                         <div>
                             <div class="list-view-img">
                                 <img class="image-square" src="{{data.course_outline.banner_image.url}}" alt="">
+                                <div class="course-price">
+                                    <ng-container *ngIf="data.course_info.cost.online; then onlineprice else campusprice">
+                                    </ng-container>
+                                    <ng-template #onlineprice>
+                                        <span class="price-badge">{{data.course_info.cost.online}}</span>
+                                    </ng-template>
+                                    <ng-template #campusprice>
+                                        <span class="price-badge">{{data.course_info.cost.campus}}</span>
+                                    </ng-template>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-7">
+                    <div class="col-lg-6">
                         <div>
                             <p class="course-title">{{data.course_name}}</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua.</p>
+                            <p>{{data.brief_description}}</p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: {{data.instructor[0].first_name}}</span></div>
@@ -137,8 +152,8 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="btn-wrapper">
+                    <div class="col-lg-4">
+                        <div class="btn-wrapper text-center">
                             <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-orange rounded" href="#">{{ci}}</a>
                         </div>
                     </div>
@@ -147,7 +162,7 @@
 
             <div class="container" *ngIf="showDiv.gridView">
                 <div class="row">
-                    <div class="col-lg-6" *ngFor="let data of courseCatalogsData |catalogfilter: searchCatalog">
+                    <div class="col-lg-4" *ngFor="let data of courseCatalogsData |catalogfilter: searchCatalog">
                         <div class="card-wrapper clickable-card">
                             <mat-card (click)='courseDetails(data)' class="example-card">
                                 <mat-card-header>
