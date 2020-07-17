@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserRegisterationService } from '../shared/userregisteration.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-user',
@@ -16,7 +18,7 @@ export class UserComponent implements OnInit {
     title:''
   }
   registerUserFlag = false;
-  constructor(private fb: FormBuilder, private userService: UserRegisterationService,  private router: Router) {
+  constructor(public dialog: MatDialog, private fb: FormBuilder, private userService: UserRegisterationService,  private router: Router) {
 
   }
 
@@ -48,6 +50,16 @@ export class UserComponent implements OnInit {
       },
       (error) => { console.log(error) }
     )
+  }
+
+  openDialogLogin(): void {
+    const dialogRef = this.dialog.open(LoginComponent, {
+      
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
 }

@@ -68,8 +68,8 @@ margin:0 auto;
 .navbar-dark .navbar-nav .nav-link.show, 
 .navbar-dark .navbar-nav .show>.nav-link{
     border-bottom:2px solid #f54b1e;
-    color:#f54b1e;
-    text-shadow: 2px 2px 0px #000000;
+    color:#ffffff;
+    text-shadow: 1px 1px 0px #000000;
 }
 
 .hero-banner .mat-form-field-appearance-outline .mat-form-field-label,
@@ -82,6 +82,7 @@ margin:0 auto;
 .table > div{
     display: table-cell;
     vertical-align: middle;
+    padding-right:5px;
 }
 .hero-banner{
     position: relative;
@@ -531,6 +532,13 @@ margin:0 auto;
 .map-container img{
     width:100%;   
 }
+.btn-link{
+    cursor: pointer;    
+}
+.location-overlay{
+    background-color: rgba(22, 22, 22, 0.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+}
 .hero-banner .banner-overlay{
     background-color: rgba(22, 22, 22, 0.7);
     min-height:450px;    
@@ -770,6 +778,9 @@ section, footer{
 }
 .icon-wrapper{
     text-align: center;    
+}
+.icon-wrapper h3{
+    text-transform: uppercase;
 }
 .icon-wrapper .icon-box .mat-icon{
     height: 50px;
@@ -1128,9 +1139,7 @@ section, footer{
 .instructor-carousel{
     width:70%;
 }
-.table > div{
-    display:block;
-}
+
 .hero-banner .banner-overlay{
     padding: 10% 30px 5%;
 }
@@ -1564,6 +1573,9 @@ svg#clouds {
 
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
+    .table > div{
+        display:block;
+    }
     .img-box-container-rl .img-container,
     .img-box-container-lr .img-container,    
     .img-box-container-rl .img-content-box,

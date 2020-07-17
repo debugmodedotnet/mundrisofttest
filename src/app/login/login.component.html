@@ -15,13 +15,12 @@
                 <div class="frm-input">
                     <input type="password" placeholder="Enter Password" formControlName='password' />
                 </div>
-
             </div>
             <div *ngIf='studentData?.entries?.length == 0' class="alert alert-danger">
                 <p> Wrong User Name and Password</p>
             </div>
         </div>
-        <p>Forgot My Password?</p>
+        <p>Forgot Password?</p>
         <div class="frm-btn-container">
             <button [disabled]='studentLoginForm.invalid' mat-raised-button color="warn" (click)="loginStudent()">Login</button>
         </div>

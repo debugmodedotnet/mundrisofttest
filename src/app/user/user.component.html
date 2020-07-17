@@ -4,8 +4,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1>Create Your Acccount</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    </p>
+                    <p>Turn ambitions into marketable skills and business goals into tangible results with IT training from New Horizons.</p>
                 </div>
             </div>
             <div class="row">
@@ -46,17 +45,16 @@
                     <div class="zipcode">
 
                         <div class="frm-input">
-                            <input formControlName='zip_code' type="text" placeholder="Zip Code [Optional]" />
+                            <input formControlName="zip_code" type="text" placeholder="Zip Code [Optional]" />
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
-                    <p>Already have an account? <strong>Login here</strong></p>
+                    <p>Already have an account? <a (click)="openDialogLogin()" class="btn-link"><strong>Login here</strong></a></p>
                     <div class="checkbox-container">
-                        <span><input type="checkbox" class="input-checkbox"></span> Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit
+                        <span><input type="checkbox" class="input-checkbox"></span> Check here to indicate that you have read and agree to the terms of the <span class="txt-orange">AWS Customer Agreement</span>
 
                     </div>
                 </div>
