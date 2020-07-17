@@ -1,0 +1,218 @@
+<div class="schedule-container">
+    <div class="campus-schedule-wrapper">
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="schedule-header">
+                            <h1>What works for you?</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="schedule-btns">
+                            <button [class.btn-active]="campusScheduleBtn" (click)="showDiv.campusSchedule = !showDiv.campusSchedule;showDiv.onlineSchedule = false; campusView();"
+                                class="btn-active rounded" mat-raised-button>Campus Schedule</button>
+                            <button [class.btn-active]="onlineScheduleBtn" (click)="showDiv.onlineSchedule = !showDiv.onlineSchedule;showDiv.campusSchedule = false; onlineView();"
+                                class="rounded" mat-raised-button>Online Schedule</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" *ngIf="showDiv.campusSchedule">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="schedule-cost">
+                            <span>$149</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="schedule-location">
+                            <span>Your campus is: </span> <span class="txt-orange"><strong>New Horizons, Portland</strong></span>
+                            <span class="txt-small"> Change</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Course Name Here</h3>
+                        <div class="calendar-container">
+                            <app-calendar #myCalendar (dateSelected)="dateSelected($event)"></app-calendar>
+                        </div>
+                        <div>
+                            <mat-radio-group aria-label="Select An Option">
+                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
+                                <mat-radio-button value="2">Class Available</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table">
+                            <div>
+                                <h4>Next On Campus Class:</h4>
+                                <span>August 20, 2020 | 1:00PM</span>
+                            </div>
+                            <div>
+                                <button class="btn-orange" mat-raised-button>Campus</button>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">12</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Wednesday</span>
+                            </div>
+                            <div class="time">
+                                <span>1:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <span>2 seats left</span>
+                                <div class="seats-box rounded">Almost Full</div>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">13</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Thursday</span>
+                            </div>
+                            <div class="time">
+                                <span>2:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <span>1 seats left</span>
+                                <div class="seats-box rounded">Almost Full</div>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">14</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Friday</span>
+                            </div>
+                            <div class="time">
+                                <span>2:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <div class="seats-box rounded">Full</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="schedule-btn-container">
+                            <button class="btn-orange" mat-raised-button>Add To Cart</button>
+                            <button class="btn-orange" mat-raised-button>Add To Bookmark</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" *ngIf="showDiv.onlineSchedule">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="schedule-cost">
+                            <span>$199</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Course Name Here</h3>
+                        <div class="calendar-container">
+                            <app-calendar #myCalendar (dateSelected)="dateSelected($event)"></app-calendar>
+                        </div>
+                        <div>
+                            <mat-radio-group aria-label="Select An Option">
+                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
+                                <mat-radio-button value="2">Class Available</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="table">
+                            <div>
+                                <button class="btn-orange" mat-raised-button>Online LIVE</button>
+                            </div>
+                            <div>
+                                <h4>Next On Campus Class:</h4>
+                                <span>August 20, 2020 | 1:00PM</span>
+                            </div>
+                            <div>
+                                <button class="btn-orange" mat-raised-button>Online LIVE</button>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">12</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Wednesday</span>
+                            </div>
+                            <div class="time">
+                                <span>1:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <span>2 seats left</span>
+                                <div class="seats-box rounded">Almost Full</div>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">13</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Thursday</span>
+                            </div>
+                            <div class="time">
+                                <span>2:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <span>1 seats left</span>
+                                <div class="seats-box rounded">Almost Full</div>
+                            </div>
+                        </div>
+                        <div class="date-schedules">
+                            <div class="date">
+                                <div class="dt">14</div>
+                                <div class="month">August</div>
+                            </div>
+                            <div class="day">
+                                <span>Friday</span>
+                            </div>
+                            <div class="time">
+                                <span>2:00PM - 5:00PM</span>
+                            </div>
+                            <div class="availability">
+                                <div class="seats-box rounded">Full</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="schedule-btn-container">
+                            <button class="btn-orange" mat-raised-button>Add To Cart</button>
+                            <button class="btn-orange" mat-raised-button>Add To Bookmark</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+</div>

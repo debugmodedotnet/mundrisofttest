@@ -6,6 +6,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -19,6 +20,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
+import { MdePopoverModule } from '@material-extended/mde';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -31,6 +35,8 @@ import {StarRatingComponent} from './shared/star-rating.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
 import { TestComponent } from './test/test.component';
 import {CatalogfilterPipe} from './shared/catalog.pipe';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 @NgModule({
@@ -44,7 +50,9 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     StarRatingComponent, 
     FindCampusComponent, 
     CatalogfilterPipe,
-    TestComponent,    
+    TestComponent,
+    ScheduleComponent,
+    CalendarComponent,    
   ],
   entryComponents: [
     RegisterDialogComponent,
@@ -59,6 +67,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatRadioModule,
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
@@ -72,9 +81,13 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
     MatExpansionModule,
     CarouselModule,
     FranchiseModule,
+    MdePopoverModule,
+    MatDatepickerModule,
+    MatMomentDateModule, 
+      
    
   ],
   providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

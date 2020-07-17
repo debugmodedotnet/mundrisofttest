@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+/*For Angular Popover*/
+@import '~@angular/cdk/overlay-prebuilt.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -1570,7 +1572,78 @@ svg#clouds {
     text-align: left;
       
 }
-
+button:focus{
+    outline: 1px dotted;
+}
+.schedule-header, .schedule-btns, 
+.schedule-cost, .schedule-location{
+    text-align:center;
+    margin:5px auto 10px;
+}
+.schedule-btn-container{
+    text-align:center;
+    margin:30px auto 10px;
+}
+.schedule-btns{
+    margin-left:25px;    
+}
+.schedule-btns button{
+    margin-left:-25px;
+    padding: 0px 35px;
+}
+.schedule-btn-container button{    
+    margin:0px 5px;
+}
+.schedule-cost span{
+    font-size:20px;
+    font-weight: 600;
+}
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+.schedule-location{
+    font-size: 18px;
+}
+.schedule-location .txt-small{
+    font-size: 12px;
+    padding:10px;    
+}
+.date-schedules{
+    display: flex;
+    flex-wrap: wrap;
+    vertical-align: center;
+    align-items: center;    
+    padding:5px;
+    border:1px solid #cccccc;
+    border-radius:4px;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.date-schedules:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); 
+}
+.date-schedules > div{
+    flex-grow: 1;    
+    padding:5px;
+    text-align: center;
+    width:90px;
+}
+.date-schedules .dt{
+    font-size:22px;
+    font-weight: 500;
+}
+.calendar-wrapper{
+    width: 100%;
+    text-align: center;
+    margin:25px 0px;
+    border:1px solid #cccccc;
+    border-radius:4px;
+}
+.seats-box{
+    background-color:#cccccc;
+    text-align: center;
+}
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
     .table > div{
