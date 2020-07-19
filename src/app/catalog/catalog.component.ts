@@ -29,20 +29,9 @@ export class CatalogComponent implements OnInit {
   //selected: any;
 
   constructor(private coursecatalogService: CourseCatalogService, private router: Router, private route: ActivatedRoute) {
-    /*this.list = [
-      'Read about Angular',
-      'Read about knockout',
-      'Read about backbone',
-      'Read about jquery',
-      'Read about javascript'
-    ];*/
+    
   }
-  /*select(item) {
-    this.selected = item;
-  };
-  isActive(item) {
-    return this.selected === item;
-  };*/
+  
   
   ngOnInit(): void {
     this.coursecatalogService.getCourseCatalog().subscribe(

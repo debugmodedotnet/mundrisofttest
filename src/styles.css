@@ -292,7 +292,8 @@ margin:0 auto;
     vertical-align: top;
 }
 .course-picture{
-    width:100%;
+    min-width:110px;
+    width: 100%;
     height:110px;
     border:1px solid #cccccc;
     display: flex;
@@ -300,10 +301,42 @@ margin:0 auto;
     justify-content: center;
     margin-bottom:25px;
 }
+.popover-container .course-picture{
+    min-width:100px;
+    height:70px;
+}
 .course-title{
     font-size: 16px;
     font-weight: 500;
     color: #f54b1e;    
+}
+.popover-container .popover{
+    min-width:500px;
+}
+.course-cost{
+    font-size: 18px;
+    font-weight: 500;
+}
+.col-width-75{
+    width:75%;
+}
+.cart-btn-container{
+    margin:20px auto;
+    text-align: center;
+}
+.cart-btn-container button{
+    margin:10px auto;
+    width:150px;
+}
+.popover-header{
+    display:flex;
+    align-items: center;    
+}
+.popover-header > div{
+    padding:5px;    
+}
+.popover-header h3{
+    margin-bottom: .5rem
 }
 .owl-carousel.owl-drag .owl-item .card-wrapper{
     margin:15px;
@@ -1618,6 +1651,15 @@ button:focus{
     border-radius:4px;
     margin-bottom:5px;
     cursor: pointer;
+    position: relative;
+}
+.date-schedules .booked-seat{
+    position: absolute;
+    right:-12px;
+    top:40%;
+}
+.date-schedules .booked-seat .mat-icon{
+    color:#008000;
 }
 .date-schedules:hover{
     transform: translateY(-3px);
@@ -1642,12 +1684,17 @@ button:focus{
 }
 .seats-box{
     background-color:#cccccc;
-    text-align: center;
+    text-align: center;    
+    padding:5px 20px;
+    display: inline-block;
 }
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
     .table > div{
         display:block;
+    }
+    .popover-container .table > div{
+        display:table-cell;
     }
     .img-box-container-rl .img-container,
     .img-box-container-lr .img-container,    

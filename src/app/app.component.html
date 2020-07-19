@@ -16,20 +16,183 @@
               <li class="nav-item" routerLinkActive="active">
                 <a class="nav-link" aria-label="Catalog" routerLink="/catalog">Catalog</a>
               </li>
-              <li class="nav-item" routerLinkActive="active">
-                  <a class="nav-link" aria-label="Schedule" routerLink="/schedule">Schedule</a>
-                </li>
-              <li class="nav-item">
-                <div>
-                  <button mat-button (click)="openDialogScheduleCampus()">Schedule</button>
-                </div>
-              </li>
             </ul>
             <div class="spacer"></div>
-            <ul class="navbar-nav mobile-view">              
+            <ul class="navbar-nav mobile-view">
               <li class="nav-item">
                 <div>
                   <button mat-button (click)="openDialogFindCampus()" mat-icon-button><mat-icon>place</mat-icon></button>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div>
+                  <button mat-button [popover]="myBookmarks" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon matBadge="4" matBadgeOverlap="true" matBadgePosition="after">bookmark</mat-icon></button>
+                  <div class="popover-container">
+                    <popover-content #myBookmarks title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                      <div class="popover-header">
+                        <div>
+                          <mat-icon>bookmark</mat-icon>
+                        </div>
+                        <div>
+                          <h3>My Bookmarks</h3>
+                        </div>
+                      </div>
+                      <div class="other-course-container">
+                        <div>
+                          <div class="course-picture">
+                            <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                          </div>
+                        </div>
+                        <div>
+                          <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                          <div class="other-course-details">
+                            <div class="course-info icon">
+                              <div>
+                                <span>
+                                        <mat-icon aria-label="star">star</mat-icon>
+                                        <mat-icon aria-label="star">star</mat-icon>
+                                        <mat-icon aria-label="star">star</mat-icon>
+                                        <mat-icon aria-label="star">star</mat-icon>
+                                        <mat-icon aria-label="star_half">star_half</mat-icon>
+                                    </span>
+                              </div>
+                            </div>
+                            <div class="table">
+                              <div class="course-cost">$199</div>
+                              <div><button mat-button class="btn-orange">Remove</button></div>
+                              <div><button mat-button class="btn-orange">Add to Cart</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="other-course-container">
+                        <div>
+                          <div class="course-picture">
+                            <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                          </div>
+                        </div>
+                        <div>
+                          <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                          <div class="other-course-details">
+                            <div class="course-info icon">
+                              <div>
+                                <span>
+                                          <mat-icon aria-label="star">star</mat-icon>
+                                          <mat-icon aria-label="star">star</mat-icon>
+                                          <mat-icon aria-label="star">star</mat-icon>
+                                          <mat-icon aria-label="star">star</mat-icon>
+                                          <mat-icon aria-label="star_half">star_half</mat-icon>
+                                      </span>
+                              </div>
+                            </div>
+                            <div class="table">
+                              <div class="course-cost">$199</div>
+                              <div><button mat-button class="btn-orange">Remove</button></div>
+                              <div><button mat-button class="btn-orange">Add to Cart</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="other-course-container">
+                        <div>
+                          <div class="course-picture">
+                            <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                          </div>
+                        </div>
+                        <div>
+                          <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                          <div class="other-course-details">
+                            <div class="course-info icon">
+                              <div>
+                                <span>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star_half">star_half</mat-icon>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="table">
+                              <div class="course-cost">$199</div>
+                              <div><button mat-button class="btn-orange">Remove</button></div>
+                              <div><button mat-button class="btn-orange">Add to Cart</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </popover-content>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div>
+                  <button mat-button [popover]="myCart" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon matBadge="2" matBadgeOverlap="true" matBadgePosition="after">add_shopping_cart</mat-icon></button>
+                  <div class="popover-container">
+                    <popover-content #myCart title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                      <div class="popover-header">
+                        <div>
+                          <mat-icon>add_shopping_cart</mat-icon>
+                        </div>
+                        <div>
+                          <h3>My Cart</h3>
+                        </div>
+                      </div>
+
+                      <div class="other-course-container">
+                        <div>
+                          <div class="course-picture">
+                            <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>
+                          </div>
+                        </div>
+                        <div>
+                          <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                          <p>Lorem ipsum dolor sit amet, consectetur</p>
+                          <div class="other-course-details">
+                            <div class="course-info icon">
+                              <div>
+                                <span>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star">star</mat-icon>
+                                      <mat-icon aria-label="star_half">star_half</mat-icon>
+                                  </span>
+                              </div>
+                            </div>
+                            <div class="table">
+                              <div class="course-cost">$199</div>
+                              <div><button mat-button class="btn-orange">Remove</button></div>
+                              <div><button mat-button class="btn-orange">Compare</button></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <hr>
+                      <div>
+                        <div class="table">
+                          <div class="col-width-75 text-right">
+                            <div>Fees:</div>
+                            <div>Total</div>
+                          </div>
+                          <div class="course-cost text-right">
+                            <div>0.00</div>
+                            <div>$199</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-btn-container">
+                        <div><button mat-button class="btn-orange">Go To Checkout<mat-icon aria-label="play">play</mat-icon></button></div>
+                        <div><button mat-button class="btn-orange">Keep Browsing<mat-icon aria-label="play">play</mat-icon></button></div>
+                      </div>
+                    </popover-content>
+                  </div>
 
                 </div>
               </li>

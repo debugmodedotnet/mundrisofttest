@@ -12,12 +12,13 @@ export class ScheduleComponent implements OnInit {
   
   campusScheduleBtn: boolean = true;
   onlineScheduleBtn: boolean = false;
-  campusSchedule: boolean = false; 
+  campusSchedule: boolean = true; 
   onlineSchedule: boolean = false; 
   constructor() {}
 
   ngOnInit(): void {
   }
+  //Calendar
   @ViewChild('myCalendar')
   myCalendar: CalendarComponent;
  
@@ -27,8 +28,8 @@ export class ScheduleComponent implements OnInit {
   
   //Cmapus/Online Schedule
   showDiv = {
-    campusSchedule: false,
-    onlineSchedule: true,
+    campusSchedule: true,
+    onlineSchedule: false,
   }
 
   campusView(){

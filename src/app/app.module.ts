@@ -23,6 +23,8 @@ import { HashLocationStrategy, LocationStrategy  } from '@angular/common';
 import { MdePopoverModule } from '@material-extended/mde';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import {PopoverModule} from "ngx-smart-popover";
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -84,7 +86,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     MdePopoverModule,
     MatDatepickerModule,
     MatMomentDateModule, 
-      
+    PopoverModule,
+    MatBadgeModule, 
    
   ],
   providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],

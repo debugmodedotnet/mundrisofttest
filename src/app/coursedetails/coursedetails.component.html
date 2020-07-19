@@ -275,7 +275,7 @@
                                     <div><span>...</span></div>
                                 </div>
                                 <div class="course-btn-wrapper">
-                                    <div><a *ngFor="let a of courseDetailsData?.course_info?.course_availability" mat-raised-button
+                                    <div><a (click)="openDialogScheduleCampus()" *ngFor="let a of courseDetailsData?.course_info?.course_availability" mat-raised-button
                                             class="btn-orange rounded">{{a}}</a>
 
                                     </div>
@@ -324,12 +324,12 @@
                                     <div><span>April 12, 2020</span> <span>|</span> <span>1:00pm</span> </div>
 
                                     <div>
-                                        <div><a mat-raised-button class="btn-orange">Online LIVE</a></div>
+                                        <div><a mat-raised-button (click)="openDialogScheduleCampus()" class="btn-orange">Online LIVE</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="course-btn-wrapper">
-                                <div><a mat-raised-button class="btn-orange">View Other Dates</a></div>
+                                <div><a mat-raised-button (click)="openDialogScheduleCampus()" class="btn-orange">View Other Dates</a></div>
                             </div>
 
                             <h3>Next Campus Class:</h3>
@@ -338,12 +338,12 @@
                                     <div><span>April 12, 2020</span> <span>|</span> <span>1:00pm</span> </div>
 
                                     <div>
-                                        <div><a mat-raised-button class="btn-orange">Campus</a></div>
+                                        <div><a mat-raised-button (click)="openDialogScheduleCampus()" class="btn-orange">Campus</a></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="course-btn-wrapper">
-                                <div><a mat-raised-button class="btn-orange">View Other Dates</a></div>
+                                <div><a mat-raised-button (click)="openDialogScheduleCampus()" class="btn-orange">View Other Dates</a></div>
                             </div>
 
                             <div class="course-btn-wrapper">
