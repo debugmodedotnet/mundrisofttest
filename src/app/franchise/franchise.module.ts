@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
  
 import { FormsModule }						from '@angular/forms';
 // import { HttpModule }							from '@angular/common/http';
+import {StarRatingComponent} from '../shared/star-rating.component'
+import {ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from '../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,13 +21,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 
 import { FranchiseRoutingModule } from './franchise-routing.module';
-import { FranchiseService }					  from './franchise.service';
 import { FranchiseComponent }					  from './franchise.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 @NgModule({
-  declarations: [FranchiseComponent],
+  declarations: [FranchiseComponent,StarRatingComponent],
   imports: [
     CommonModule,
     CarouselModule,
@@ -43,9 +44,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatCheckboxModule,
     MatPaginatorModule,
     MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [
-    FranchiseService    
   ]
 })
 export class FranchiseModule { }

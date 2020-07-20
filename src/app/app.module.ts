@@ -30,7 +30,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 import { CatalogComponent } from './catalog/catalog.component';
-import { FranchiseModule } from './franchise/franchise.module';
+// import { FranchiseModule } from './franchise/franchise.module';
 import { LoginComponent } from './login/login.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import {StarRatingComponent} from './shared/star-rating.component';
@@ -39,12 +39,14 @@ import { TestComponent } from './test/test.component';
 import {CatalogfilterPipe} from './shared/catalog.pipe';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { FranchiseComponent } from './franchise/franchise.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    FranchiseComponent,
     RegisterDialogComponent,
     CatalogComponent,    
     LoginComponent,
@@ -59,7 +61,7 @@ import { CalendarComponent } from './calendar/calendar.component';
   entryComponents: [
     RegisterDialogComponent,
     LoginComponent,
-    FindCampusComponent,
+    FindCampusComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +84,6 @@ import { CalendarComponent } from './calendar/calendar.component';
     MatSelectModule,
     MatExpansionModule,
     CarouselModule,
-    FranchiseModule,
     MdePopoverModule,
     MatDatepickerModule,
     MatMomentDateModule, 

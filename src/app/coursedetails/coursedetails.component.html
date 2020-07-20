@@ -1,6 +1,6 @@
 <div class="main-container internal-page-wrapper course-details-page">
     <!-- Hero Banner section begin-->
-    <div class="hero-banner">
+    <div class="hero-banner" [ngStyle]="{'background': 'url(' + courseDetailsData?.course_outline.banner_image.url + ') no-repeat 0 0'}">
         <div class="banner-overlay">
             <div class="container">
                 <div class="row banner-content">

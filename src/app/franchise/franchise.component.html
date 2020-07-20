@@ -1,14 +1,15 @@
 <div class="main-container internal-page-wrapper franchise-page">
     <!-- Hero Banner section begin
     -->
-    <div class="hero-banner skew" [ngStyle]="{'background-image': 'url(' + _franchise.banner_section.image.url + ')'}">
+    <div class="hero-banner skew"
+        [ngStyle]="{'background-image': 'url(' + franchiseData?.banner_section?.image?.url + ')'}">
         <div class="banner-overlay">
             <div class="container">
                 <div class="row banner-content">
                     <div class="col-12">
-                        <h1>@{{_franchise.banner_section.heading}}@</h1>
+                        <h1>@{{franchiseData?.banner_section?.heading}}@</h1>
 
-                        <p>{{_franchise.banner_section.description}} </p>
+                        <p>{{franchiseData?.banner_section.description}} </p>
                         <div>
                             <a mat-raised-button class="btn-transparent btn-white">Watch</a>
                         </div>
@@ -26,7 +27,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div>
-                            <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span><span>/</span>
+                            <span><a class="txt-orange" aria-label="Home"
+                                    routerLink="/home">Home</a></span><span>/</span>
                             <span class="">New Horizons, Portland</span>
                         </div>
                     </div>
@@ -42,13 +44,14 @@
                     <div class="col-12">
                         <div class="img-box-container-rl">
                             <div class="img-container rounded-corner-shadow">
-                                <img [src]="_franchise.marketing_section_1.image.url" [alt]="_franchise.marketing_section_1.image.filename">
+                                <img [src]="franchiseData?.marketing_section_1.image.url"
+                                    [alt]="franchiseData?.marketing_section_1.image.filename">
 
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>{{_franchise.marketing_section_1.heading}}</h2>
-                                    <p>{{_franchise.marketing_section_1.description}}</p>
+                                    <h2>{{franchiseData?.marketing_section_1.heading}}</h2>
+                                    <p>{{franchiseData?.marketing_section_1.description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -103,8 +106,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="events-header">
-                            <h2>{{_franchise.marketing_section_2.heading}}</h2>
-                            <p>{{_franchise.marketing_section_2.description}}</p>
+                            <h2>{{franchiseData?.marketing_section_2.heading}}</h2>
+                            <p>{{franchiseData?.marketing_section_2.description}}</p>
                         </div>
                     </div>
                 </div>
@@ -113,18 +116,21 @@
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
-                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
+                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">
+                                        photo_size_select_actual</mat-icon>
                                 </div>
                                 <mat-card-header>
                                 </mat-card-header>
 
                                 <mat-card-content>
 
-                                    <h3>{{_franchise.marketing_section_2_modular_blocks[0].block_1.heading}} </h3>
-                                    <p> {{_franchise.marketing_section_2_modular_blocks[0].block_1.description}} </p>
+                                    <h3>{{franchiseData?.marketing_section_2_modular_blocks[0].block_1.heading}} </h3>
+                                    <p> {{franchiseData?.marketing_section_2_modular_blocks[0].block_1.description}}
+                                    </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[0].block_1.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[0].block_1.cta_button_text}}</a>
+                                    <a mat-raised-button class="btn-orange"
+                                        [href]="franchiseData?.marketing_section_2_modular_blocks[0].block_1.cta_button_url">{{franchiseData?.marketing_section_2_modular_blocks[0].block_1.cta_button_text}}</a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -133,7 +139,8 @@
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
-                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
+                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">
+                                        photo_size_select_actual</mat-icon>
                                 </div>
                                 <mat-card-header>
 
@@ -142,11 +149,13 @@
 
                                 <mat-card-content>
 
-                                    <h3>{{_franchise.marketing_section_2_modular_blocks[1].block_2.heading}} </h3>
-                                    <p> {{_franchise.marketing_section_2_modular_blocks[1].block_2.description}} </p>
+                                    <h3>{{franchiseData?.marketing_section_2_modular_blocks[1].block_2.heading}} </h3>
+                                    <p> {{franchiseData?.marketing_section_2_modular_blocks[1].block_2.description}}
+                                    </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[1].block_2.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[1].block_2.cta_button_text}}</a>
+                                    <a mat-raised-button class="btn-orange"
+                                        [href]="franchiseData?.marketing_section_2_modular_blocks[1].block_2.cta_button_url">{{franchiseData?.marketing_section_2_modular_blocks[1].block_2.cta_button_text}}</a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -155,7 +164,8 @@
                         <div class="card-wrapper icon-card">
                             <mat-card class="example-card no-card-border">
                                 <div class="icon-circle-blue">
-                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">photo_size_select_actual</mat-icon>
+                                    <mat-icon aria-hidden="false" aria-label="photo_size_select_actual icon">
+                                        photo_size_select_actual</mat-icon>
                                 </div>
                                 <mat-card-header>
 
@@ -164,11 +174,13 @@
 
                                 <mat-card-content>
 
-                                    <h3>{{_franchise.marketing_section_2_modular_blocks[2].block_3.heading}} </h3>
-                                    <p> {{_franchise.marketing_section_2_modular_blocks[2].block_3.description}} </p>
+                                    <h3>{{franchiseData?.marketing_section_2_modular_blocks[2].block_3.heading}} </h3>
+                                    <p> {{franchiseData?.marketing_section_2_modular_blocks[2].block_3.description}}
+                                    </p>
                                 </mat-card-content>
                                 <mat-card-actions>
-                                    <a mat-raised-button class="btn-orange" [href]="_franchise.marketing_section_2_modular_blocks[2].block_3.cta_button_url">{{_franchise.marketing_section_2_modular_blocks[2].block_3.cta_button_text}}</a>
+                                    <a mat-raised-button class="btn-orange"
+                                        [href]="franchiseData?.marketing_section_2_modular_blocks[2].block_3.cta_button_url">{{franchiseData?.marketing_section_2_modular_blocks[2].block_3.cta_button_text}}</a>
                                 </mat-card-actions>
                             </mat-card>
                         </div>
@@ -187,8 +199,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Popular Courses at Portland</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        <h2>Popular Courses at {{courseData?.campus_name}}</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </div>
                 </div>
@@ -196,146 +209,57 @@
                     <div class="col-12">
                         <div>
                             <owl-carousel-o [options]="customOptionsCourses">
-                                <ng-template carouselSlide>
+                                <ng-template *ngFor="let c of courseData?.popular_courses_in_campus" carouselSlide>
                                     <div class="card-wrapper">
-                                        <mat-card class="example-card">
+                                        <mat-card (click)='courseDetails(c)' class="example-card">
                                             <mat-card-header>
 
                                             </mat-card-header>
                                             <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-2.png" alt="Picture">
-
+                                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
                                             </div>
                                             <div class="course-price">
-                                                <span class="price-badge">$150</span>
+                                                <span class="price-badge">
+                                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
+                                                    </ng-container>
+                                                    <ng-template #onlineprice>
+                                                        {{c.course_info.cost.online}}
+                                                    </ng-template>
+                                                    <ng-template #campusprice>
+                                                        {{c.course_info.cost.campus}}
+                                                    </ng-template>
+                                                </span>
                                             </div>
                                             <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                                <h4>{{c.course_name}}</h4>
                                                 <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
+                                                    <div>
+                                                        <span>
+                                                            <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
+                                                        </span>
+                                                    </div>
+                                                    <!-- need to be fixed the chart  -->
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div>
+                                                        <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                                        </ng-container>
+                                                        <ng-template #onlinelength>
+                                                            <span>{{c.course_info.course_length.online}}</span>
+                                                        </ng-template>
+                                                        <ng-template #campuslength>
+                                                            <span>{{c.course_info.course_length.campus}}</span>
+                                                        </ng-template>
+                                                    </div>
                                                 </div>
                                             </mat-card-content>
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-1.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-2.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
+                                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
+                                                    <div>
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                    </div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
@@ -364,8 +288,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="content-wrapper">
-                            <h2>New Courses at Portland</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <h2>New Courses at {{courseData?.campus_name}}</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                         </div>
                     </div>
@@ -374,151 +299,64 @@
                     <div class="col-12">
                         <div class="content-wrapper">
                             <owl-carousel-o [options]="customOptionsCourses">
-                                <ng-template carouselSlide>
+
+                                <ng-template *ngFor="let c of courseData?.new_courses_in_campus" carouselSlide>
                                     <div class="card-wrapper">
-                                        <mat-card class="example-card">
+                                        <mat-card (click)='courseDetails(c)' class="example-card">
                                             <mat-card-header>
 
                                             </mat-card-header>
                                             <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-2.png" alt="Picture">
-
+                                                <img class="image-square" mat-card-image [src]='c.course_outline.banner_image.url' alt="Picture">
                                             </div>
                                             <div class="course-price">
-                                                <span class="price-badge">$150</span>
+                                                <span class="price-badge">
+                                                    <ng-container *ngIf="c.course_info.cost.online; then onlineprice else campusprice">
+                                                    </ng-container>
+                                                    <ng-template #onlineprice>
+                                                        {{c.course_info.cost.online}}
+                                                    </ng-template>
+                                                    <ng-template #campusprice>
+                                                        {{c.course_info.cost.campus}}
+                                                    </ng-template>
+                                                </span>
                                             </div>
                                             <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
+                                                <h4>{{c.course_name}}</h4>
                                                 <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
+                                                    <div>
+                                                        <span>
+                                                            <app-starrating [rating]='c.course_info.star_rating'></app-starrating>
+                                                        </span>
+                                                    </div>
+                                                    <!-- need to be fixed the chart  -->
+                                                    <div><span>Level:</span>
+                                                        <mat-icon> bar_chart</mat-icon>
+                                                    </div>
+                                                    <div>
+                                                        <ng-container *ngIf="c.course_info.course_length.online; then onlinelength else campuslength">
+                                                        </ng-container>
+                                                        <ng-template #onlinelength>
+                                                            <span>{{c.course_info.course_length.online}}</span>
+                                                        </ng-template>
+                                                        <ng-template #campuslength>
+                                                            <span>{{c.course_info.course_length.campus}}</span>
+                                                        </ng-template>
+                                                    </div>
                                                 </div>
                                             </mat-card-content>
                                             <mat-card-actions>
                                                 <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
+                                                    <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
+                                                    <div>
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                    </div>
                                                 </div>
                                             </mat-card-actions>
                                         </mat-card>
                                     </div>
                                 </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-1.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-2.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
-                                <ng-template carouselSlide>
-                                    <div class="card-wrapper">
-                                        <mat-card class="example-card">
-                                            <mat-card-header>
-
-                                            </mat-card-header>
-                                            <div class="img-container">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-1.png" alt="Picture">
-
-                                            </div>
-                                            <div class="course-price">
-                                                <span class="price-badge">$150</span>
-                                            </div>
-                                            <mat-card-content>
-                                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h4>
-                                                <div class="course-detials-container">
-                                                    <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_half</mat-icon><mat-icon>star_border</mat-icon></span></div>
-
-                                                </div>
-                                            </mat-card-content>
-                                            <mat-card-actions>
-                                                <div class="card-btn-wrapper">
-
-                                                    <div><a mat-button class="btn-orange rounded">Campus</a><a mat-button class="btn-orange rounded">Online</a></div>
-                                                </div>
-                                            </mat-card-actions>
-                                        </mat-card>
-                                    </div>
-                                </ng-template>
+                              
                             </owl-carousel-o>
                         </div>
                     </div>
@@ -541,9 +379,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="events-header">
-                            <h2>{{_franchise.marketing_section_3.heading}}</h2>
-                            <h3>{{_franchise.marketing_section_3.sub_heading}}</h3>
-                            <p>{{_franchise.marketing_section_3.description}}</p>
+                            <h2>{{franchiseData?.marketing_section_3.heading}}</h2>
+                            <h3>{{franchiseData?.marketing_section_3.sub_heading}}</h3>
+                            <p>{{franchiseData?.marketing_section_3.description}}</p>
                         </div>
                     </div>
                 </div>
@@ -553,12 +391,13 @@
                     <div class="col-12 remove-b-padding">
                         <div class="img-box-container-lr content-box-over">
                             <div class="img-container">
-                                <img [src]="_franchise.marketing_section_3_modular_blocks[0].block_1.image.url" alt="_franchise.marketing_section_3_modular_blocks[0].block_1.image.title">
+                                <img [src]="franchiseData?.marketing_section_3_modular_blocks[0].block_1.image.url"
+                                    alt="franchiseData.marketing_section_3_modular_blocks[0].block_1.image.title">
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>{{_franchise.marketing_section_3_modular_blocks[0].block_1.heading}}</h2>
-                                    <p>{{_franchise.marketing_section_3_modular_blocks[0].block_1.description}}</p>
+                                    <h2>{{franchiseData?.marketing_section_3_modular_blocks[0].block_1.heading}}</h2>
+                                    <p>{{franchiseData?.marketing_section_3_modular_blocks[0].block_1.description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -575,12 +414,13 @@
                     <div class="col-12 remove-t-padding">
                         <div class="img-box-container-rl content-box-over">
                             <div class="img-container">
-                                <img [src]="_franchise.marketing_section_3_modular_blocks[1].block_2.image.url" alt="image">
+                                <img [src]="franchiseData?.marketing_section_3_modular_blocks[1].block_2.image.url"
+                                    alt="image">
                             </div>
                             <div class="img-content-box">
                                 <div>
-                                    <h2>{{_franchise.marketing_section_3_modular_blocks[1].block_2.heading}}</h2>
-                                    <p>{{_franchise.marketing_section_3_modular_blocks[1].block_2.description}}</p>
+                                    <h2>{{franchiseData?.marketing_section_3_modular_blocks[1].block_2.heading}}</h2>
+                                    <p>{{franchiseData?.marketing_section_3_modular_blocks[1].block_2.description}}</p>
                                 </div>
                             </div>
                         </div>
@@ -607,13 +447,19 @@
                                         <div class="instructor-details instruct-col">
                                             <div class="">
                                                 <p class="course-title">James Lawery</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                                 <div class="btn-wrapper">
@@ -623,7 +469,8 @@
                                         </div>
                                         <div class="instruct-col">
                                             <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                     </div>
@@ -633,13 +480,19 @@
                                         <div class="instructor-details instruct-col">
                                             <div class="">
                                                 <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
 
@@ -647,7 +500,8 @@
                                         </div>
                                         <div class="instruct-col">
                                             <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-3.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                     </div>
@@ -657,20 +511,27 @@
                                         <div class="instructor-details instruct-col">
                                             <div class="">
                                                 <p class="course-title">Lorem ipsum dolor sit amet</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                             </div>
                                         </div>
                                         <div class="instruct-col">
                                             <div class="instructor-avatar">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-4.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                     </div>
@@ -695,13 +556,16 @@
                     <div class="col-lg-4">
                         <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 .
                             </p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div>
                                         <div class="btn-wrapper">
                                             <div><a mat-button class="btn-orange rounded">Campus</a></div>
@@ -721,13 +585,16 @@
                     <div class="col-lg-4">
                         <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 .
                             </p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div>
                                         <div class="btn-wrapper">
                                             <div><a mat-button class="btn-orange rounded">Campus</a></div>
@@ -747,13 +614,16 @@
                     <div class="col-lg-4">
                         <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 .
                             </p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div>
                                         <div class="btn-wrapper">
                                             <div><a mat-button class="btn-orange rounded">Campus</a></div>
@@ -773,13 +643,16 @@
                     <div class="col-lg-4">
                         <div class="course-box">
                             <p class="course-title">Lorem ipsum dolor sit amet</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut
                                 .
                             </p>
                             <div class="other-course-details">
                                 <div class="course-info">
                                     <div><span>By: Alex Mills</span></div>
-                                    <div><span>Level: </span><span><mat-icon aria-label="Level">insert_chart_outlined</mat-icon></span></div>
+                                    <div><span>Level: </span><span>
+                                            <mat-icon aria-label="Level">insert_chart_outlined</mat-icon>
+                                        </span></div>
                                     <div>
                                         <div class="btn-wrapper">
                                             <div><a mat-button class="btn-orange rounded">Campus</a></div>
@@ -811,19 +684,26 @@
                                     <div class="instructor-carousel">
                                         <div class="instruct-col">
                                             <div class="instructor-avatar-small">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                         <div class="instructor-details-content instruct-col">
                                             <div class="">
                                                 <p class="course-title">Exceeding Customer Expectatons</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                             </div>
@@ -834,19 +714,26 @@
                                     <div class="instructor-carousel">
                                         <div class="instruct-col">
                                             <div class="instructor-avatar-small">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                         <div class="instructor-details-content instruct-col">
                                             <div class="">
                                                 <p class="course-title">Exceeding Customer Expectatons</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                             </div>
@@ -857,19 +744,26 @@
                                     <div class="instructor-carousel">
                                         <div class="instruct-col">
                                             <div class="instructor-avatar-small">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                         <div class="instructor-details-content instruct-col">
                                             <div class="">
                                                 <p class="course-title">Exceeding Customer Expectatons</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                             </div>
@@ -880,19 +774,26 @@
                                     <div class="instructor-carousel">
                                         <div class="instruct-col">
                                             <div class="instructor-avatar-small">
-                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png" alt="Picture">
+                                                <img class="image-square" mat-card-image src="./assets/img/figure-5.png"
+                                                    alt="Picture">
                                             </div>
                                         </div>
                                         <div class="instructor-details-content instruct-col">
                                             <div class="">
                                                 <p class="course-title">Exceeding Customer Expectatons</p>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                    eiusmod tempor
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                    veniam,
+                                                    quis nostrud exercitation Lorem ipsum dolor sit amet, consectetur
+                                                    adipiscing
+                                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                                    aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation Lorem ipsum dolor
-                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                    sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                    incididunt
+                                                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                                    nostrud
                                                     exercitation
                                                 </p>
                                             </div>
@@ -913,8 +814,10 @@
                     <div class="col-12">
                         <div class="events-header">
                             <h2>Events in Our City</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt
                                 ut.
                             </p>
                         </div>
@@ -958,7 +861,8 @@
                                             <div class="col-lg-6">
                                                 <div class="table">
                                                     <div class="location-icon">
-                                                        <mat-icon aria-hidden="false" aria-label="place">place</mat-icon>
+                                                        <mat-icon aria-hidden="false" aria-label="place">place
+                                                        </mat-icon>
                                                     </div>
                                                     <div>
                                                         <span>Current Location</span>
@@ -1020,27 +924,31 @@
                                 <button mat-raised-button class="rounded">My Team</button>
                             </div>
                             <div>
-                                <form class="example-form">
+                                <form class="example-form" (ngSubmit)='contactUs()' [formGroup]='contactusForm' novalidate>
                                     <div>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>First Name</mat-label>
-                                            <input matInput placeholder="First Name">
+                                            <input matInput placeholder="First Name" formControlName='full_name'>
                                         </mat-form-field>
                                     </div>
                                     <div class="table">
                                         <div class="">
-                                            <select>
+                                            <!-- <select>
                                                 <option>US</option>
                                                 <option>UK</option>
                                                 <option>ASIA</option>
                                                 <option>AFRICA</option>
+                                            </select> -->
+                                            <select class="form-control" formControlName='country' id="contry">
+                                                <option *ngFor="let c of countries" [value]="c.name">{{c.name}}</option>
                                             </select>
                                         </div>
                                         <div class="">
                                             <mat-form-field class="example-full-width">
                                                 <mat-label>Telephone</mat-label>
                                                 <span matPrefix>+1 &nbsp;</span>
-                                                <input type="tel" matInput placeholder="555-555-1234">
+                                                <input type="tel" formControlName='phone_number' matInput
+                                                    placeholder="555-555-1234">
                                                 <mat-icon matSuffix>mode_edit</mat-icon>
                                             </mat-form-field>
                                         </div>
@@ -1049,21 +957,29 @@
                                     <div>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Email</mat-label>
-                                            <input matInput placeholder="Email">
+                                            <input formControlName='email_address' matInput placeholder="Email">
+                                        </mat-form-field>
+                                    </div>
+                                    <div>
+                                        <mat-form-field class="example-full-width">
+                                            <mat-label>Message</mat-label>
+                                            <input formControlName='message' matInput placeholder="Message">
                                         </mat-form-field>
                                     </div>
                                     <div>
                                         <mat-form-field class="example-full-width">
                                             <mat-label>Zipcode</mat-label>
-                                            <input matInput #postalCode maxlength="6" placeholder="Zipcode">
+                                            <input formControlName='zipcode' matInput #postalCode maxlength="6"
+                                                placeholder="Zipcode">
                                             <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
                                         </mat-form-field>
                                     </div>
+                                    <div class="btn-container">
+                                        <button [disabled]='contactusForm.invalid' mat-raised-button class="btn-orange">Contact Us</button>
+                                    </div>
                                 </form>
                             </div>
-                            <div class="btn-container">
-                                <button mat-raised-button class="btn-orange">Contact Us</button>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="col-lg-6">
