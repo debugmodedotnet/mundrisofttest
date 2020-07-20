@@ -25,6 +25,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import {PopoverModule} from "ngx-smart-popover";
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -40,6 +42,7 @@ import {CatalogfilterPipe} from './shared/catalog.pipe';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { FranchiseComponent } from './franchise/franchise.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -56,7 +59,8 @@ import { FranchiseComponent } from './franchise/franchise.component';
     CatalogfilterPipe,
     TestComponent,
     ScheduleComponent,
-    CalendarComponent,    
+    CalendarComponent,
+    CheckoutComponent,    
   ],
   entryComponents: [
     RegisterDialogComponent,
@@ -88,7 +92,9 @@ import { FranchiseComponent } from './franchise/franchise.component';
     MatDatepickerModule,
     MatMomentDateModule, 
     PopoverModule,
-    MatBadgeModule, 
+    MatBadgeModule,
+    MatStepperModule,
+    MatAutocompleteModule, 
    
   ],
   providers: [{provide : LocationStrategy , useClass: HashLocationStrategy}],

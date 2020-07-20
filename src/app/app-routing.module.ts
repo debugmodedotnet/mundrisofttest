@@ -6,12 +6,14 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { CoursedetailsComponent } from './coursedetails/coursedetails.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'franchise', component: FranchiseComponent },
   { path: 'catalog', component: CatalogComponent },
-  { path: 'schedule', component: ScheduleComponent }, 
+  { path: 'schedule', component: ScheduleComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path: 'course-details/:id', component: CoursedetailsComponent },
   {
     path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule)

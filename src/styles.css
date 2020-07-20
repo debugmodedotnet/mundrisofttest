@@ -276,7 +276,7 @@ margin:0 auto;
     vertical-align: center;
 }
 .course-outline-wrapper .accordion-container .mat-expansion-panel-header-description {
-    flex-grow: 100;
+    flex-grow: 1;
 }
 .course-outline-wrapper .accordion-container{
     margin-top: 20px;
@@ -290,6 +290,113 @@ margin:0 auto;
     display:table-cell;
     padding:10px;
     vertical-align: top;
+}
+.checkout-course-view .other-course-container > div{
+    padding:0px 20px 0px 0px;
+}
+.checkout-course-view{
+    display: flex;
+    flex-wrap: wrap;
+}
+.checkout-course-view h4{
+    font-size:18px;
+}
+.checkout-course-view > div{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.checkout-course-view > div.half {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+ }
+ .checkout-container .checkout-header{
+    text-align: center;
+    position: relative;
+    margin:25px auto 50px;
+ }
+ .checkout-page .btn-container button{
+    margin-right:10px;
+ }
+ .checkout-page .btn-container button .material-icons{
+    font-size: 18px;
+}
+ .checkout-course-view .checkout-header .heading{
+     text-align: center;
+ }
+ .checkout-page .course-cost{
+    font-size: 24px;
+ }
+ .checkout-container .course-picture{
+    height:70px;
+ }
+ .checkout-container{
+     margin:35px auto;
+ }
+ .payment-description{
+     border:1px solid #cccccc;
+     padding:20px;
+     max-height:200px;
+     overflow-y: scroll;
+     margin:35px auto;
+ }
+ .payment-total{
+     direction: flex;
+ }
+ .payment-total > div{
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.payment-total > div.third-half {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 70%;
+ }
+ .checkout-container .btn-container > div{
+    margin-bottom: 10px;
+ }
+ .payment-form-wrapper div .mat-form-field{
+    margin:5px 10px 5px 0px;
+ }
+ .confirmation-total{
+     margin:35px auto;
+ }
+ .checkbox-options > div{
+    margin:5px auto;
+    width:100%; 
+ }
+ .checkbox-options > div .mat-checkbox{
+    margin:5px 10px 5px 0px;  
+ }
+ .checkbox-options > div .right-align{
+    float: right;  
+ }
+ .payment-details > div, .code-container > div{
+     text-align: right;
+     margin:5px auto;
+ }
+ .total-payment{
+     font-size: 22px;
+     font-weight: 500;
+ }
+ .subtotal, .fees{
+    font-size: 16px;
+    font-weight: 500;
+ }
+ .right-block{
+     position: absolute;
+     float: right;
+     top: 10%;
+     right:0;
+ }
+ .dt-container{
+     display: flex;
+ }
+ .dt-container .material-icons{
+    font-size: 14px;
+}
+ .dt-container > div{
+    padding:5px 5px 5px 0px;
 }
 .course-picture{
     min-width:110px;
@@ -312,6 +419,9 @@ margin:0 auto;
 }
 .popover-container .popover{
     min-width:500px;
+}
+.popover-container .popover .arrow{
+    left: 47.5%;
 }
 .course-cost{
     font-size: 18px;
@@ -582,6 +692,14 @@ margin:0 auto;
     padding:10% 60px 5%;
     display: flex;
     align-items: center;
+}
+.checkout-page .hero-banner .banner-overlay {
+    padding: 8% 30px 2%;
+    min-height:100px;
+}
+.checkout-page .hero-banner .banner-content{
+    width: auto;
+    text-align: center;
 }
 .hero-banner .btn-white{
     background-color: rgba(255,255,255,0.3);
@@ -1688,11 +1806,18 @@ button:focus{
     padding:5px 20px;
     display: inline-block;
 }
+.divider{
+    margin:25px auto 35px;
+    border-top:1px solid #cccccc;
+}
 /* Responsive Styles */
 @media screen and (max-width: 991px) {
     .table > div{
         display:block;
     }
+    .checkout-course-view > div.half {        
+        flex-basis: 100%;
+     }
     .popover-container .table > div{
         display:table-cell;
     }
