@@ -1825,8 +1825,53 @@ button:focus{
     margin:25px auto 35px;
     border-top:1px solid #cccccc;
 }
+
+.boxWrapper {
+    width: 100%;
+    margin: 30px auto 70px auto;
+    text-align: center;
+    text-align: -webkit-center;
+}
+.boxWrapperCol {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+}
+.boxWrapperCol:hover {
+    transform: scale(1.05);
+    -moz-transition: scale(1.05);
+}
+.boxWrapperCol a {
+    text-decoration: none;
+    outline: none;
+}
+
+.whiteBox {
+    display: block;
+    width: 182px;
+    height: 80px;
+    padding: 15px 20px 15px 20px;
+    background: #fff;
+    color: #000;
+    text-align: center;
+    vertical-align: top;
+    line-height: 22px;
+    border: 1px solid #e1e0e0;
+    border-radius: 0 0 7px 7px;
+}
 /* Responsive Styles */
+@media screen and (max-width: 1199px) and (min-width: 1000px){
+    .boxWrapperCol {
+        display: inline-block;
+        vertical-align: top;
+        margin: 10px;
+    }
+}
 @media screen and (max-width: 991px) {
+    .boxWrapperCol {
+        margin: 15px;
+        width: 27%;
+    }
     .table > div{
         display:block;
     }
@@ -1892,6 +1937,9 @@ button:focus{
 }
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
+    .boxWrapperCol {        
+        width: 35%;
+    }
     .navigation-container{
         background-color: rgba(245, 75, 30, 1);
         position: relative;
