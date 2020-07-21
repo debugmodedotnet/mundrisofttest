@@ -10,10 +10,11 @@ import { tap, catchError, map } from 'rxjs/operators';
 })
 export class StudentLoginService {
 
-  apiurldata : string; 
+  apiurldata: string;
   apiurl = 'https://cdn.contentstack.io/v3/content_types/student/entries?environment=poc&query=';
- // apiurl = 'https://cdn.contentstack.io/v3/content_types/student/entries?environment=poc&query={"email_address": "ravir@mundrisoft.com","password": "raviranjan"';
+  // apiurl = 'https://cdn.contentstack.io/v3/content_types/student/entries?environment=poc&query={"email_address": "ravir@mundrisoft.com","password": "raviranjan"';
   // apiurl = 'https://cdn.contentstack.io/v3/content_types/course/entries/?environment=poc';
+  //apiurl = "https://cdn.contentstack.io/v3/content_types/student/entries?environment=poc&query={"$and":[{"email_address": "hhhh@gg.com"},{"password": "1234"}]}"
   headers = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set("api_key", "blt88a7ab59a822374a")
@@ -28,18 +29,51 @@ export class StudentLoginService {
 
   }
 
-  loginStudent(loginUser:any){
-  //  console.log(loginUser);
-    this.apiurldata = this.apiurl + JSON.stringify(loginUser);
-    console.log(this.apiurldata); 
-    return this.http.get<any>(this.apiurldata, this.httpOptions).pipe(
-        tap(data => { console.log(data) }),
-        catchError(this.handleError)
-      );
+  loginStudent(loginUser: any) {
 
+    localStorage.removeItem('user');
+    let loginUserDTO = {
+      $and: []
+    }
+    loginUserDTO.$and.push(loginUser);
+    this.apiurldata = this.apiurl + JSON.stringify(loginUserDTO);
+    return this.http.get<any>(this.apiurldata, this.httpOptions).pipe(
+      tap(data => {
+        console.log(data.entries.length);
+        if (data.entries.length == 1) {
+          localStorage.setItem('user', JSON.stringify(data));
+        }
+      }
+      ),
+      catchError(this.handleError)
+    );
   }
 
+  isLoggedIn() {
+    let user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
+    if (user) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 
+  getLoggedInUser(){
+    let user = JSON.parse(localStorage.getItem('user'));
+
+    if (user) {
+      return user;
+    }
+    else {
+      return null;
+    }
+  }
+
+  logOut() {
+    localStorage.removeItem('user');
+  }
 
   private handleError(error: any) {
     console.error(error);
