@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { StudentLoginService } from '../shared/studentlogin.service';
 import { Router, NavigationExtras } from '@angular/router';
-import { MatDialogRef } from '@angular/material/dialog'
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   navigationExtras: NavigationExtras ={}; 
   
-  constructor(private fb: FormBuilder, private loginService: StudentLoginService, private router: Router, private dialogRef: MatDialogRef<LoginComponent >) { }
+  constructor(public dialog: MatDialog, private fb: FormBuilder, private loginService: StudentLoginService, private router: Router, private dialogRef: MatDialogRef<LoginComponent >) { }
 
   ngOnInit(): void {
 
@@ -27,6 +28,8 @@ export class LoginComponent implements OnInit {
     })
 
   }
+
+  
 
   loginStudent() {
     //alert("Login");

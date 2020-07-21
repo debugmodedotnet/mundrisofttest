@@ -438,9 +438,16 @@ margin:0 auto;
     margin:10px auto;
     width:150px;
 }
+.location-zipcode{
+    margin: 50px 50px;
+    display: flex;
+    justify-content: center;
+}
+
 .popover-header{
     display:flex;
-    align-items: center;    
+    align-items: center;
+    background-color: transparent;    
 }
 .popover-header > div{
     padding:5px;    
@@ -1654,6 +1661,14 @@ svg#clouds {
 .login-form .form-field .frm-input, .login-form .zipcode .frm-input{
     height:auto;
     margin:0px 0px 20px 0px;
+}
+.login-form .form-field.password-input .frm-input,
+.login-form .form-field.password-input .frm-input input{
+    height:auto;
+    margin:0px 0px 0px 0px;
+}
+.txt-container{
+    margin:15px 0px 15px 0px;
 }
 .campus-location{
     display: table;

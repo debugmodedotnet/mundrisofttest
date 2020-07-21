@@ -5,27 +5,32 @@
         <div class="frm-field-group">
             <div class="form-field">
                 <div class="frm-input">
-                    <input type="text" placeholder="Email *"  formControlName='email_address'/>
+                    <input type="text" placeholder="Email *" formControlName='email_address' />
                     <div class="alert  alert-danger" *ngIf="studentLoginForm.get('email_address').hasError('required') && studentLoginForm.get('email_address').touched">
                         Email is required
                     </div>
                 </div>
             </div>
-            <div class="form-field">
+            <div class="form-field password-input">
                 <div class="frm-input">
-                    <input type="password" placeholder="Enter Password" formControlName='password' />
+                    <input type="password" placeholder="Password *" formControlName='password' />
                 </div>
             </div>
             <div *ngIf='studentData?.entries?.length == 0' class="alert alert-danger">
                 <p> Wrong User Name and Password</p>
             </div>
         </div>
-        <p>Forgot Password?</p>
+        <div class="txt-container">
+            <p>Forgot Password?</p>
+        </div>
         <div class="frm-btn-container">
             <button [disabled]='studentLoginForm.invalid' mat-raised-button color="warn" (click)="loginStudent()">Login</button>
         </div>
-        <p>or</p>
-
+        <div class="txt-container">
+            <p>Login with from a different account. Don’t have an Account? <a class="btn-link"><strong>Sign up</strong></a></p>
+            <p>or</p>
+        </div>
+        
         <div class="frm-btn-container">
             <button mat-raised-button color="warn">Login with Facebook</button>
         </div>

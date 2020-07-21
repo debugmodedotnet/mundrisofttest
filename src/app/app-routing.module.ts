@@ -7,11 +7,13 @@ import { CoursedetailsComponent } from './coursedetails/coursedetails.component'
 import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { FindCampusComponent } from './find-campus/find-campus.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'franchise', component: FranchiseComponent },
   { path: 'catalog', component: CatalogComponent },
+  { path: 'findacampus', component: FindCampusComponent },
   { path: 'schedule', component: ScheduleComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'course-details/:id', component: CoursedetailsComponent },
