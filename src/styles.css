@@ -415,8 +415,29 @@ margin:0 auto;
     margin-bottom:25px;
 }
 .popover-container .course-picture{
-    min-width:100px;
+    max-width:100px;
     height:70px;
+}
+.popover-container .course-picture img{
+    width:100%;
+}
+.popover-container .course-title{
+    color: #222222;
+    line-height: 19px;
+}
+.popover-container .other-course-details .course-info{
+    justify-content: inherit;
+}
+.popover-container .other-course-container{
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+.popover-container .table > div{
+    padding-right: 0px;
+    padding-top:10px;
+}
+.popover-container .table > div button{
+    margin-right:10px;
 }
 .course-title{
     font-size: 16px;
@@ -445,7 +466,7 @@ margin:0 auto;
     width:150px;
 }
 .location-zipcode{
-    margin: 50px 50px;
+    margin: 30px 50px;
     display: flex;
     justify-content: center;
 }

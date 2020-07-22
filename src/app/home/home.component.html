@@ -263,7 +263,7 @@
                                                 <div class="card-btn-wrapper">
                                                     <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}}</div>
                                                     <div>
-                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-flat rounded">{{b}}</a>
                                                     </div>
                                                 </div>
                                             </mat-card-actions>
@@ -346,7 +346,7 @@
                                                     <div> By: {{c.instructor[0].first_name}} {{c.instructor[0].last_name}} </div>
                                                     <div>
                                                         <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
-                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                        <a *ngFor="let b of c.course_info.course_availability; let i=index" mat-button class="btn-flat rounded">{{b}}</a>
                                                         <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                     </div>
                                                 </div>
@@ -411,7 +411,7 @@
                                                                 <div>By: Alex Mills</div>
                                                                 <div>
                                                                     <!--  we need to fix the URL from API. API has to return the URL for these buttons  -->
-                                                                    <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-orange rounded">{{b}}</a>
+                                                                    <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-flat rounded">{{b}}</a>
                                                                     <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                                 </div>
 
