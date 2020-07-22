@@ -43,6 +43,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { FranchiseComponent } from './franchise/franchise.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { MyteamComponent } from './myteam/myteam.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     TestComponent,
     ScheduleComponent,
     CalendarComponent,
-    CheckoutComponent,    
+    CheckoutComponent,
+    MyteamComponent,    
   ],
   entryComponents: [
     RegisterDialogComponent,

@@ -8,6 +8,7 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
+import { MyteamComponent } from './myteam/myteam.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'findacampus', component: FindCampusComponent },
   { path: 'schedule', component: ScheduleComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'myteam', component: MyteamComponent },
   { path: 'course-details/:id', component: CoursedetailsComponent },
   {
     path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule)

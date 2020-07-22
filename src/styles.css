@@ -358,6 +358,12 @@ margin:0 auto;
  .payment-form-wrapper div .mat-form-field{
     margin:5px 10px 5px 0px;
  }
+ .payment-form-wrapper div .mat-form-field .mat-form-field-flex{
+    border: 1px solid #cccccc;    
+    padding: 0px 10px;
+    border-radius: 4px;
+ }
+
  .confirmation-total{
      margin:35px auto;
  }
@@ -856,6 +862,9 @@ margin:0 auto;
 .card-btn-wrapper > div:last-child{    
     text-align: right;  
 }
+.myteam-page .card-btn-wrapper > div:last-child{    
+    text-align: left;  
+}
 .course-btn-wrapper{
     display: flex;
     margin: 20px auto;
@@ -1317,6 +1326,10 @@ section, footer{
 }
 .btn-orange, .btn-orange:hover{
     background-color:#f54b1e;
+    color:#ffffff;
+}
+.btn-flat, .btn-flat:hover{
+    background-color:#666666;
     color:#ffffff;
 }
 .frm-btn-container button{
@@ -1858,6 +1871,7 @@ button:focus{
     line-height: 22px;
     border: 1px solid #e1e0e0;
     border-radius: 0 0 7px 7px;
+    margin: 0 auto;
 }
 /* Responsive Styles */
 @media screen and (max-width: 1199px) and (min-width: 1000px){
