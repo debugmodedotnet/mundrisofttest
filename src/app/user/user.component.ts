@@ -4,6 +4,7 @@ import { UserRegisterationService } from '../shared/userregisteration.service';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
+import { CourseCatalogService } from '../shared/coursecatalog.service';
 
 @Component({
   selector: 'app-user',
@@ -18,7 +19,11 @@ export class UserComponent implements OnInit {
     title:''
   }
   registerUserFlag = false;
-  constructor(public dialog: MatDialog, private fb: FormBuilder, private userService: UserRegisterationService,  private router: Router) {
+  constructor(public dialog: MatDialog, 
+    private fb: FormBuilder, 
+    private userService: UserRegisterationService, 
+    private courseService : CourseCatalogService,
+     private router: Router) {
 
   }
 
@@ -45,6 +50,12 @@ export class UserComponent implements OnInit {
         this.resData.title = data.entry.title; 
         this.registerUserFlag = true; 
         this.userRegistrationForm.reset();
+        this.courseService.publishData("student",this.resData.uid ).subscribe((res)=>{
+          console.log(res);
+          console.log('student published');
+        },
+        e=>{console.log(e);}
+        )
         this.router.navigateByUrl('/user/student');
 
       },
