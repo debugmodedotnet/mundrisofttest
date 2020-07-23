@@ -78,7 +78,7 @@ export class AppComponent {
 
   }
 
-  showBookMark(){
+  showBookMark() {
     if (this.studentService.isLoggedIn()) {
       this.getBookMarkData();
     }
@@ -116,8 +116,6 @@ export class AppComponent {
       },
       error => console.log(error)
     )
-   
-
   }
 
 }

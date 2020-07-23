@@ -81,13 +81,6 @@ export class ScheduleComponent implements OnInit {
     )
 
 
-
-
-
-
-
-
-
   }
   addToCart() {
 

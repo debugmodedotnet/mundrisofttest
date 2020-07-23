@@ -19,6 +19,7 @@ export class CourseCatalogService {
   addtoBookMarkApiUrl = "https://api.contentstack.io/v3/content_types/student_course_bookmark/entries?locale=en-us";
   getStudentCartApiUrl = "https://cdn.contentstack.io/v3/content_types/student_shopping_cart/entries/?query=";
   getBookMarksApiUrl = "https://cdn.contentstack.io/v3/content_types/student_course_bookmark/entries/?query=";
+  addToPurchaedCourseApiUrl = "https://api.contentstack.io/v3/content_types/student_purchased_course/entries?locale=en-us";
   addtocartheaders = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set("api_key", "blt88a7ab59a822374a")
@@ -56,7 +57,7 @@ export class CourseCatalogService {
     console.log('in get student cart');
     console.log(JSON.stringify(studentId));
     this.getStudentCartApiUrl = "https://cdn.contentstack.io/v3/content_types/student_shopping_cart/entries/?query=";
-    this.getStudentCartApiUrl = this.getStudentCartApiUrl + JSON.stringify(studentId) + "&environment=poc&locale=en-us&include[]=added_course&include[]=added_course.course_category";
+    this.getStudentCartApiUrl = this.getStudentCartApiUrl + JSON.stringify(studentId) + "&environment=poc&locale=en-us&include[]=added_course&include[]=added_course.course_category&include[]=added_course.instructor";
 
     console.log(this.getStudentCartApiUrl);
     return this.http.get<any>(this.getStudentCartApiUrl, this.httpOptions).pipe(
@@ -72,8 +73,8 @@ export class CourseCatalogService {
     console.log('in bookmark');
     console.log(JSON.stringify(studentId));
     this.getBookMarksApiUrl = "https://cdn.contentstack.io/v3/content_types/student_course_bookmark/entries/?query=";
-    this.getBookMarksApiUrl = this.getBookMarksApiUrl + JSON.stringify(studentId) + "&environment=poc&locale=en-us&include[]=added_course&include[]=added_course.course_category";
- 
+    this.getBookMarksApiUrl = this.getBookMarksApiUrl + JSON.stringify(studentId) + "&environment=poc&locale=en-us&include[]=added_course&include[]=added_course.course_category&include[]=added_course.instructor";
+
     console.log(this.getBookMarksApiUrl);
     return this.http.get<any>(this.getBookMarksApiUrl, this.httpOptions).pipe(
       tap(data => {
@@ -135,6 +136,24 @@ export class CourseCatalogService {
       tap(data => console.log(data)),
       catchError(this.handleError)
     );
+
+  }
+
+  addToPurchaedCourse(course: any): Observable<any> {
+
+    console.log("purchaing");
+    // Mapping to the form accepted by the API 
+    let courseDTO = {
+      entry: {
+        ...course
+      }
+    }
+    // Making call to the API
+    return this.http.post<any>(this.addToPurchaedCourseApiUrl, JSON.stringify(courseDTO), this.addtocarthttpOptions).pipe(
+      tap(data => console.log(data)),
+      catchError(this.handleError)
+    );
+   // return null; 
 
   }
 

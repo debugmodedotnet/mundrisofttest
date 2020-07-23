@@ -34,21 +34,21 @@
                                                 <h2 class="text-center">
                                                     <mat-icon aria-label="Bookmark icon">bookmark</mat-icon> My Bookmarks</h2><span class="right-block"> Clear My Bookmarks</span>
                                             </div>
-                                            <div class="checkout-course-view">
+                                            <div class="checkout-course-view" *ngFor="let course of studentsBookMarkData">
                                                 <div class="half">
                                                     <div class="other-course-container">
                                                         <div>
                                                             <div class="course-picture">
                                                                 <img src='' alt='' border='0' />
+                                                                <!-- <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt=""> -->
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                            <h4>{{course?.added_course[0].course_name}}</h4>
+                                                            <p>{{course?.added_course[0].brief_description}}</p>
                                                             <div class="table">
                                                                 <div>
-                                                                    <span>By: Alex Mills</span>
+                                                                    <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                 </div>
                                                                 <div>
                                                                     <div class="btn-container">
@@ -64,27 +64,36 @@
                                                     <h4>Date and Time</h4>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday 08/03/2020</span></div>
+                                                            <!-- <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span> -->
+                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday 08/03/2020</span>
+                                                        </div>
                                                     </div>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>1:00PM - 4:00PM</span></div>
+                                                            <!-- <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span> -->
+                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>1:00PM - 4:00PM</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <h4>Delivery</h4>
                                                     <div class="btn-container">
                                                         <button mat-raised-button class="btn-flat rounded">Online LIVE</button>
+                                                        <!-- <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button> -->
+
                                                     </div>
                                                 </div>
                                                 <div>
+                                                    <!-- <span class="course-cost">{{course?.purchased_cost}}</span> -->
                                                     <span class="course-cost">$99</span>
+                                                   
+                                                </div>
+                                                <div class="btn-container">
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="btn-container">
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
-                                            </div>
+                                            
                                         </div>
                                         <div class="divider"></div>
 
@@ -95,21 +104,21 @@
                                                 <h2 class="text-center">
                                                     <mat-icon aria-label="My Cart icon">add_shopping_cart</mat-icon> My Cart</h2><span class="right-block"> Clear My Cart</span>
                                             </div>
-                                            <div class="checkout-course-view">
+                                            <div class="checkout-course-view" *ngFor="let course of studentsCartData" >
                                                 <div class="half">
                                                     <div class="other-course-container">
                                                         <div>
                                                             <div class="course-picture">
                                                                 <img src='' alt='' border='0' />
+                                                                <!-- <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt=""> -->
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                            <h4>{{course?.added_course[0].course_name}}</h4>
+                                                            <p> {{course?.added_course[0].brief_description}}</p>
                                                             <div class="table">
                                                                 <div>
-                                                                    <span>By: Alex Mills</span>
+                                                                    <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                 </div>
                                                                 <div>
                                                                     <div class="btn-container">
@@ -125,84 +134,31 @@
                                                     <h4>Date and Time</h4>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Tuseday 08/04/2020</span></div>
+                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span></div>
                                                     </div>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>4PM - 6PM</span></div>
+                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span></div>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <h4>Delivery</h4>
                                                     <div class="btn-container">
-                                                        <button mat-raised-button class="btn-flat rounded">Online LIVE</button>
+                                                        <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="course-cost">$99</span>
+                                                    <span class="course-cost">{{course?.purchased_cost}}</span>
+                                                </div>
+                                                <div class="btn-container">
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
                                                 </div>
                                             </div>
-                                            <div class="btn-container">
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
-                                            </div>
+                                            
                                         </div>
 
-                                        <div class="checkout-container">
-                                            <div class="checkout-course-view">
-                                                <div class="half">
-                                                    <div class="other-course-container">
-                                                        <div>
-                                                            <div class="course-picture">
-                                                                <img src='' alt='' border='0' />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                            <div class="table">
-                                                                <div>
-                                                                    <span>By: Alex Mills</span>
-                                                                </div>
-                                                                <div>
-                                                                    <div class="btn-container">
-                                                                        <button mat-raised-button class="btn-orange">Campus</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div>
-                                                    <h4>Date and Time</h4>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday - Friday<br>08/03/2020-08/07/2020</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>1PM - 4PM</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h4>Delivery</h4>
-                                                    <div class="btn-container">
-                                                        <button mat-raised-button class="btn-flat rounded">Campus<br>New Horizons, Portland</button>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <span class="course-cost">$99</span>
-                                                </div>
-                                            </div>
-                                            <div class="btn-container">
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
-                                            </div>
-                                        </div>
+                                        
 
                                     </div>
                                     <div>
@@ -344,7 +300,7 @@
                                     </div>
                                     <div>
                                         <button mat-button matStepperPrevious>Back</button>
-                                        <button mat-button matStepperNext>Next</button>
+                                        <button (click)="addToPurchase()" mat-button matStepperNext>Next</button>
                                     </div>
 
                                 </mat-step>
@@ -363,105 +319,58 @@
                                             </div>
                                         </div>
                                         <div class="checkout-container">
-                                            <div class="checkout-course-view">
+                                            <div class="checkout-course-view" *ngFor="let course of studentsCartData" >
                                                 <div class="half">
                                                     <div class="other-course-container">
                                                         <div>
                                                             <div class="course-picture">
                                                                 <img src='' alt='' border='0' />
+                                                                <!-- <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt=""> -->
                                                             </div>
                                                         </div>
                                                         <div>
-                                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                            <h4>{{course?.added_course[0].course_name}}</h4>
+                                                            <p> {{course?.added_course[0].brief_description}}</p>
                                                             <div class="table">
                                                                 <div>
-                                                                    <span>By: Alex Mills</span>
+                                                                    <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                 </div>
                                                                 <div>
                                                                     <div class="btn-container">
-                                                                        <button mat-raised-button class="btn-orange">Course</button>
+                                                                        <button mat-raised-button class="btn-orange">Campus</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                                 <div>
                                                     <h4>Date and Time</h4>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday 08/03/2020</span>
-                                                        </div>
+                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span></div>
                                                     </div>
                                                     <div class="dt-container">
                                                         <div>
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>4PM - 6PM</span>
-                                                        </div>
+                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span></div>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <h4>Delivery</h4>
                                                     <div class="btn-container">
-                                                        <button mat-raised-button class="btn-flat rounded">Online Live</button>
+                                                        <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <span class="course-cost">$99</span>
+                                                    <span class="course-cost">{{course?.purchased_cost}}</span>
                                                 </div>
+                                                
                                             </div>
 
                                         </div>
                                         <div class="checkout-container">
-                                            <div class="checkout-course-view">
-                                                <div class="half">
-                                                    <div class="other-course-container">
-                                                        <div>
-                                                            <div class="course-picture">
-                                                                <img src='' alt='' border='0' />
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <h4>Lorem ipsum dolor sit amet</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                                                                do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                            <div class="table">
-                                                                <div>
-                                                                    <span>By: Alex Mills</span>
-                                                                </div>
-                                                                <div>
-                                                                    <div class="btn-container">
-                                                                        <button mat-raised-button class="btn-orange">Certification</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h4>Date and Time</h4>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday - Friday<br>08/03/2020-08/07/2020</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>8AM - 3PM</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h4>Delivery</h4>
-                                                    <div class="btn-container">
-                                                        <button mat-raised-button class="btn-flat rounded">Campus<br>New Horizons, Portland</button>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <span class="course-cost">$1199</span>
-                                                </div>
-                                            </div>
+                                       
                                             <div class="btn-container text-center">
                                                 <div><button mat-raised-button class="btn-orange">Browse More Courses</button></div>
                                                 <div><button mat-raised-button class="btn-orange">Logout</button></div>
