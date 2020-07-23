@@ -23,6 +23,10 @@ export class AppComponent {
   studentsBookMarkData: any;
   bookMarkNumber = undefined;
 
+  loginUser = false;
+  hideElement = true;
+  showElement = false;
+
   constructor(public dialog: MatDialog,
     private coursecatalogservice: CourseCatalogService,
     private router: Router, private studentService: StudentLoginService) { }
@@ -37,6 +41,9 @@ export class AppComponent {
     if (this.studentService.isLoggedIn()) {
       this.getCartData();
       this.getBookMarkData();
+      this.loginUser = true;
+      this.hideElement = false;
+      this.showElement = true;
     }
   }
   // Register form

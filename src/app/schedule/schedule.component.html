@@ -31,26 +31,24 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="schedule-location">
-                            <span>Your campus is: </span> <span class="txt-orange"><strong>New Horizons, Portland</strong></span>
-                            <span class="txt-small"> Change</span>
+                            <div>
+                                <span>Your campus is: </span> <span class="txt-orange"><strong>New Horizons, Portland</strong></span>
+                                <span class="txt-small"> Change</span>
+                            </div>
+                            <h3>{{coursedata?.course_name}}</h3>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>{{coursedata?.course_name}}</h3>
+                    <div class="col-md-4">
+
                         <div class="calendar-container">
                             <app-calendar #myCalendar (dateSelected)="dateSelected($event)"></app-calendar>
                         </div>
-                        <div>
-                            <mat-radio-group aria-label="Select An Option">
-                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
-                                <mat-radio-button value="2">Class Available</mat-radio-button>
-                            </mat-radio-group>
-                        </div>
+
                     </div>
-                    <div class="col-md-6">
-                        <div class="table">
+                    <div class="col-md-8">
+                        <!--<div class="table">
                             <div>
                                 <h4>Next On Campus Class:</h4>
                                 <span>August 20, 2020 | 1:00PM</span>
@@ -58,7 +56,7 @@
                             <div>
                                 <button class="btn-orange" mat-raised-button>Campus</button>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="date-schedules">
                             <div class="date">
                                 <div class="dt">12</div>
@@ -110,6 +108,12 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+                        <div>
+                            <mat-radio-group aria-label="Select An Option">
+                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
+                                <mat-radio-button value="2">Class Available</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
                         <div class="schedule-btn-container">
                             <button class="btn-orange" (click)='addToCart()' mat-raised-button>Add To Cart</button>
                             <button class="btn-orange" (click)='addToBookMark()' mat-raised-button>Add To Bookmark</button>
@@ -124,24 +128,20 @@
                         <div class="schedule-cost">
                             <span>{{coursedata?.course_info.cost.online}}</span>
                         </div>
+                        <h3>{{coursedata?.course_name}}</h3>
                     </div>
                 </div>
-                
+
                 <div class="row">
-                    <div class="col-md-6">
-                        <h3>{{coursedata?.course_name}}</h3>
+                    <div class="col-md-4">
+
                         <div class="calendar-container">
                             <app-calendar #myCalendar (dateSelected)="dateSelected($event)"></app-calendar>
                         </div>
-                        <div>
-                            <mat-radio-group aria-label="Select An Option">
-                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
-                                <mat-radio-button value="2">Class Available</mat-radio-button>
-                            </mat-radio-group>
-                        </div>
+
                     </div>
-                    <div class="col-md-6">
-                        <div class="table">
+                    <div class="col-md-8">
+                        <!--<div class="table">
                             <div>
                                 <button class="btn-orange" mat-raised-button>Online LIVE</button>
                             </div>
@@ -152,7 +152,7 @@
                             <div>
                                 <button class="btn-orange" mat-raised-button>Online LIVE</button>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="date-schedules">
                             <div class="date">
                                 <div class="dt">12</div>
@@ -205,6 +205,12 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+                        <div>
+                            <mat-radio-group aria-label="Select An Option">
+                                <mat-radio-button value="1">Chosen Date</mat-radio-button>
+                                <mat-radio-button value="2">Class Available</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
                         <div class="schedule-btn-container">
                             <button class="btn-orange" (click)='addToCart()' mat-raised-button>Add To Cart</button>
                             <button class="btn-orange" (click)='addToBookMark()' mat-raised-button>Add To Bookmark</button>

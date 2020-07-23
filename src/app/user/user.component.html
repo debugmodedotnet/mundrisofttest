@@ -1,5 +1,5 @@
 <div class="register-form">
-    <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form">
+    <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form" *ngIf='registerUserForm'>
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -62,7 +62,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="frm-btn-container">
-                        <button class="btn-orange" mat-raised-button color="warn" [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+                        <button class="btn-orange" mat-raised-button [disabled]='userRegistrationForm.invalid'>Start Learning</button>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,14 @@
 
 
     </form>
-    <div *ngIf='registerUserFlag'>
-        <p>Student Created Sucessfully with Id {{resData.uid}} and title {{resData.title}}</p>
+    <div class="success-message" *ngIf='registerUserFlag'>
+        <div class="success-icon">
+            <mat-icon>check_circle</mat-icon>
+        </div>
+        <p class="register-user">Hi, {{resData.title}}</p>
+        <p class="message-txt">Awesome, you're all set!</p>
+        <div class="btn-container">               
+            <button class="btn-orange" mat-raised-button>Continue My Learning</button>                
+        </div>
     </div>
 </div>

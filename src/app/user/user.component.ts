@@ -19,6 +19,7 @@ export class UserComponent implements OnInit {
     title:''
   }
   registerUserFlag = false;
+  registerUserForm = true;
   constructor(public dialog: MatDialog, 
     private fb: FormBuilder, 
     private userService: UserRegisterationService, 
@@ -44,15 +45,16 @@ export class UserComponent implements OnInit {
     this.userRegistrationForm.value.title = this.userRegistrationForm.value.full_name.replace(/\s+/g, "");;
     this.userService.registerStudent(this.userRegistrationForm.value).subscribe(
       (data) => {
-        console.log("student registered");
-        console.log(data);
+        //console.log("student registered");
+        //console.log(data);
         this.resData.uid = data.entry.uid;
         this.resData.title = data.entry.title; 
-        this.registerUserFlag = true; 
+        this.registerUserFlag = true;
+        this.registerUserForm = false; 
         this.userRegistrationForm.reset();
         this.courseService.publishData("student",this.resData.uid ).subscribe((res)=>{
-          console.log(res);
-          console.log('student published');
+          //console.log(res);
+          //console.log('student published');
         },
         e=>{console.log(e);}
         )

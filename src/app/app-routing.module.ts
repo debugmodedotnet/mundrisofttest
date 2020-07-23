@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'findacampus', component: FindCampusComponent },
   { path: 'schedule', component: ScheduleComponent },
   { path: 'checkout', component: CheckoutComponent },
-  { path: 'myteam', component: MyteamComponent },
+  { path: 'myteam', component: MyteamComponent },  
   { path: 'course-details/:id', component: CoursedetailsComponent },
   {
     path: 'user', loadChildren: () => import('./user/user.module').then(m => m.UserModule)

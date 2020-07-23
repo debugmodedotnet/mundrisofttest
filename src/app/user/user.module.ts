@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule} from '@angular/forms';
-
+import { MatIconModule } from '@angular/material/icon';
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login.component';
@@ -13,7 +13,8 @@ import { LoginComponent } from './login.component';
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
   ]
 })
 export class UserModule { }

@@ -26,27 +26,31 @@
                 <div>
                   <button mat-button [popover]="myCampus" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon>place</mat-icon></button>
                   <div class="popover-container">
-                    <popover-content #myCampus title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
-                      <div class="popover-header">
-                        <div>
-                          <mat-icon>place</mat-icon>
-                        </div>
-                        <div>
-                          <h3>My Campus</h3>
-                        </div>
-                      </div>
-                      <div class="location-zipcode">
-                        <div>
-                          <mat-form-field class="example-full-width">
-                            <mat-label>Enter Your zipcode</mat-label>
-                            <input matInput #postalCode maxlength="5" placeholder="zipcode">
-                          </mat-form-field>
-                        </div>
-                        <div>
-                          <button mat-button class="btn-orange">Save</button>
-                        </div>
-                      </div>
-                    </popover-content>
+                      <popover-content #myCampus title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                          <div class="popover-header">
+                            <div>
+                              <mat-icon>place</mat-icon>
+                            </div>
+                            <div>
+                              <h3>My Campus</h3>
+                            </div>
+                          </div>
+                          <div class="location-zipcode">
+                            <div>
+                              <mat-form-field class="example-full-width">
+                                <mat-label>Enter Your zipcode</mat-label>
+                                <input matInput #postalCode maxlength="5" placeholder="zipcode" value="97086">
+                              </mat-form-field>
+                            </div>
+                            <div>
+                              <button mat-button class="btn-orange">Save</button>
+                            </div>
+                          </div>
+                          <div class="closet-campus">
+                            <p>Your closet campus is in</p>
+                            <p class="campus-title">Portland, Oregon</p>
+                          </div>
+                        </popover-content>
                   </div>
                 </div>
               </li>
@@ -64,7 +68,12 @@
                           <h3>My Bookmarks</h3>
                         </div>
                       </div>
+                      <div class="message-container" *ngIf='hideElement'>
+                        <p>Please Login / Signup to view your bookmarks.</p>                        
+                      </div>
+
                       <div class="other-course-container" *ngFor="let course of studentsBookMarkData">
+
                         <div>
                           <div class="course-picture">
                             <!-- <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>-->
@@ -86,7 +95,12 @@
                             </div>
                           </div>
                         </div>
+                        
                       </div>
+                      <hr>
+                      <div class="cart-btn-container">
+                          <div><button mat-button class="btn-orange" routerLink="/catalog">Keep Browsing<mat-icon aria-label="play">play_arrow</mat-icon></button></div>
+                        </div>
                     </popover-content>
                   </div>
                 </div>
@@ -106,11 +120,13 @@
                           <h3>My Cart</h3>
                         </div>
                       </div>
-
+                      <div class="message-container" *ngIf='hideElement'>
+                        <p>Please Login / Signup to view your cart.</p>
+                      </div>
                       <div class="other-course-container" *ngFor="let course of studentsCartData">
                         <div>
                           <div class="course-picture">
-                             <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt="">
+                            <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt="">
                           </div>
                         </div>
                         <div>
@@ -131,7 +147,7 @@
                       </div>
                       <hr>
                       <div>
-                        <div class="table">
+                        <div class="table" *ngIf='showElement'>
                           <div class="col-width-75 text-right">
                             <div>Fees:</div>
                             <div>Total</div>
@@ -143,20 +159,22 @@
                         </div>
                       </div>
                       <div class="cart-btn-container">
-                        <div><button mat-button class="btn-orange" routerLink="/checkout">Go To Checkout<mat-icon aria-label="play">play_arrow</mat-icon></button></div>
-                        <div><button mat-button class="btn-orange">Keep Browsing<mat-icon aria-label="play">play_arrow</mat-icon></button></div>
+                        <div *ngIf='showElement'><button mat-button class="btn-orange" routerLink="/checkout">Go To Checkout<mat-icon aria-label="play">play_arrow</mat-icon></button></div>
+                        <div><button mat-button class="btn-orange" routerLink="catalog">Keep Browsing<mat-icon aria-label="play">play_arrow</mat-icon></button></div>
                       </div>
                     </popover-content>
                   </div>
 
                 </div>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" *ngIf='hideElement'>
                 <button mat-button (click)="openDialog()">Sign Up</button>
               </li>
-              <li class="nav-item">
+              <li class="nav-item" *ngIf='hideElement'>
                 <button mat-button (click)="openDialogLogin()">Login</button>
-                <button mat-button [popover]="myCourses" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true">User</button>
+              </li>
+              <li class="nav-item" *ngIf='loginUser'>
+                <button mat-button [popover]="myCourses" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true"><mat-icon>person_outline</mat-icon></button>
                 <div class="popover-container">
                   <popover-content #myCourses title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
                     <div class="popover-header">
@@ -170,23 +188,26 @@
                     <div class="other-course-container">
                       <div>
                         <div class="course-picture">
-                          <mat-icon aria-label="Course">photo_size_select_actual</mat-icon>                          
+                          <img class="image-square" src="./assets/img/course-1.jpg" alt="">
                         </div>
                       </div>
                       <div>
                         <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
                         <div class="other-course-details">
                           <div class="course-info icon">
-                            
+
                           </div>
-                          <div class="table">                            
+                          <div class="table">
                             <div><button mat-button class="btn-orange">Continue Learning</button></div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div class="table text-center">
+                      <div><button mat-button class="btn-orange">Logout</button></div>
+                    </div>
                   </popover-content>
-                  </div>
+                </div>
               </li>
 
               <li class="nav-item">
@@ -195,14 +216,14 @@
                 </div>
               </li>
             </ul>
-            </div>
+          </div>
 
         </nav>
-        </div>
       </div>
-
     </div>
 
   </div>
 
-  <router-outlet></router-outlet>
+</div>
+
+<router-outlet></router-outlet>
