@@ -18,7 +18,9 @@ export class LoginComponent implements OnInit {
 
   navigationExtras: NavigationExtras ={}; 
   
-  constructor(public dialog: MatDialog, private fb: FormBuilder, private loginService: StudentLoginService, private router: Router, private dialogRef: MatDialogRef<LoginComponent >) { }
+  constructor(public dialog: MatDialog, 
+    private fb: FormBuilder, private loginService: StudentLoginService, 
+    private router: Router, private dialogRef: MatDialogRef<LoginComponent >) { }
 
   ngOnInit(): void {
 

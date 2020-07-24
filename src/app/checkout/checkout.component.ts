@@ -130,7 +130,7 @@ export class CheckoutComponent implements OnInit {
         (data) => {
           console.log(data);
           console.log("added to the cart");
-          this.coursecatalogservice.publishData("student_shopping_cart", data.entry.uid).subscribe((res) => {
+          this.coursecatalogservice.publishData("student_purchased_course", data.entry.uid).subscribe((res) => {
             console.log(res);
           },
             e => { console.log(e); })

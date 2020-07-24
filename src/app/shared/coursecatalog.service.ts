@@ -20,6 +20,8 @@ export class CourseCatalogService {
   getStudentCartApiUrl = "https://cdn.contentstack.io/v3/content_types/student_shopping_cart/entries/?query=";
   getBookMarksApiUrl = "https://cdn.contentstack.io/v3/content_types/student_course_bookmark/entries/?query=";
   addToPurchaedCourseApiUrl = "https://api.contentstack.io/v3/content_types/student_purchased_course/entries?locale=en-us";
+  getStudentMyCourseApiUrl = "https://cdn.contentstack.io/v3/content_types/student_purchased_course/entries/?query=";
+  
   addtocartheaders = new HttpHeaders()
     .set('Content-Type', 'application/json')
     .set("api_key", "blt88a7ab59a822374a")
@@ -107,6 +109,23 @@ export class CourseCatalogService {
         console.log(data);
       }),
       catchError(this.handleError));
+  }
+
+  getStudentMyCourse(studentId:any): Observable<any> {
+
+    console.log('in student my course');
+    console.log(JSON.stringify(studentId));
+    this.getStudentMyCourseApiUrl = "https://cdn.contentstack.io/v3/content_types/student_purchased_course/entries/?query=";
+    this.getStudentMyCourseApiUrl = this.getStudentMyCourseApiUrl + JSON.stringify(studentId) + "&environment=poc&locale=en-us&include[]=purchased_course&include[]=purchased_course.course_category";
+
+    console.log(this.getStudentMyCourseApiUrl);
+    return this.http.get<any>(this.getStudentMyCourseApiUrl, this.httpOptions).pipe(
+      tap(data => {
+        console.log("student course");
+        console.log(data);
+      }),
+      catchError(this.handleError)
+    );
   }
 
   //   getCourseCatalogTemp():Observable<any> {

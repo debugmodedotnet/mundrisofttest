@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RegisterDialogComponent } from './register-dialog/register-dialog.component';
 import { LoginComponent } from './login/login.component';
 import { FindCampusComponent } from './find-campus/find-campus.component';
@@ -20,6 +20,7 @@ export class AppComponent {
   studentId = Object.create(null);
   studentsCartData: any;
   cartNumber = undefined;
+  studentMyCourses : any; 
   studentsBookMarkData: any;
   bookMarkNumber = undefined;
 
@@ -27,7 +28,7 @@ export class AppComponent {
   hideElement = true;
   showElement = false;
 
-  constructor(public dialog: MatDialog,
+  constructor(public dialog: MatDialog,private dialogRef: MatDialogRef<AppComponent>,
     private coursecatalogservice: CourseCatalogService,
     private router: Router, private studentService: StudentLoginService) { }
 
@@ -108,6 +109,32 @@ export class AppComponent {
     console.log(this.studentUser);
 
   }
+
+
+  courseDetail(data){
+    console.log(data);
+    this.router.navigateByUrl('/course-details/' + data);
+    //this.dialogRef.close();
+ 
+  }
+  getMyCourses()
+  {
+    this.studentUser = this.studentService.getLoggedInUser();
+    console.log(this.studentUser);
+    this.studentId['student.uid'] = this.studentUser.entries[0].uid;
+   // this.studentId['student.uid']= 'blt3bbb1a8fe16dea39';
+    this.coursecatalogservice.getStudentMyCourse(this.studentId).subscribe(
+      (data) => {
+        console.log(data);
+        this.studentMyCourses = data.entries;
+      
+        console.log(this.studentMyCourses);
+      },
+      error => console.log(error)
+    )
+    
+  }
+
 
   getBookMarkData() {
 

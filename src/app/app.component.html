@@ -174,7 +174,12 @@
                 <button mat-button (click)="openDialogLogin()">Login</button>
               </li>
               <li class="nav-item" *ngIf='loginUser'>
-                <button mat-button [popover]="myCourses" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true"><mat-icon>person_outline</mat-icon></button>
+                <button mat-button 
+                (click)='getMyCourses()'
+                mdePopoverTriggerOn="click"
+                [popover]="myCourses" 
+                [popoverOnHover]="false" 
+                [popoverCloseOnMouseOutside]="true"><mat-icon>person_outline</mat-icon></button>
                 <div class="popover-container">
                   <popover-content #myCourses title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
                     <div class="popover-header">
@@ -185,20 +190,23 @@
                         <h3>My Courses</h3>
                       </div>
                     </div>
-                    <div class="other-course-container">
+                    <div *ngFor="let mycourse of studentMyCourses" class="other-course-container">
                       <div>
                         <div class="course-picture">
-                          <img class="image-square" src="./assets/img/course-1.jpg" alt="">
+                          <!-- <img class="image-square" src="./assets/img/course-1.jpg" alt=""> -->
+                          <div class="course-picture">
+                            <img class="image-square" src="{{mycourse?.purchased_course[0].course_outline.banner_image.url}}" alt="">
+                          </div>
                         </div>
                       </div>
                       <div>
-                        <p class="course-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p>
+                        <p class="course-title"> {{mycourse.purchased_course[0].course_name}}</p>
                         <div class="other-course-details">
                           <div class="course-info icon">
 
                           </div>
                           <div class="table">
-                            <div><button mat-button class="btn-orange">Continue Learning</button></div>
+                            <div><button (click)="courseDetail(mycourse.purchased_course[0].uid)" mat-button class="btn-orange">Continue Learning</button></div>
                           </div>
                         </div>
                       </div>
