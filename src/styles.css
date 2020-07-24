@@ -73,7 +73,9 @@ margin:0 auto;
     color:#ffffff;
     text-shadow: 1px 1px 0px #000000;
 }
-
+.home-page .hero-banner .mat-form-field{
+    width:100%;
+}
 .hero-banner .mat-form-field-appearance-outline .mat-form-field-label,
 .bg-light-orange .mat-form-field-appearance-outline .mat-form-field-label{
     color:#ffffff;
@@ -108,7 +110,7 @@ margin:0 auto;
     width:100%;
 }
 .hero-banner .banner-content .btn-container .mat-form-field-infix{
-    width:350px;
+    width:100%;
 }
 .hero-banner .banner-content .btn-container button,
 .hero-banner .banner-content .btn-container a{
@@ -126,6 +128,7 @@ margin:0 auto;
 }
 .hero-banner .banner-content .btn-container > div{
     margin:0px 15px 0px 0px;
+    width: 100%;
 }
 .hero-banner .banner-content .btn-container .search-input .mat-form-field-appearance-outline .mat-form-field-outline {
     color: rgba(255, 255, 255, 0.87);
@@ -328,8 +331,10 @@ margin:0 auto;
     font-size: 24px;
  }
  .checkout-container .course-picture{
-    height:70px;
+    height:100px;
+    width:150px;
  }
+ 
  .checkout-container{
      margin:35px auto;
  }
@@ -428,6 +433,8 @@ margin:0 auto;
 }
 .popover-container .course-title{
     color: #222222;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 19px;
 }
 .popover-container .other-course-details .course-info{
@@ -452,6 +459,14 @@ margin:0 auto;
 .popover-container .popover{
     min-width:500px;
 }
+.popover-container .mat-button{
+    font-size: 12px;
+    line-height: 30px;
+    padding: 0px 10px;
+}
+.popover-container .location-zipcode .mat-button{
+    line-height: 36px;
+}
 .popover-container .popover .arrow{
     left: 47.5%;
 }
@@ -465,6 +480,25 @@ margin:0 auto;
 .cart-btn-container{
     margin:20px auto;
     text-align: center;
+}
+.mat-dialog-container{
+    position: relative;
+}
+.mat-dialog-container .btn-close{
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.bold-txt{
+    font-weight: 600;    
+}
+.mat-dialog-container .mat-button.btn-close:focus{
+    background-color: #ffffff!important;
+}
+.stepper-btns .mat-button{
+    background-color: #3f51b5;
+    color: white;
+    margin-right:10px;
 }
 .cart-btn-container button{
     margin:10px auto;
@@ -1019,7 +1053,25 @@ section, footer{
 .toolbar #twitter-logo:hover {
   opacity: 0.8;
 }
-
+.mat-raised-button.mat-warn{
+    background-color: #f54b1e;
+}
+.register-form .frm-btn-container button:not(:disabled){
+    background-color: #f54b1e;
+    color:#ffffff;
+}
+.register-form button{
+    border:0px;
+    background-color:#ffffff;
+    border:1px solid #cccccc;
+    border-radius:4px;
+}
+.mat-dialog-actions.btn-close button,
+.mat-dialog-actions.btn-close button:focus{    
+    border:0px solid #cccccc;
+    outline:0px;
+    background-color:#ffffff;  
+}
 .content {
   display: flex;
   margin: 30px auto 0px;
@@ -1918,7 +1970,11 @@ button:focus{
 .boxWrapperCol {
     display: inline-block;
     vertical-align: top;
-    width: 20%;
+    width: 20%;        
+}
+.boxWrapperCol img{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 .boxWrapperCol:hover {
     transform: scale(1.05);

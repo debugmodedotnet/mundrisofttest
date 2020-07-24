@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { UserRoutingModule } from './user-routing.module';
 import { UserComponent } from './user.component';
 import { LoginComponent } from './login.component';
-
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { LoginComponent } from './login.component';
     UserRoutingModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatDialogModule,
   ]
 })
 export class UserModule { }

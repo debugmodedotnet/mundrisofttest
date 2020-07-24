@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
            ... this.studentData.entries[0]
         }
         console.log(this.navigationExtras.state);
-         this.router.navigateByUrl('/user/student',this.navigationExtras.state);
+         this.router.navigateByUrl('/catalog/catalog',this.navigationExtras.state);
          this.dialogRef.close();
       }
     }

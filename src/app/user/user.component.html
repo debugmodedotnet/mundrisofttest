@@ -1,4 +1,7 @@
 <div class="register-form">
+    <div class="btn-close" mat-dialog-actions>
+        <button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </div>
     <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form" *ngIf='registerUserForm'>
         <div class="container">
             <div class="row">
@@ -54,7 +57,7 @@
                 <div class="col-12">
                     <p>Already have an account? <a (click)="openDialogLogin()" class="btn-link"><strong>Login here</strong></a></p>
                     <div class="checkbox-container">
-                        <span><input type="checkbox" class="input-checkbox"></span> Check here to indicate that you have read and agree to the terms of the <span class="txt-orange">New Horizons Customer Agreement</span>
+                        <span><input type="checkbox" formControlName="accept_terms_and_conditions" class="input-checkbox"></span>                        Check here to indicate that you have read and agree to the terms of the <span class="txt-orange">New Horizons Customer Agreement</span>
 
                     </div>
                 </div>
@@ -62,7 +65,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="frm-btn-container">
-                        <button class="btn-orange" mat-raised-button [disabled]='userRegistrationForm.invalid'>Start Learning</button>
+                        <button class="mat-warn" mat-raised-button color="warn" [disabled]='userRegistrationForm.invalid'>Start Learning</button>
                     </div>
                 </div>
             </div>
@@ -77,8 +80,8 @@
         </div>
         <p class="register-user">Hi, {{resData.title}}</p>
         <p class="message-txt">Awesome, you're all set!</p>
-        <div class="btn-container">               
-            <button class="btn-orange" mat-raised-button>Continue My Learning</button>                
+        <div class="btn-container">
+            <button class="btn-orange" mat-raised-button routerLink="/catalog">Continue My Learning</button>
         </div>
     </div>
 </div>

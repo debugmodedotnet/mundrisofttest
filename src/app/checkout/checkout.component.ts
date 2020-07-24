@@ -95,12 +95,12 @@ export class CheckoutComponent implements OnInit {
 
   addToPurchase() {
 
-    alert("hey");
+    //alert("hey");
 
     this.studentUser = this.studentService.getLoggedInUser();
-    console.log(this.studentUser);
+    //console.log(this.studentUser);
 
-    console.log(this.studentsCartData);
+    //console.log(this.studentsCartData);
 
     for (let s of this.studentsCartData) {
       
@@ -128,10 +128,10 @@ export class CheckoutComponent implements OnInit {
 
       this.coursecatalogservice.addToPurchaedCourse(dataToCart).subscribe(
         (data) => {
-          console.log(data);
-          console.log("added to the cart");
+          //console.log(data);
+          //console.log("added to the cart");
           this.coursecatalogservice.publishData("student_purchased_course", data.entry.uid).subscribe((res) => {
-            console.log(res);
+            //console.log(res);
           },
             e => { console.log(e); })
         },

@@ -252,7 +252,7 @@
 
 
                             <h2>Course Info</h2>
-                            <div class="course-details-info">
+                            <div class="course-details-info bold-txt">
                                 <div class="course-info">
                                     <div><span>Level:</span></div>
                                     <div>
@@ -282,55 +282,57 @@
                                 </div>
                             </div>
 
-                            <h3>Cost:</h3>
-                            <div class="course-details-info">
+                            
+                            <div class="course-details-info">                                    
                                 <div *ngIf="courseDetailsData?.course_info?.cost.online" class="course-info">
-                                    <div><span>
+                                        <h3>Cost: <span>{{courseDetailsData?.course_info?.cost.online}}</span></h3>
+                                    <!--<div><span>
                                             <mat-icon>bar_chart</mat-icon>
                                         </span><span>Online:</span></div>
                                     <div>
                                         <span>{{courseDetailsData?.course_info?.cost.online}}</span>
-                                    </div>
+                                    </div>-->
                                 </div>
-                                <div *ngIf="courseDetailsData?.course_info?.cost.campus" class="course-info">
+                                <!--<div *ngIf="courseDetailsData?.course_info?.cost.campus" class="course-info">
                                     <div><span>
                                             <mat-icon>star</mat-icon>
                                         </span><span>Campus:</span></div>
                                     <div><span>{{courseDetailsData?.course_info?.cost.campus}}</span></div>
-                                </div>
+                                </div>-->
                             </div>
 
-                            <h3>Length:</h3>
+                            
                             <div class="course-details-info">
                                 <div *ngIf="courseDetailsData?.course_info?.course_length?.online" class="course-info">
-                                    <div><span>
+                                        <h3>Length: <span>{{courseDetailsData?.course_info?.course_length.online}}</span></h3>
+                                    <!--<div><span>
                                             <mat-icon>bar_chart</mat-icon>
                                         </span><span>Online:</span></div>
                                     <div>
                                         <span>{{courseDetailsData?.course_info?.course_length.online}}</span>
-                                    </div>
+                                    </div>-->
                                 </div>
-                                <div *ngIf="courseDetailsData?.course_info?.course_length?.campus" class="course-info">
+                                <!--<div *ngIf="courseDetailsData?.course_info?.course_length?.campus" class="course-info">
                                     <div><span>
                                             <mat-icon>star</mat-icon>
                                         </span><span>Campus:</span></div>
                                     <div><span>{{courseDetailsData?.course_info?.course_length?.campus}}</span></div>
-                                </div>
+                                </div>-->
                             </div>
 
                             <h3>Next Online Class:</h3>
                             <div class="course-details-info">
                                 <div class="course-info">
-                                    <span>April 12, 2020 | 1:00pm</span>
+                                    <span>April 12, 2020 | 1:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 13, 2020 | 2:00pm</span>
+                                    <span>April 13, 2020 | 2:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 14, 2020 | 2:00pm</span>
+                                    <span>April 14, 2020 | 2:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 15, 2020 | 3:00pm</span>
+                                    <span>April 15, 2020 | 3:00 pm</span>
                                 </div>
                             </div>
                             <div class="course-btn-wrapper">
@@ -340,16 +342,16 @@
                             <h3>Next Campus Class:</h3>
                             <div class="course-details-info">
                                 <div class="course-info">
-                                    <span>April 12, 2020 | 1:00pm</span>
+                                    <span>April 12, 2020 | 1:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 13, 2020 | 2:00pm</span>
+                                    <span>April 13, 2020 | 2:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 14, 2020 | 2:00pm</span>
+                                    <span>April 14, 2020 | 2:00 pm</span>
                                 </div>
                                 <div class="course-info">
-                                    <span>April 15, 2020 | 3:00pm</span>
+                                    <span>April 15, 2020 | 3:00 pm</span>
                                 </div>
                             </div>
                             <div class="course-btn-wrapper">

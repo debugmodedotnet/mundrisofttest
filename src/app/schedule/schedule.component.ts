@@ -43,11 +43,8 @@ export class ScheduleComponent implements OnInit {
 
   addToBookMark(){
 
-
-    alert("hey ");
-
     this.studentUser = this.loginService.getLoggedInUser();
-    console.log(this.studentUser);
+    //console.log(this.studentUser);
     let dataToCart = {
 
       "title": this.studentUser.entries[0].full_name + this.coursedata.course_name + new Date(),
@@ -67,13 +64,13 @@ export class ScheduleComponent implements OnInit {
 
     }
 
-    //alert("hey data");
+    alert("Course is Bookmarked. Access it anytime from your Bookmark");
     this.courseService.addToBookMark(dataToCart).subscribe(
       (data) => { 
-        console.log(data);
-        console.log("added to the bookmark");
+        //console.log(data);
+        //console.log("added to the bookmark");
         this.courseService.publishData("student_course_bookmark",data.entry.uid).subscribe((res)=>{
-          console.log(res);
+          //console.log(res);
         },
         e=>{console.log(e);})
        },
@@ -85,7 +82,7 @@ export class ScheduleComponent implements OnInit {
   addToCart() {
 
     this.studentUser = this.loginService.getLoggedInUser();
-    console.log(this.studentUser);
+    //console.log(this.studentUser);
     let dataToCart = {
 
       "title": this.studentUser.entries[0].full_name + this.coursedata.course_name + new Date(),
@@ -110,13 +107,13 @@ export class ScheduleComponent implements OnInit {
 
     }
 
-    //alert("hey data");
+    alert("Course is added in your cart");
     this.courseService.addToCart(dataToCart).subscribe(
       (data) => { 
-        console.log(data);
-        console.log("added to the cart");
+        //console.log(data);
+        //console.log("added to the cart");
         this.courseService.publishData("student_shopping_cart",data.entry.uid).subscribe((res)=>{
-          console.log(res);
+          //console.log(res);
         },
         e=>{console.log(e);})
        },

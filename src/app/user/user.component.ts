@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserRegisterationService } from '../shared/userregisteration.service';
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { LoginComponent } from '../login/login.component';
 import { CourseCatalogService } from '../shared/coursecatalog.service';
 
@@ -31,11 +31,11 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.userRegistrationForm = this.fb.group({
       locale: ['en-us'],
-      accept_terms_and_conditions: [true],
+      accept_terms_and_conditions: [true, [Validators.required]],
       email_address: [null, [Validators.required]],
       full_name: [null, [Validators.required]],
       password: [null, [Validators.required]],
-      confirmpassword: [null],
+      confirmpassword: [null, [Validators.required]],
       title: [null],
       zip_code: [null]
     })
@@ -58,7 +58,7 @@ export class UserComponent implements OnInit {
         },
         e=>{console.log(e);}
         )
-        this.router.navigateByUrl('/user/student');
+        //this.router.navigateByUrl('/catalog/catalog');
 
       },
       (error) => { console.log(error) }

@@ -1,4 +1,7 @@
 <div class="find-campus-container">
+    <div class="btn-close" mat-dialog-actions>
+        <button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+    </div>
     <div>
         <h1>Find a Campus</h1>
         <h3>Search for a New Horizons location</h3>
@@ -11,17 +14,17 @@
         </mat-form-field>
     </div>
     <div>
-            <div class="campus-location">
-                <div>
-                    <div><span class="location-pointer"></span> <span class="location-name">New Horizons, Portland</span></div>
-                </div>
-                <div>
-                    <div class="">
-                            <button class="btn-orange" (click)='navigateToFranciese()'  mat-raised-button>Visit This Campus</button>
-                    </div>
+        <div class="campus-location">
+            <div>
+                <div><span class="location-pointer"></span> <span class="location-name">New Horizons, Portland</span></div>
+            </div>
+            <div>
+                <div class="">
+                    <button class="btn-orange" (click)='navigateToFranciese()' mat-raised-button>Visit This Campus</button>
                 </div>
             </div>
         </div>
+    </div>
     <div class="map-container">
         <img src="/assets/img/map-pointer.JPG" alt="Location" />
     </div>

@@ -7,11 +7,10 @@
             <div class="container">
                 <div class="row banner-content">
                     <div class="col-12">
-                        <h1>@{{franchiseData?.banner_section?.heading}}@</h1>
-
+                        <h1>{{franchiseData?.banner_section?.heading}}</h1>
                         <p>{{franchiseData?.banner_section.description}} </p>
                         <div>
-                            <a mat-raised-button class="btn-transparent btn-white">Watch</a>
+                            <a mat-raised-button class="btn-transparent btn-white">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -21,15 +20,24 @@
     <!-- Hero Banner section end-->
 
     <div class="content" role="main">
-
         <section class="stb-padding s3-padding-tb-30 breadcrumb remove-b-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <div>
+                        <!--<div>
                             <span><a class="txt-orange" aria-label="Home"
                                     routerLink="/home">Home</a></span><span>/</span>
                             <span class="">New Horizons, Portland</span>
+                        </div>-->
+                        <div>
+                            <mat-tab-group>
+                                <mat-tab label="About"></mat-tab>
+                                <mat-tab label="Schedule"></mat-tab>
+                                <mat-tab label="Promotions"></mat-tab>
+                                <mat-tab label="Team"></mat-tab>
+                                <mat-tab label="Events"></mat-tab>
+                                <mat-tab label="Method"></mat-tab>
+                              </mat-tab-group>
                         </div>
                     </div>
                 </div>

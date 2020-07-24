@@ -26,7 +26,7 @@
                 <div>
                   <button mat-button [popover]="myCampus" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon>place</mat-icon></button>
                   <div class="popover-container">
-                      <popover-content #myCampus title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                      <popover-content #myCampus title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
                           <div class="popover-header">
                             <div>
                               <mat-icon>place</mat-icon>
@@ -39,7 +39,7 @@
                             <div>
                               <mat-form-field class="example-full-width">
                                 <mat-label>Enter Your zipcode</mat-label>
-                                <input matInput #postalCode maxlength="5" placeholder="zipcode" value="97086">
+                                <input matInput #postalCode maxlength="5" placeholder="zipcode">
                               </mat-form-field>
                             </div>
                             <div>
@@ -47,7 +47,7 @@
                             </div>
                           </div>
                           <div class="closet-campus">
-                            <p>Your closet campus is in</p>
+                            <p>Your nearest campus is</p>
                             <p class="campus-title">Portland, Oregon</p>
                           </div>
                         </popover-content>
@@ -59,7 +59,7 @@
                   <button mat-button (click)="showBookMark()" mdePopoverTriggerOn="click" [popover]="myBookmarks" [popoverOnHover]="false"
                     [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon matBadge="{{bookMarkNumber}}" matBadgeOverlap="true" matBadgePosition="after">bookmark</mat-icon></button>
                   <div class="popover-container">
-                    <popover-content #myBookmarks title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                    <popover-content #myBookmarks title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
                       <div class="popover-header">
                         <div>
                           <mat-icon>bookmark</mat-icon>
@@ -111,7 +111,7 @@
                     mat-icon-button>
                   <mat-icon matBadge="{{cartNumber}}" matBadgeOverlap="true" matBadgePosition="after">add_shopping_cart</mat-icon></button>
                   <div class="popover-container">
-                    <popover-content #myCart title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                    <popover-content #myCart title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
                       <div class="popover-header">
                         <div>
                           <mat-icon>add_shopping_cart</mat-icon>
