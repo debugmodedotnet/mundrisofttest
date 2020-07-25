@@ -860,8 +860,8 @@ margin:0 auto;
     width:48%;
 }
 .stb-padding{
-    padding-top:70px;
-    padding-bottom:70px;
+    padding-top:40px;
+    padding-bottom:40px;
     z-index: 1;
 }
 
@@ -1074,7 +1074,7 @@ section, footer{
 }
 .content {
   display: flex;
-  margin: 30px auto 0px;
+  margin: 0px auto 0px;
   padding: 0px;  
   flex-direction: column;
   align-items: center;
@@ -1121,6 +1121,10 @@ section, footer{
 .s3-padding-tb-30{
     padding-top: 30px;
     padding-bottom: 30px;
+}
+.s3-padding-tb-40{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .mat-card{
     background: transparent;
@@ -1432,23 +1436,23 @@ section, footer{
     color:#f54b1e;
 }
 .pathway-container{
-    display:block;       
-    padding-bottom:15px;    
+    display:flex;       
+    padding-bottom:15px;
+    flex-flow: row wrap;
+    justify-content: center;   
 }
 .clearfix{
     clear: both;
 }
-.pathway-container .pathway-card{
-    height:50px;
-    width:30.5%;
+.pathway-container .pathway-card{    
     font-size:12px;
-    text-align: center;
-    display: inline-block;
+    text-align: center;    
     border:1px solid #f54b1e;
     border-top:15px solid #f54b1e;
     border-radius:5px;
-    padding:10px;
-    margin:10px 10px 0px 0px;   
+    padding:10px 10px 5px 10px;
+    margin:10px 10px 0px 0px;
+    flex-grow: 1;   
 }
 .client-container{    
     border-top:1px solid #cccccc;
@@ -1963,7 +1967,7 @@ button:focus{
 
 .boxWrapper {
     width: 100%;
-    margin: 30px auto 70px auto;
+    margin: 30px auto 40px auto;
     text-align: center;
     text-align: -webkit-center;
 }
@@ -1976,26 +1980,41 @@ button:focus{
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
+.boxWrapperCol .box-img{
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    overflow: hidden;    
+}
+.boxWrapperCol .box-img img{
+    width:100%;
+}
 .boxWrapperCol:hover {
     transform: scale(1.05);
     -moz-transition: scale(1.05);
 }
-.boxWrapperCol a {
+.boxWrapperCol a{
     text-decoration: none;
     outline: none;
+    display: inline-block;
+    border: 1px solid #e1e0e0;
+    border-radius: 7px;
+    padding: 15px 0px 15px 0px;
+    box-shadow: 0px 1px 1px 1px #cccccc;
 }
 
 .whiteBox {
     display: block;
-    width: 182px;
-    height: 80px;
-    padding: 15px 20px 15px 20px;
+    width: 180px;
+    height: 70px;
+    overflow:hidden;
+    padding: 15px 20px 0px 20px;
     background: #fff;
     color: #000;
     text-align: center;
     vertical-align: top;
     line-height: 22px;
-    border: 1px solid #e1e0e0;
+    /*border: 1px solid #e1e0e0;*/   
     border-radius: 0 0 7px 7px;
     margin: 0 auto;
 }

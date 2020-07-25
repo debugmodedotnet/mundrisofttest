@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserRegisterationService } from '../shared/userregisteration.service';
 import { Router } from '@angular/router';
@@ -12,7 +12,7 @@ import { CourseCatalogService } from '../shared/coursecatalog.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-
+  
   userRegistrationForm: FormGroup;
   resData= {
     uid:'',
@@ -40,6 +40,12 @@ export class UserComponent implements OnInit {
       zip_code: [null]
     })
   }
+  //Close dialog box
+  @ViewChild('dialogCloseBtn') dialogCloseBtn: ElementRef<HTMLElement>;
+  triggerFalseClick() {
+      let el: HTMLElement = this.dialogCloseBtn.nativeElement;
+      el.click();
+  }
 
   registerUser(): void {
     this.userRegistrationForm.value.title = this.userRegistrationForm.value.full_name.replace(/\s+/g, "");;
@@ -59,6 +65,10 @@ export class UserComponent implements OnInit {
         e=>{console.log(e);}
         )
         //this.router.navigateByUrl('/catalog/catalog');
+        //Close dialog box
+        setTimeout (() => {
+            this.triggerFalseClick();
+        }, 3000);
 
       },
       (error) => { console.log(error) }
@@ -69,7 +79,8 @@ export class UserComponent implements OnInit {
     const dialogRef = this.dialog.open(LoginComponent, {
       
     });
-
+    //close sigunp dialog box
+    this.triggerFalseClick();
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
