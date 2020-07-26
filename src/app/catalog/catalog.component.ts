@@ -15,8 +15,8 @@ export class CatalogComponent implements OnInit {
   courseCatalogsData = [];
   searchCatalog: any;
   courseBanner: any;
-  pageSize = 6;
-  pageLength = 6;
+  pageSize = 10;
+  pageLength = 10;
   navigationExtras: NavigationExtras = {};
   navigation = this.router.getCurrentNavigation();
   tempData: any;

@@ -1,6 +1,6 @@
 <div class="register-form">
     <div class="btn-close" mat-dialog-actions>
-        <button #dialogCloseBtn mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+        <button #dialogCloseBtn mat-dialog-close><mat-icon>close</mat-icon></button>
     </div>
     <form (ngSubmit)='registerUser()' [formGroup]='userRegistrationForm' novalidate class="form" *ngIf='registerUserForm'>
         <div class="container">
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="frm-input">
-                        <input formControlName='confirmpassword' type="password" placeholder="Again Enter Password" />
+                        <input formControlName='confirmpassword' type="password" placeholder="Confirm password" />
                     </div>
                 </div>
             </div>

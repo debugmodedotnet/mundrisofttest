@@ -32,78 +32,147 @@
                                         <div class="checkout-container">
                                             <div class="checkout-header">
                                                 <h2 class="text-center">
-                                                    <mat-icon aria-label="Bookmark icon">bookmark</mat-icon> My Bookmarks</h2><span class="right-block"> Clear My Bookmarks</span>
+                                                    <mat-icon aria-label="Bookmark icon">bookmark</mat-icon> My Bookmarks</h2><span class="right-block"><button mat-button>Clear My Bookmarks</button></span>
                                             </div>
-                                            <div class="checkout-course-view" *ngFor="let course of studentsBookMarkData">
-                                                <div class="half">
-                                                    <div class="other-course-container">
-                                                        <div>
-                                                            <div class="course-picture">                                                                
-                                                                <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt="">
-                                                            </div>
-                                                        </div>
-                                                        <div>
-                                                            <h4>{{course?.added_course[0].course_name}}</h4>
-                                                            <p>{{course?.added_course[0].brief_description}}</p>
-                                                            <div class="table">
-                                                                <div>
-                                                                    <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
+                                            <div *ngFor="let course of studentsBookMarkData">
+                                                <div class="checkout-course-view">
+                                                    <div class="half">
+                                                        <div class="other-course-container">
+                                                            <div>
+                                                                <div class="course-picture">
+                                                                    <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt="">
                                                                 </div>
-                                                                <div>
-                                                                    <div class="btn-container">
-                                                                        <button mat-raised-button class="btn-flat">Campus</button>
+                                                            </div>
+                                                            <div>
+                                                                <h4>{{course?.added_course[0].course_name}}</h4>
+                                                                <p>{{course?.added_course[0].brief_description}}</p>
+                                                                <div class="table">
+                                                                    <div>
+                                                                        <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                     </div>
+                                                                    <!--<div>
+                                                                        <div class="">
+                                                                            <button mat-raised-button class="btn-flat">Campus</button>
+                                                                        </div>
+                                                                    </div>-->
                                                                 </div>
                                                             </div>
                                                         </div>
+
+                                                    </div>
+                                                    <div>
+                                                        <h4>Date and Time</h4>
+                                                        <div class="dt-container">
+                                                            <div>
+                                                                <!-- <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span> -->
+                                                                <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday 08/03/2020</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dt-container">
+                                                            <div>
+                                                                <!-- <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span> -->
+                                                                <mat-icon aria-label="Time icon">access_time</mat-icon><span>1:00PM - 4:00PM</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Delivery</h4>
+                                                        <div class="">
+                                                            <button mat-raised-button class="btn-flat rounded">Online LIVE</button>
+                                                            <!-- <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button> -->
+
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <!-- <span class="course-cost">{{course?.purchased_cost}}</span> -->
+                                                        <span class="course-cost">$99</span>
+
                                                     </div>
 
                                                 </div>
-                                                <div>
-                                                    <h4>Date and Time</h4>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <!-- <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span> -->
-                                                            <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>Monday 08/03/2020</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="dt-container">
-                                                        <div>
-                                                            <!-- <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span> -->
-                                                            <mat-icon aria-label="Time icon">access_time</mat-icon><span>1:00PM - 4:00PM</span>
-                                                        </div>
-                                                    </div>
+                                                <div class="btn-container-right">
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
                                                 </div>
-                                                <div>
-                                                    <h4>Delivery</h4>
-                                                    <div class="btn-container">
-                                                        <button mat-raised-button class="btn-flat rounded">Online LIVE</button>
-                                                        <!-- <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button> -->
-
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <!-- <span class="course-cost">{{course?.purchased_cost}}</span> -->
-                                                    <span class="course-cost">$99</span>
-                                                   
-                                                </div>
-                                                
-                                            </div>
-                                            <div class="btn-container">
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
+                                                <div class="divider"></div>
                                             </div>
                                         </div>
-                                        <div class="divider"></div>
-
-
 
                                         <div class="checkout-container">
                                             <div class="checkout-header">
                                                 <h2 class="text-center">
-                                                    <mat-icon aria-label="My Cart icon">add_shopping_cart</mat-icon> My Cart</h2><span class="right-block"> Clear My Cart</span>
+                                                    <mat-icon aria-label="My Cart icon">add_shopping_cart</mat-icon> My Cart</h2><span class="right-block"><button mat-raised-button>Clear My Cart</button></span>
                                             </div>
-                                            <div class="checkout-course-view" *ngFor="let course of studentsCartData" >
+                                            <div *ngFor="let course of studentsCartData">
+                                                <div class="checkout-course-view">
+                                                    <div class="half">
+                                                        <div class="other-course-container">
+                                                            <div>
+                                                                <div class="course-picture">
+                                                                    <img class="image-square" src="{{course?.added_course[0].course_outline.banner_image.url}}" alt="">
+                                                                </div>
+                                                            </div>
+                                                            <div>
+                                                                <h4>{{course?.added_course[0].course_name}}</h4>
+                                                                <p> {{course?.added_course[0].brief_description}}</p>
+                                                                <div class="table">
+                                                                    <div>
+                                                                        <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
+                                                                    </div>
+                                                                    <!--<div>
+                                                                        <div class="">
+                                                                            <button mat-raised-button class="btn-flat">Campus</button>
+                                                                        </div>
+                                                                    </div>-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Date and Time</h4>
+                                                        <div class="dt-container">
+                                                            <div>
+                                                                <mat-icon aria-label="Day icon">calendar_today</mat-icon><span>{{course?.schedule_date}}</span></div>
+                                                        </div>
+                                                        <div class="dt-container">
+                                                            <div>
+                                                                <mat-icon aria-label="Time icon">access_time</mat-icon><span>{{course?.schedule_time}}</span></div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <h4>Delivery</h4>
+                                                        <div class="">
+                                                            <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span class="course-cost">{{course?.purchased_cost}}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="btn-container-right">
+                                                    <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
+                                                </div>
+                                                <div class="divider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepper-btns">
+                                        <button mat-button matStepperNext>Next</button>
+                                    </div>
+                                </mat-step>
+                                <mat-step [stepControl]="secondFormGroup">
+                                    <ng-template matStepLabel>Registration</ng-template>
+                                    <!--<h2>Registration</h2>
+                                    <p>You are already login go to next step.</p>-->
+                                    <div class="registration-container">
+                                        <div class="text-center">
+                                            <div class="confirmation-total">
+                                                <div class="total-payment">$1298.00</div>
+                                                <p>Here’s what you are purchasing today!</p>
+                                            </div>
+                                        </div>
+                                        <div class="checkout-container" *ngFor="let course of studentsCartData">
+                                            <div class="checkout-course-view">
                                                 <div class="half">
                                                     <div class="other-course-container">
                                                         <div>
@@ -118,11 +187,11 @@
                                                                 <div>
                                                                     <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                 </div>
-                                                                <div>
-                                                                    <div class="btn-container">
+                                                                <!--<div>
+                                                                    <div class="">
                                                                         <button mat-raised-button class="btn-flat">Campus</button>
                                                                     </div>
-                                                                </div>
+                                                                </div>-->
                                                             </div>
                                                         </div>
                                                     </div>
@@ -141,30 +210,23 @@
                                                 </div>
                                                 <div>
                                                     <h4>Delivery</h4>
-                                                    <div class="btn-container">
+                                                    <div class="">
                                                         <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <span class="course-cost">{{course?.purchased_cost}}</span>
                                                 </div>
-                                                
                                             </div>
-                                            <div class="btn-container">
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Remove icon">delete_outline</mat-icon>Remove</button>
-                                                <button mat-raised-button class="btn-orange"><mat-icon aria-label="Add To Cart icon">add_shopping_cart</mat-icon>Move To Cart</button>
+                                            <div class="divider"></div>
+                                        </div>
+                                        <div class="checkout-container">
+                                            <div class="btn-container text-center">
+                                                <div><button mat-raised-button class="btn-orange" routerLink="/catalog">Browse More Courses</button></div>
                                             </div>
                                         </div>
 
                                     </div>
-                                    <div class="stepper-btns">
-                                        <button mat-button matStepperNext>Next</button>
-                                    </div>
-                                </mat-step>
-                                <mat-step [stepControl]="secondFormGroup">
-                                    <ng-template matStepLabel>Registration</ng-template>
-                                    <h2>Registration</h2>
-                                    <p>You are already login go to next step.</p>
                                     <div class="stepper-btns">
                                         <button mat-button matStepperPrevious>Back</button>
                                         <button mat-button matStepperNext>Next</button>
@@ -175,7 +237,7 @@
                                     <ng-template matStepLabel>Payment</ng-template>
 
                                     <div class="payment-container">
-                                        <h2>Payment</h2>
+                                        <!--<h2>Payment</h2>-->
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                             ut labore et dolore magna aliqua.
                                         </p>
@@ -239,19 +301,16 @@
                                                         <input matInput #state placeholder="State*">
                                                     </mat-form-field>
                                                 </div>
-
                                                 <div class="checkbox-options">
                                                     <div>
-                                                        <mat-checkbox class="example-margin">Save this card for further purcases</mat-checkbox>
-                                                        <mat-checkbox class="right-align">Optional Item Here</mat-checkbox>
+                                                        <mat-checkbox class="example-margin">Save this card for further purcases</mat-checkbox><br>
+                                                        <mat-checkbox class="example-margin">Save as default payment</mat-checkbox>                                                        
                                                     </div>
-                                                    <div>
-                                                        <mat-checkbox class="example-margin">Save as default payment</mat-checkbox>
-                                                        <mat-checkbox class="right-align">Optional Item Here</mat-checkbox>
+                                                    <div class="right-align">
+                                                        <mat-checkbox>Optional Item Here</mat-checkbox><br>
+                                                        <mat-checkbox>Optional Item Here</mat-checkbox>
                                                     </div>
                                                 </div>
-
-
                                                 <div class="payment-description">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
@@ -277,7 +336,6 @@
                                                         </mat-form-field>
                                                     </div>
                                                 </div>
-
                                                 <div class="divider"></div>
                                                 <div class="payment-total">
                                                     <div class="third-half">
@@ -301,21 +359,20 @@
 
                                 </mat-step>
                                 <mat-step>
-                                    <ng-template matStepLabel>Confirmatoion</ng-template>
+                                    <ng-template matStepLabel>Confirmation</ng-template>
                                     <div class="confirmation-container">
                                         <div class="text-center">
-                                            <h2>Confirmation</h2>
-                                            <h4>Congratulations!</h4>
-                                            <p>Welcome to New Horizons, we're happy to have you! Be sure to check your inbox
-                                                for a registration confirmation email and student portal instructions.
-                                            </p>
+                                            <!--<h2>Confirmation</h2>-->
+                                            <h2>Congratulations!</h2>
+                                            <p>Welcome to New Horizons, we're happy to have you!</p>
+                                            <p>Be sure to check your inbox for a registration confirmation email and student portal instructions.</p>
                                             <div class="confirmation-total">
                                                 <div class="total-payment">$1298.00</div>
                                                 <p>Here's what you purchased today!</p>
                                             </div>
                                         </div>
-                                        <div class="checkout-container">
-                                            <div class="checkout-course-view" *ngFor="let course of studentsCartData" >
+                                        <div class="checkout-container" *ngFor="let course of studentsCartData">
+                                            <div class="checkout-course-view">
                                                 <div class="half">
                                                     <div class="other-course-container">
                                                         <div>
@@ -330,15 +387,14 @@
                                                                 <div>
                                                                     <span>By: {{course?.added_course[0].instructor[0].first_name}} {{course?.added_course[0].instructor[0].last_name}}</span>
                                                                 </div>
-                                                                <div>
-                                                                    <div class="btn-container">
+                                                                <!--<div>
+                                                                    <div class="">
                                                                         <button mat-raised-button class="btn-flat">Campus</button>
                                                                     </div>
-                                                                </div>
+                                                                </div>-->
                                                             </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                                 <div>
                                                     <h4>Date and Time</h4>
@@ -353,21 +409,19 @@
                                                 </div>
                                                 <div>
                                                     <h4>Delivery</h4>
-                                                    <div class="btn-container">
+                                                    <div class="">
                                                         <button mat-raised-button class="btn-flat rounded">{{course?.course_delivery_mode}}</button>
                                                     </div>
                                                 </div>
                                                 <div>
                                                     <span class="course-cost">{{course?.purchased_cost}}</span>
                                                 </div>
-                                                
                                             </div>
-
+                                            <div class="divider"></div>
                                         </div>
                                         <div class="checkout-container">
-                                       
                                             <div class="btn-container text-center">
-                                                <div><button mat-raised-button class="btn-orange" routerLink="/catalog">Browse More Courses</button></div>                                                
+                                                <div><button mat-raised-button class="btn-orange" routerLink="/catalog">Browse More Courses</button></div>
                                             </div>
                                         </div>
                                     </div>

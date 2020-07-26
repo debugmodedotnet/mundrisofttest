@@ -23,11 +23,11 @@
 
     <div class="content" role="main">
         <!-- Catalog Cards section begin-->
-        <section class="stb-padding s3-padding-tb-70">
+        <section class="stb-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="breadcrumb">
+                        <div class="breadcrumb-wrapper">
                             <span><a class="txt-orange" aria-label="Home" routerLink="/home">Home</a></span> <span> / </span>
                             <span class="">Courses</span>
                         </div>
@@ -86,8 +86,8 @@
                         <div class="search-box-container">
                             <div class="search-input">
                                 <mat-form-field appearance="outline">
-                                    <mat-label>Search a topic, path, course</mat-label>
-                                    <input matInput [(ngModel)]='searchCatalog' placeholder="Search a topic, path, course">
+                                    <mat-label>Search a course, certification or parthway</mat-label>
+                                    <input matInput [(ngModel)]='searchCatalog' placeholder="Search a course, certification or parthway">
                                     <mat-icon matSuffix>search</mat-icon>
                                 </mat-form-field>
                             </div>
@@ -114,7 +114,7 @@
             </div>
 
             <div class="container" *ngIf="showDiv.listView">
-                <div class="row list-view-row" (click)='courseDetails(data)' *ngFor="let data of courseCatalogsData | catalogfilter: searchCatalog">
+                <div class="row list-view-row card-wrapper" (click)='courseDetails(data)' *ngFor="let data of courseCatalogsData | catalogfilter: searchCatalog">
                     <div class="col-lg-2">
                         <div>
                             <div class="list-view-img">
@@ -152,7 +152,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="btn-wrapper text-center">
-                            <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-flat rounded" href="#">{{ci}}</a>
+                            <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-flat rounded">{{ci}}</a>
                         </div>
                     </div>
                 </div>
@@ -213,7 +213,7 @@
                                             <span>By : {{data.instructor[0].first_name}}</span>
                                         </div>
                                         <div>
-                                            <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-flat rounded" href="#">{{ci}}</a>
+                                            <a *ngFor="let ci of data.course_info.course_availability" mat-button class="btn-flat rounded">{{ci}}</a>
 
                                         </div>
                                     </div>
