@@ -50,6 +50,7 @@ margin:0 auto;
 .main-container.internal-page-wrapper.catalog-page .content{
     margin-top:0px;
 }
+
 .navigation-container{
     background-color: rgba(22, 22, 22, 0.5);
     color: white;
@@ -164,6 +165,20 @@ margin:0 auto;
     position: relative;
     z-index: 1;
 }
+.tabs-container .mat-tab-label{
+    background-color: #f2f2f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border:1px solid #bbbbbb;
+}
+.tabs-container .mat-tab-label-active{
+    background-color: #bbbbbb;   
+}
+.tabs-container .mat-tab-label-active .mat-tab-label-content{
+    color:#000000;
+    font-weight: 600;
+}
+
 .franchise-page .hero-banner .banner-overlay{
     /*background-color: rgba(9, 131, 245, 0.7);*/
 }
@@ -241,6 +256,7 @@ margin:0 auto;
 }
 .right-panel{    
     border:1px solid #cccccc;
+    margin-top:54px;
 }
 .right-panel .course-info-wrapper{
     background-color: #f4f4f4;
@@ -254,7 +270,14 @@ margin:0 auto;
     font-weight:500;
     font-size: 14px;
 }
-
+.accordion-container .mat-expansion-panel-header-description,
+.accordion-container .mat-expansion-indicator::after{
+    color: rgba(0, 0, 0, 0.87);
+}
+.info-title{
+    font-size:14px;
+    font-weight: 500;
+}
 .topic-details{
     display: flex;
 }
@@ -508,8 +531,9 @@ margin:0 auto;
     line-height: 36px;
 }
 .popover-container .popover .arrow{
-    left: 47.5%;
+    left: 47.5%;    
 }
+
 .course-cost{
     font-size: 18px;
     font-weight: 500;
@@ -532,7 +556,7 @@ margin:0 auto;
 }
 
 .bold-txt{
-    font-weight: 600;    
+    font-weight: 500;    
 }
 .mat-dialog-container .mat-button.btn-close:focus{
     background-color: #ffffff!important;
@@ -921,8 +945,11 @@ margin:0 auto;
     display:table-cell;
     padding:5px;
 }
-.course-details-info, .course-detials-container .card-btn-wrapper{
+.course-detials-container .card-btn-wrapper{
     margin-bottom:25px;
+}
+.course-details-info{
+    margin-bottom:0px;
 }
 .course-details-info .course-info{
     display:flex;
@@ -1268,9 +1295,31 @@ section, footer{
 .card-wrapper.icon-card .mat-card{
     text-align: center;
 }
+.certification-wrapper .certification-card{
+    display: flex;
+}
+.certification-wrapper .card-wrapper{
+    background-color: #ffffff;
+}
+
+.certification-wrapper .card-wrapper .mat-card{
+    padding: 15px;
+}
+.certification-wrapper .card-wrapper .certification-icon .mat-icon{
+    width:70px;
+    height:70px;
+}
+.certification-wrapper .card-wrapper .certification-icon .material-icons{
+   font-size:70px;
+   color:#3f51b5;
+}
 .certification-card{
     border:1px solid #cccccc;
-    margin:0px 15px; 
+    margin:0px 0px; 
+  }
+  .certification-title{
+      color:#3f51b5;
+      font-weight: 500;
   }
   .certification-card .course-detials-container{
     margin:10px;
@@ -1319,6 +1368,9 @@ section, footer{
 }
 .text-center{
     text-align: center;
+}
+.bg-light-gray-1{
+    background-color:#f2f2f2;
 }
 .bg-light-gray .mat-card, .bg-light-gray .mat-card .mat-button,
 .bg-dark-gray .mat-card, .bg-dark-gray .mat-card .mat-button{
@@ -1991,7 +2043,7 @@ button:focus{
     flex-grow: 1;    
     padding:5px;
     text-align: center;
-    width:90px;
+    /*width:90px;*/
 }
 .date-schedules .dt{
     font-size:22px;
@@ -2004,11 +2056,15 @@ button:focus{
     border:1px solid #cccccc;
     border-radius:4px;
 }
+.date-schedules .day {
+    width: 90px;
+}
 .seats-box{
     background-color:#cccccc;
     text-align: center;    
     padding:5px 20px;
     display: inline-block;
+    width:115px;
 }
 .divider{
     margin:25px auto 35px;

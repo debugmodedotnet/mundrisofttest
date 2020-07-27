@@ -24,7 +24,7 @@
             <ul class="navbar-nav mobile-view">
               <li class="nav-item">
                 <div>
-                  <button mat-button [popover]="myCampus" [popoverOnHover]="false" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon>place</mat-icon></button>
+                  <button mat-button [popover]="myCampus" [popoverOnHover]="true" [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon>place</mat-icon></button>
                   <div class="popover-container">
                       <popover-content #myCampus title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
                           <div class="popover-header">
@@ -56,7 +56,7 @@
               </li>
               <li class="nav-item">
                 <div>
-                  <button mat-button (click)="showBookMark()" mdePopoverTriggerOn="click" [popover]="myBookmarks" [popoverOnHover]="false"
+                  <button mat-button (click)="showBookMark()" mdePopoverTriggerOn="click" [popover]="myBookmarks" [popoverOnHover]="true"
                     [popoverCloseOnMouseOutside]="true" mat-icon-button><mat-icon matBadge="{{bookMarkNumber}}" matBadgeOverlap="true" matBadgePosition="after">bookmark</mat-icon></button>
                   <div class="popover-container">
                     <popover-content #myBookmarks title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
@@ -178,10 +178,10 @@
                 (click)='getMyCourses()'
                 mdePopoverTriggerOn="click"
                 [popover]="myCourses" 
-                [popoverOnHover]="false" 
+                [popoverOnHover]="true" 
                 [popoverCloseOnMouseOutside]="true"><mat-icon>person_outline</mat-icon></button>
                 <div class="popover-container">
-                  <popover-content #myCourses title="" popoverPlacement="auto" popoverSize="auto" [closeOnClickOutside]="true">
+                  <popover-content #myCourses title="" popoverPlacement="auto" popoverSize="auto" [closeOnMouseOutside]="true">
                     <div class="popover-header">
                       <div>
                         <mat-icon>library_books</mat-icon>

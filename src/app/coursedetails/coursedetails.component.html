@@ -249,20 +249,18 @@
                 <div class="col-lg-4">
                     <div class="right-panel">
                         <div class="course-info-wrapper">
-
-
                             <h2>Course Info</h2>
-                            <div class="course-details-info bold-txt">
+                            <div class="course-details-info">
                                 <div class="course-info">
-                                    <div><span>Level:</span></div>
+                                    <div><span class="bold-txt">Level:</span></div>
                                     <div>
                                         {{courseDetailsData?.course_info?.level}}
                                         <mat-icon> bar_chart</mat-icon>
                                     </div>
                                 </div>
                                 <div class="course-info">
-                                    <div><span>Rating:</span></div>
-                                    <!-- <div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span>                                        <span>(5782)</span></div> -->
+                                    <div><span class="bold-txt">Rating:</span></div>
+                                    <!--<div><span><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star_border</mat-icon><mat-icon>star_border</mat-icon></span>                                        <span>(5782)</span></div> -->
                                     <div>
                                         <span>
                                             <app-starrating [rating]='courseDetailsData?.course_info?.star_rating'>
@@ -271,7 +269,7 @@
                                     </div>
                                 </div>
                                 <div class="course-info">
-                                    <div><span>Offered:</span></div>
+                                    <div><span class="bold-txt">Offered:</span></div>
                                     <div><span>...</span></div>
                                 </div>
                                 <div class="course-btn-wrapper">
@@ -285,7 +283,7 @@
                             
                             <div class="course-details-info">                                    
                                 <div *ngIf="courseDetailsData?.course_info?.cost.online" class="course-info">
-                                        <h3>Cost: <span>{{courseDetailsData?.course_info?.cost.online}}</span></h3>
+                                        <p><span class="info-title">Cost:</span> <span>{{courseDetailsData?.course_info?.cost.online}}</span></p>
                                     <!--<div><span>
                                             <mat-icon>bar_chart</mat-icon>
                                         </span><span>Online:</span></div>
@@ -304,7 +302,7 @@
                             
                             <div class="course-details-info">
                                 <div *ngIf="courseDetailsData?.course_info?.course_length?.online" class="course-info">
-                                        <h3>Length: <span>{{courseDetailsData?.course_info?.course_length.online}}</span></h3>
+                                        <p><span class="info-title">Length:</span> <span>{{courseDetailsData?.course_info?.course_length.online}}</span></p>
                                     <!--<div><span>
                                             <mat-icon>bar_chart</mat-icon>
                                         </span><span>Online:</span></div>
@@ -320,7 +318,7 @@
                                 </div>-->
                             </div>
 
-                            <h3>Next Online Class:</h3>
+                            <p class="info-title">Next Online Class:</p>
                             <div class="course-details-info">
                                 <div class="course-info">
                                     <span>April 12, 2020 | 1:00 pm</span>
@@ -339,7 +337,7 @@
                                 <div><a mat-raised-button (click)="openDialogScheduleCampus()" class="btn-orange btn-full">Select Your Schedule</a></div>
                             </div>
 
-                            <h3>Next Campus Class:</h3>
+                            <p class="info-title">Next Campus Class:</p>
                             <div class="course-details-info">
                                 <div class="course-info">
                                     <span>April 12, 2020 | 1:00 pm</span>

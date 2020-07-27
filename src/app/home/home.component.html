@@ -182,15 +182,30 @@
                     <div class="col-lg-12">
                         <h2 class="text-center">Training for Every Member of the Enterprise</h2>
                         <div class="boxWrapper">
-                            <div class="boxWrapperCol"><a href="#"><div class="box-img"><img alt="IT Training" src="./assets/img/nh-circleimage-1.jpg"></div> <span class="whiteBox">Information Technology</span></a>
+                            <div class="boxWrapperCol">
+                                <a href="#">
+                                    <div class="box-img"><img alt="IT Training" src="./assets/img/nh-circleimage-1.jpg"></div> <span class="whiteBox">Information Technology</span></a>
                             </div>
-                            <div class="boxWrapperCol"><a href="#"><div class="box-img"><img alt="Microsoft Office Certification" src="./assets/img/nh-circleimage-2.jpg"></div> <span class="whiteBox">Productivity Applications</span></a>
+                            <div class="boxWrapperCol">
+                                <a href="#">
+                                    <div class="box-img"><img alt="Microsoft Office Certification" src="./assets/img/nh-circleimage-2.jpg"></div>
+                                    <span class="whiteBox">Productivity Applications</span></a>
                             </div>
-                            <div class="boxWrapperCol"><a href="#"><div class="box-img"><img alt="Center for Development and Leadership" src="./assets/img/nh-circleimage-3.jpg"></div> <span class="whiteBox">Leadership and Development Skills</span></a>
+                            <div class="boxWrapperCol">
+                                <a href="#">
+                                    <div class="box-img"><img alt="Center for Development and Leadership" src="./assets/img/nh-circleimage-3.jpg"></div>
+                                    <span class="whiteBox">Leadership and Development Skills</span></a>
                             </div>
-                            <div class="boxWrapperCol"><a href="#"><div class="box-img"><img alt="Service and Project Management" src="./assets/img/nh-circleimage-4.jpg"></div> <span class="whiteBox">Project/Service Management</span></a>
+                            <div class="boxWrapperCol">
+                                <a href="#">
+                                    <div class="box-img"><img alt="Service and Project Management" src="./assets/img/nh-circleimage-4.jpg"></div>
+                                    <span class="whiteBox">Project/Service Management</span></a>
                             </div>
-                            <div class="boxWrapperCol"><a href="#"><div class="box-img"><img alt="Cloud Technology Learning" src="./assets/img/nh-circleimage-5.jpg"></div> <span class="whiteBox">Cloud &amp; Big Data</span></a>
+                            <div class="boxWrapperCol">
+                                <a href="#">
+                                    <div class="box-img"><img alt="Cloud Technology Learning" src="./assets/img/nh-circleimage-5.jpg"></div>
+                                    <span class="whiteBox">Cloud &amp; Big Data</span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -364,23 +379,189 @@
         <!-- Trending Courses section end-->
 
         <!-- Certification section begin-->
-        <section class="stb-padding remove-b-padding">
+        <section class="stb-padding bg-light-gray-1">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="content-wrapper">
                             <h2>{{homeData?.entry?.certification_at_new_horizons.heading}}</h2>
-                            <p>{{homeData?.entry?.certification_at_new_horizons.description_text}}</p>
+                            <p>New Horizons has certification path for many technical job roles. Each of these certifications
+                                consits of passing a series of exams to earn certification.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- certification  -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <mat-tab-group class="mat-tab-container" animationDuration="1000ms">
+            <div class="certification-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <h3>Fundamentals certifications</h3>
+                            <p>Recommended start. Ideal for individuals just starting in technology or thinking about a career
+                                change.
+                            </p>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Fundamentals certifications</h5>
+                                            <p class="certification-title">New Horizons Certified: Azure Fundamentals</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Fundamentals certifications</h5>
+                                            <p class="certification-title">New Horizons Certified:<br>Fundamentals</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Fundamentals certifications</h5>
+                                            <p class="certification-title">New Horizons Certified: Power Platform Fundamentals</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div>
+                                <a mat-button class="link-orange">Browse fundamental certifications <mat-icon>keyboard_arrow_right</mat-icon></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>Role-based certifications</h3>
+                            <p>Choose a role-based certification to begin learning valuable job role skills.
+                            </p>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Associate Certification</h5>
+                                            <p class="certification-title">New Horizons Certified: Azure Developer Associate</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Associate Certification</h5>
+                                            <p class="certification-title">New Horizons Certified: Power Apps + Dynamics 365 Developer Associate</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Associate Certification</h5>
+                                            <p class="certification-title">New Horizons Certified: Dynamics 365 Sales Functional Consultant Associate</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div>
+                                <a mat-button class="link-orange">Role-based certifications <mat-icon>keyboard_arrow_right</mat-icon></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>Additional certifications</h3>
+                            <p>Explore specialty, Microsoft Certified Educator, and Microsoft Office technical certifications.
+                            </p>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Expert Certification</h5>
+                                            <p class="certification-title">New Horizons Certified: Azure for SAP Workloads Specialty</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Expert Certification</h5>
+                                            <p class="certification-title">New Horizons Certified:<br>Educator</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="card-wrapper">
+                                <mat-card class="example-card certification-card">
+                                    <div>
+                                        <div class="certification-icon">
+                                            <mat-icon>verified_user</mat-icon>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <mat-card-content>
+                                            <h5>Expert Certification</h5>
+                                            <p class="certification-title">New Horizons Certified: Microsoft Word Expert (Word and Word 2019)</p>
+                                        </mat-card-content>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="">
+                                <a mat-button class="link-orange">Additional certifications <mat-icon>keyboard_arrow_right</mat-icon></a>
+                            </div>
+                        </div>
+
+
+                        <mat-tab-group class="mat-tab-container" animationDuration="1000ms" style="display:none;">
                             <mat-tab *ngFor="let c of homeData?.entry?.certification" label={{c.certification_category[0].category_name}}>
                                 <div class="container">
                                     <div class="row">
@@ -391,7 +572,6 @@
                                                         <span class="card-badge">New</span>
                                                         <h3>{{cdata.heading}}</h3>
                                                         <p [innerHtml]='cdata.brief_description'></p>
-
                                                     </mat-card-content>
                                                     <mat-card-actions class="card-btn-group">
                                                         <div>
@@ -414,7 +594,6 @@
                                                                     <a *ngFor="let b of cdata.availability; let i=index" mat-button class="btn-flat rounded">{{b}}</a>
                                                                     <!-- <a mat-button class="btn-orange rounded" href="#">Online</a></div> -->
                                                                 </div>
-
                                                             </div>
                                                         </div>
                                                         <div>
@@ -424,7 +603,6 @@
                                                 </mat-card>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </mat-tab>
@@ -435,7 +613,7 @@
 
             <!-- end certification  -->
 
-            <div class="container">
+            <!--<div class="container">
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center">
@@ -445,7 +623,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </section>
         <!-- Certification section end -->
 
@@ -570,7 +748,7 @@
 
         <!-- Site Footer -->
         <footer class="stb-padding bg-light-gray">
-            <!-- 
+            
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
@@ -611,7 +789,7 @@
                         </ul>
                     </div>
                 </div>
-            </div> -->
+            </div> 
         </footer>
         <!-- Site Footer -->
 
