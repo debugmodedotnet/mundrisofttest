@@ -101,6 +101,9 @@ export class CheckoutComponent implements OnInit {
     //console.log(this.studentUser);
 
     //console.log(this.studentsCartData);
+    //let s = this.studentsCartData[0];
+
+    //console.log(s);
 
     for (let s of this.studentsCartData) {
       
@@ -118,9 +121,9 @@ export class CheckoutComponent implements OnInit {
             "_content_type_uid": "student"
           }
         ],
-        "added_course": [
+        "purchased_course": [
           {
-            "uid": s.uid,
+            "uid": s.added_course[0].uid,
             "_content_type_uid": "course"
           }
         ]
@@ -128,15 +131,16 @@ export class CheckoutComponent implements OnInit {
 
       this.coursecatalogservice.addToPurchaedCourse(dataToCart).subscribe(
         (data) => {
-          //console.log(data);
+          console.log(data);
           //console.log("added to the cart");
           this.coursecatalogservice.publishData("student_purchased_course", data.entry.uid).subscribe((res) => {
-            //console.log(res);
+            console.log(res);
           },
             e => { console.log(e); })
         },
         error => console.log(error)
       )
+
 
     }
 
