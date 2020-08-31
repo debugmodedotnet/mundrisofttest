@@ -31,7 +31,7 @@ export class StudentLoginService {
 
   loginStudent(loginUser: any) {
 
-    localStorage.removeItem('user');
+   localStorage.removeItem('user');
     let loginUserDTO = {
       $and: []
     }

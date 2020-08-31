@@ -70,7 +70,7 @@ import { MyteamComponent } from './myteam/myteam.component';
     FindCampusComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     FormsModule,
     AppRoutingModule,

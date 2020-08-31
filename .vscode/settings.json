@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/fdfbabfd-c6e1-41db-916b-6b7738bea4a9/resourceGroups/geek97resourcegroup/providers/Microsoft.Web/sites/mundrisoft",
+    "appService.deploySubpath": "dist"
+}

@@ -27,12 +27,15 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
-  }
-
+  },
+  {
+    path: "**",
+    redirectTo: ""
+   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'top', useHash: false,})],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top', useHash: false, initialNavigation: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
